@@ -1,0 +1,1496 @@
+{
+  "bootstrap": {
+    "note": "sampling uncertainty over dataset samples; no repeated generations were run",
+    "replicates": 2000,
+    "seed": 20260925,
+    "unit": "sample (one generation each)"
+  },
+  "engines": {
+    "model": {
+      "all": {
+        "asr_files": {
+          "clean_input.wav:ok": 498,
+          "clean_output.wav:ok": 498,
+          "clean_output.wav:ok_empty_transcript": 8,
+          "input.wav:ok": 498,
+          "output.wav:ok": 498
+        },
+        "behavior": {
+          "official_format_note": "official stats_by_axis over every parsed response, rounded to 2 dp",
+          "official_format_ratios": {
+            "C": {
+              "C_RESPOND": 0.59,
+              "C_RESUME": 0.27,
+              "C_UNCERTAIN_HANDLING": 0.04,
+              "C_UNKNOWN": 0.1
+            },
+            "C_total_tags": 498
+          },
+          "population": 498,
+          "status": {
+            "valid": 498
+          },
+          "valid_label_proportions": {
+            "C_RESPOND": {
+              "bootstrap": {
+                "ci95": [
+                  0.5502008032128514,
+                  0.6385542168674698
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:all:C_RESPOND",
+                "unit": "sample",
+                "unit_n": 498
+              },
+              "count": 296,
+              "proportion": 0.5943775100401606
+            },
+            "C_RESUME": {
+              "bootstrap": {
+                "ci95": [
+                  0.22690763052208834,
+                  0.30522088353413657
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:all:C_RESUME",
+                "unit": "sample",
+                "unit_n": 498
+              },
+              "count": 132,
+              "proportion": 0.26506024096385544
+            },
+            "C_UNCERTAIN_HANDLING": {
+              "bootstrap": {
+                "ci95": [
+                  0.02208835341365462,
+                  0.05622489959839357
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:all:C_UNCERTAIN_HANDLING",
+                "unit": "sample",
+                "unit_n": 498
+              },
+              "count": 19,
+              "proportion": 0.03815261044176707
+            },
+            "C_UNKNOWN": {
+              "bootstrap": {
+                "ci95": [
+                  0.07630522088353414,
+                  0.1285140562248996
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:all:C_UNKNOWN",
+                "unit": "sample",
+                "unit_n": 498
+              },
+              "count": 51,
+              "proportion": 0.10240963855421686
+            }
+          },
+          "valid_n": 498
+        },
+        "timing_official_overlap": {
+          "ineligible_reasons": {},
+          "manifest_flags": {
+            "audio_received_after_T": 498,
+            "playout_active_at_T": 491
+          },
+          "official_all_intervals": {
+            "reduction": "campaign reduction of official per-sample intervals (end - start); official source defines no scalar aggregate",
+            "response": {
+              "bootstrap_pooled_mean": {
+                "ci95": [
+                  1.0331420346172266,
+                  1.0948606214689263
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:all:overlap:resp",
+                "unit": "sample",
+                "unit_n": 498
+              },
+              "interval_n": 942,
+              "mean_s": 1.0609851380042463,
+              "median_s": 0.9640000000000004,
+              "samples": 498,
+              "zero_interval_samples": 0
+            },
+            "stop": {
+              "bootstrap_pooled_mean": {
+                "ci95": [
+                  0.7666680366705998,
+                  0.8230233511050351
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:all:overlap:stop",
+                "unit": "sample",
+                "unit_n": 498
+              },
+              "interval_n": 472,
+              "mean_s": 0.7939661016949151,
+              "median_s": 0.7960000000000003,
+              "samples": 498,
+              "zero_interval_samples": 49
+            }
+          },
+          "population": 498,
+          "status": {
+            "label_model_speech_at_output_end": 356,
+            "label_user_ends_without_later_model_start": 51,
+            "ok": 498
+          }
+        },
+        "timing_supplementary_clean": {
+          "ineligible_reasons": {},
+          "manifest_flags": {
+            "audio_received_after_T": 498,
+            "playout_active_at_T": 486
+          },
+          "official_all_intervals": {
+            "reduction": "campaign reduction of official per-sample intervals (end - start); official source defines no scalar aggregate",
+            "response": {
+              "bootstrap_pooled_mean": {
+                "ci95": [
+                  0.9748385969911578,
+                  1.0239778806517044
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:all:clean:resp",
+                "unit": "sample",
+                "unit_n": 498
+              },
+              "interval_n": 492,
+              "mean_s": 0.9978861788617887,
+              "median_s": 0.964,
+              "samples": 498,
+              "zero_interval_samples": 8
+            },
+            "stop": {
+              "bootstrap_pooled_mean": {
+                "ci95": [
+                  0.508,
+                  0.796
+                ],
+                "empty_replicates": 1,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:all:clean:stop",
+                "unit": "sample",
+                "unit_n": 498
+              },
+              "interval_n": 9,
+              "mean_s": 0.6431111111111112,
+              "median_s": 0.6679999999999999,
+              "samples": 498,
+              "zero_interval_samples": 489
+            }
+          },
+          "population": 498,
+          "status": {
+            "label_model_speech_at_output_end": 166,
+            "label_user_ends_without_later_model_start": 8,
+            "ok": 498
+          }
+        }
+      },
+      "background_speech": {
+        "asr_files": {
+          "clean_input.wav:ok": 100,
+          "clean_output.wav:ok": 100,
+          "input.wav:ok": 100,
+          "output.wav:ok": 100
+        },
+        "behavior": {
+          "official_format_note": "official stats_by_axis over every parsed response, rounded to 2 dp",
+          "official_format_ratios": {
+            "C": {
+              "C_RESPOND": 0.65,
+              "C_RESUME": 0.17,
+              "C_UNCERTAIN_HANDLING": 0.08,
+              "C_UNKNOWN": 0.1
+            },
+            "C_total_tags": 100
+          },
+          "population": 100,
+          "status": {
+            "valid": 100
+          },
+          "valid_label_proportions": {
+            "C_RESPOND": {
+              "bootstrap": {
+                "ci95": [
+                  0.56,
+                  0.74
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:background_speech:C_RESPOND",
+                "unit": "sample",
+                "unit_n": 100
+              },
+              "count": 65,
+              "proportion": 0.65
+            },
+            "C_RESUME": {
+              "bootstrap": {
+                "ci95": [
+                  0.1,
+                  0.24
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:background_speech:C_RESUME",
+                "unit": "sample",
+                "unit_n": 100
+              },
+              "count": 17,
+              "proportion": 0.17
+            },
+            "C_UNCERTAIN_HANDLING": {
+              "bootstrap": {
+                "ci95": [
+                  0.03,
+                  0.13
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:background_speech:C_UNCERTAIN_HANDLING",
+                "unit": "sample",
+                "unit_n": 100
+              },
+              "count": 8,
+              "proportion": 0.08
+            },
+            "C_UNKNOWN": {
+              "bootstrap": {
+                "ci95": [
+                  0.05,
+                  0.16
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:background_speech:C_UNKNOWN",
+                "unit": "sample",
+                "unit_n": 100
+              },
+              "count": 10,
+              "proportion": 0.1
+            }
+          },
+          "valid_n": 100
+        },
+        "timing_official_overlap": {
+          "ineligible_reasons": {},
+          "manifest_flags": {
+            "audio_received_after_T": 100,
+            "playout_active_at_T": 99
+          },
+          "official_all_intervals": {
+            "reduction": "campaign reduction of official per-sample intervals (end - start); official source defines no scalar aggregate",
+            "response": {
+              "bootstrap_pooled_mean": {
+                "ci95": [
+                  0.8996631133389028,
+                  0.9756969232362995
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:background_speech:overlap:resp",
+                "unit": "sample",
+                "unit_n": 100
+              },
+              "interval_n": 194,
+              "mean_s": 0.9323298969072165,
+              "median_s": 0.9000000000000001,
+              "samples": 100,
+              "zero_interval_samples": 0
+            },
+            "stop": {
+              "bootstrap_pooled_mean": {
+                "ci95": [
+                  0.7486782608695651,
+                  0.8805696296296295
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:background_speech:overlap:stop",
+                "unit": "sample",
+                "unit_n": 100
+              },
+              "interval_n": 85,
+              "mean_s": 0.8159529411764705,
+              "median_s": 0.8600000000000003,
+              "samples": 100,
+              "zero_interval_samples": 18
+            }
+          },
+          "population": 100,
+          "status": {
+            "label_model_speech_at_output_end": 65,
+            "label_user_ends_without_later_model_start": 6,
+            "ok": 100
+          }
+        },
+        "timing_supplementary_clean": {
+          "ineligible_reasons": {},
+          "manifest_flags": {
+            "audio_received_after_T": 100,
+            "playout_active_at_T": 100
+          },
+          "official_all_intervals": {
+            "reduction": "campaign reduction of official per-sample intervals (end - start); official source defines no scalar aggregate",
+            "response": {
+              "bootstrap_pooled_mean": {
+                "ci95": [
+                  0.892312,
+                  0.9416
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:background_speech:clean:resp",
+                "unit": "sample",
+                "unit_n": 100
+              },
+              "interval_n": 100,
+              "mean_s": 0.91664,
+              "median_s": 0.9000000000000001,
+              "samples": 100,
+              "zero_interval_samples": 0
+            },
+            "stop": {
+              "bootstrap_pooled_mean": {
+                "ci95": null,
+                "replicates": 0,
+                "unit": "sample",
+                "unit_n": 100
+              },
+              "interval_n": 0,
+              "mean_s": null,
+              "median_s": null,
+              "samples": 100,
+              "zero_interval_samples": 100
+            }
+          },
+          "population": 100,
+          "status": {
+            "label_model_speech_at_output_end": 22,
+            "ok": 100
+          }
+        }
+      },
+      "talking_to_other": {
+        "asr_files": {
+          "clean_input.wav:ok": 100,
+          "clean_output.wav:ok": 100,
+          "input.wav:ok": 100,
+          "output.wav:ok": 100
+        },
+        "behavior": {
+          "official_format_note": "official stats_by_axis over every parsed response, rounded to 2 dp",
+          "official_format_ratios": {
+            "C": {
+              "C_RESPOND": 0.62,
+              "C_RESUME": 0.17,
+              "C_UNCERTAIN_HANDLING": 0.05,
+              "C_UNKNOWN": 0.16
+            },
+            "C_total_tags": 100
+          },
+          "population": 100,
+          "status": {
+            "valid": 100
+          },
+          "valid_label_proportions": {
+            "C_RESPOND": {
+              "bootstrap": {
+                "ci95": [
+                  0.52,
+                  0.71
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:talking_to_other:C_RESPOND",
+                "unit": "sample",
+                "unit_n": 100
+              },
+              "count": 62,
+              "proportion": 0.62
+            },
+            "C_RESUME": {
+              "bootstrap": {
+                "ci95": [
+                  0.1,
+                  0.25
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:talking_to_other:C_RESUME",
+                "unit": "sample",
+                "unit_n": 100
+              },
+              "count": 17,
+              "proportion": 0.17
+            },
+            "C_UNCERTAIN_HANDLING": {
+              "bootstrap": {
+                "ci95": [
+                  0.01,
+                  0.1
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:talking_to_other:C_UNCERTAIN_HANDLING",
+                "unit": "sample",
+                "unit_n": 100
+              },
+              "count": 5,
+              "proportion": 0.05
+            },
+            "C_UNKNOWN": {
+              "bootstrap": {
+                "ci95": [
+                  0.09,
+                  0.24
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:talking_to_other:C_UNKNOWN",
+                "unit": "sample",
+                "unit_n": 100
+              },
+              "count": 16,
+              "proportion": 0.16
+            }
+          },
+          "valid_n": 100
+        },
+        "timing_official_overlap": {
+          "ineligible_reasons": {},
+          "manifest_flags": {
+            "audio_received_after_T": 100,
+            "playout_active_at_T": 99
+          },
+          "official_all_intervals": {
+            "reduction": "campaign reduction of official per-sample intervals (end - start); official source defines no scalar aggregate",
+            "response": {
+              "bootstrap_pooled_mean": {
+                "ci95": [
+                  0.9175258108725445,
+                  0.963528
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:talking_to_other:overlap:resp",
+                "unit": "sample",
+                "unit_n": 100
+              },
+              "interval_n": 199,
+              "mean_s": 0.9402010050251256,
+              "median_s": 0.9319999999999999,
+              "samples": 100,
+              "zero_interval_samples": 0
+            },
+            "stop": {
+              "bootstrap_pooled_mean": {
+                "ci95": [
+                  0.7977311278195489,
+                  0.948705533596838
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:talking_to_other:overlap:stop",
+                "unit": "sample",
+                "unit_n": 100
+              },
+              "interval_n": 92,
+              "mean_s": 0.8697391304347827,
+              "median_s": 0.9079999999999999,
+              "samples": 100,
+              "zero_interval_samples": 9
+            }
+          },
+          "population": 100,
+          "status": {
+            "label_model_speech_at_output_end": 59,
+            "label_user_ends_without_later_model_start": 1,
+            "ok": 100
+          }
+        },
+        "timing_supplementary_clean": {
+          "ineligible_reasons": {},
+          "manifest_flags": {
+            "audio_received_after_T": 100,
+            "playout_active_at_T": 100
+          },
+          "official_all_intervals": {
+            "reduction": "campaign reduction of official per-sample intervals (end - start); official source defines no scalar aggregate",
+            "response": {
+              "bootstrap_pooled_mean": {
+                "ci95": [
+                  0.936792,
+                  1.080808
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:talking_to_other:clean:resp",
+                "unit": "sample",
+                "unit_n": 100
+              },
+              "interval_n": 100,
+              "mean_s": 0.9937600000000001,
+              "median_s": 0.964,
+              "samples": 100,
+              "zero_interval_samples": 0
+            },
+            "stop": {
+              "bootstrap_pooled_mean": {
+                "ci95": null,
+                "replicates": 0,
+                "unit": "sample",
+                "unit_n": 100
+              },
+              "interval_n": 0,
+              "mean_s": null,
+              "median_s": null,
+              "samples": 100,
+              "zero_interval_samples": 100
+            }
+          },
+          "population": 100,
+          "status": {
+            "label_model_speech_at_output_end": 22,
+            "ok": 100
+          }
+        }
+      },
+      "user_backchannel": {
+        "asr_files": {
+          "clean_input.wav:ok": 98,
+          "clean_output.wav:ok": 98,
+          "clean_output.wav:ok_empty_transcript": 1,
+          "input.wav:ok": 98,
+          "output.wav:ok": 98
+        },
+        "behavior": {
+          "official_format_note": "official stats_by_axis over every parsed response, rounded to 2 dp",
+          "official_format_ratios": {
+            "C": {
+              "C_RESUME": 0.85,
+              "C_UNCERTAIN_HANDLING": 0.02,
+              "C_UNKNOWN": 0.13
+            },
+            "C_total_tags": 98
+          },
+          "population": 98,
+          "status": {
+            "valid": 98
+          },
+          "valid_label_proportions": {
+            "C_RESPOND": {
+              "bootstrap": {
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:user_backchannel:C_RESPOND",
+                "unit": "sample",
+                "unit_n": 98
+              },
+              "count": 0,
+              "proportion": 0.0
+            },
+            "C_RESUME": {
+              "bootstrap": {
+                "ci95": [
+                  0.7755102040816326,
+                  0.9183673469387755
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:user_backchannel:C_RESUME",
+                "unit": "sample",
+                "unit_n": 98
+              },
+              "count": 83,
+              "proportion": 0.8469387755102041
+            },
+            "C_UNCERTAIN_HANDLING": {
+              "bootstrap": {
+                "ci95": [
+                  0.0,
+                  0.05102040816326531
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:user_backchannel:C_UNCERTAIN_HANDLING",
+                "unit": "sample",
+                "unit_n": 98
+              },
+              "count": 2,
+              "proportion": 0.02040816326530612
+            },
+            "C_UNKNOWN": {
+              "bootstrap": {
+                "ci95": [
+                  0.07142857142857142,
+                  0.20408163265306123
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:user_backchannel:C_UNKNOWN",
+                "unit": "sample",
+                "unit_n": 98
+              },
+              "count": 13,
+              "proportion": 0.1326530612244898
+            }
+          },
+          "valid_n": 98
+        },
+        "timing_official_overlap": {
+          "ineligible_reasons": {},
+          "manifest_flags": {
+            "audio_received_after_T": 98,
+            "playout_active_at_T": 98
+          },
+          "official_all_intervals": {
+            "reduction": "campaign reduction of official per-sample intervals (end - start); official source defines no scalar aggregate",
+            "response": {
+              "bootstrap_pooled_mean": {
+                "ci95": [
+                  1.1094657560975612,
+                  1.3112244025157231
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:user_backchannel:overlap:resp",
+                "unit": "sample",
+                "unit_n": 98
+              },
+              "interval_n": 156,
+              "mean_s": 1.2040000000000002,
+              "median_s": 1.0280000000000005,
+              "samples": 98,
+              "zero_interval_samples": 0
+            },
+            "stop": {
+              "bootstrap_pooled_mean": {
+                "ci95": [
+                  0.6622736842105263,
+                  0.7329899484536083
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:user_backchannel:overlap:stop",
+                "unit": "sample",
+                "unit_n": 98
+              },
+              "interval_n": 96,
+              "mean_s": 0.6976666666666667,
+              "median_s": 0.7319999999999998,
+              "samples": 98,
+              "zero_interval_samples": 2
+            }
+          },
+          "population": 98,
+          "status": {
+            "label_model_speech_at_output_end": 85,
+            "label_user_ends_without_later_model_start": 39,
+            "ok": 98
+          }
+        },
+        "timing_supplementary_clean": {
+          "ineligible_reasons": {},
+          "manifest_flags": {
+            "audio_received_after_T": 98,
+            "playout_active_at_T": 94
+          },
+          "official_all_intervals": {
+            "reduction": "campaign reduction of official per-sample intervals (end - start); official source defines no scalar aggregate",
+            "response": {
+              "bootstrap_pooled_mean": {
+                "ci95": [
+                  0.9771925099936882,
+                  1.0515141156462584
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:user_backchannel:clean:resp",
+                "unit": "sample",
+                "unit_n": 98
+              },
+              "interval_n": 97,
+              "mean_s": 1.0141443298969073,
+              "median_s": 0.996,
+              "samples": 98,
+              "zero_interval_samples": 1
+            },
+            "stop": {
+              "bootstrap_pooled_mean": {
+                "ci95": null,
+                "replicates": 0,
+                "unit": "sample",
+                "unit_n": 98
+              },
+              "interval_n": 0,
+              "mean_s": null,
+              "median_s": null,
+              "samples": 98,
+              "zero_interval_samples": 98
+            }
+          },
+          "population": 98,
+          "status": {
+            "label_model_speech_at_output_end": 81,
+            "label_user_ends_without_later_model_start": 1,
+            "ok": 98
+          }
+        }
+      },
+      "user_interruption": {
+        "asr_files": {
+          "clean_input.wav:ok": 200,
+          "clean_output.wav:ok": 200,
+          "clean_output.wav:ok_empty_transcript": 7,
+          "input.wav:ok": 200,
+          "output.wav:ok": 200
+        },
+        "behavior": {
+          "official_format_note": "official stats_by_axis over every parsed response, rounded to 2 dp",
+          "official_format_ratios": {
+            "C": {
+              "C_RESPOND": 0.84,
+              "C_RESUME": 0.07,
+              "C_UNCERTAIN_HANDLING": 0.02,
+              "C_UNKNOWN": 0.06
+            },
+            "C_total_tags": 200
+          },
+          "population": 200,
+          "status": {
+            "valid": 200
+          },
+          "valid_label_proportions": {
+            "C_RESPOND": {
+              "bootstrap": {
+                "ci95": [
+                  0.795,
+                  0.895
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:user_interruption:C_RESPOND",
+                "unit": "sample",
+                "unit_n": 200
+              },
+              "count": 169,
+              "proportion": 0.845
+            },
+            "C_RESUME": {
+              "bootstrap": {
+                "ci95": [
+                  0.04,
+                  0.11
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:user_interruption:C_RESUME",
+                "unit": "sample",
+                "unit_n": 200
+              },
+              "count": 15,
+              "proportion": 0.075
+            },
+            "C_UNCERTAIN_HANDLING": {
+              "bootstrap": {
+                "ci95": [
+                  0.005,
+                  0.04
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:user_interruption:C_UNCERTAIN_HANDLING",
+                "unit": "sample",
+                "unit_n": 200
+              },
+              "count": 4,
+              "proportion": 0.02
+            },
+            "C_UNKNOWN": {
+              "bootstrap": {
+                "ci95": [
+                  0.03,
+                  0.095
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:user_interruption:C_UNKNOWN",
+                "unit": "sample",
+                "unit_n": 200
+              },
+              "count": 12,
+              "proportion": 0.06
+            }
+          },
+          "valid_n": 200
+        },
+        "timing_official_overlap": {
+          "ineligible_reasons": {},
+          "manifest_flags": {
+            "audio_received_after_T": 200,
+            "playout_active_at_T": 195
+          },
+          "official_all_intervals": {
+            "reduction": "campaign reduction of official per-sample intervals (end - start); official source defines no scalar aggregate",
+            "response": {
+              "bootstrap_pooled_mean": {
+                "ci95": [
+                  1.0818416243654823,
+                  1.1876950525664811
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:user_interruption:overlap:resp",
+                "unit": "sample",
+                "unit_n": 200
+              },
+              "interval_n": 393,
+              "mean_s": 1.128885496183206,
+              "median_s": 1.0599999999999996,
+              "samples": 200,
+              "zero_interval_samples": 0
+            },
+            "stop": {
+              "bootstrap_pooled_mean": {
+                "ci95": [
+                  0.7479958762886597,
+                  0.8432416666666666
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:user_interruption:overlap:stop",
+                "unit": "sample",
+                "unit_n": 200
+              },
+              "interval_n": 199,
+              "mean_s": 0.7959999999999998,
+              "median_s": 0.7960000000000003,
+              "samples": 200,
+              "zero_interval_samples": 20
+            }
+          },
+          "population": 200,
+          "status": {
+            "label_model_speech_at_output_end": 147,
+            "label_user_ends_without_later_model_start": 5,
+            "ok": 200
+          }
+        },
+        "timing_supplementary_clean": {
+          "ineligible_reasons": {},
+          "manifest_flags": {
+            "audio_received_after_T": 200,
+            "playout_active_at_T": 192
+          },
+          "official_all_intervals": {
+            "reduction": "campaign reduction of official per-sample intervals (end - start); official source defines no scalar aggregate",
+            "response": {
+              "bootstrap_pooled_mean": {
+                "ci95": [
+                  0.9933993231810492,
+                  1.0805708483801748
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:user_interruption:clean:resp",
+                "unit": "sample",
+                "unit_n": 200
+              },
+              "interval_n": 195,
+              "mean_s": 1.0335794871794872,
+              "median_s": 0.964,
+              "samples": 200,
+              "zero_interval_samples": 7
+            },
+            "stop": {
+              "bootstrap_pooled_mean": {
+                "ci95": [
+                  0.5108363636363636,
+                  0.7928799999999996
+                ],
+                "empty_replicates": 0,
+                "method": "percentile",
+                "replicates": 2000,
+                "seed": "20260925:model:user_interruption:clean:stop",
+                "unit": "sample",
+                "unit_n": 200
+              },
+              "interval_n": 9,
+              "mean_s": 0.6431111111111112,
+              "median_s": 0.6679999999999999,
+              "samples": 200,
+              "zero_interval_samples": 191
+            }
+          },
+          "population": 200,
+          "status": {
+            "label_model_speech_at_output_end": 41,
+            "label_user_ends_without_later_model_start": 7,
+            "ok": 200
+          }
+        }
+      }
+    }
+  },
+  "generated_at": "2026-10-09T21:02:51.879419+00:00",
+  "populations": {
+    "model": {
+      "manifest_sha256": "8e1bdde483e8c4f26cbda6eafffa9e048b8cc4ce252e99c15d13f68c96af88b9",
+      "sample_ids": [
+        "background_speech/1",
+        "background_speech/10",
+        "background_speech/100",
+        "background_speech/11",
+        "background_speech/12",
+        "background_speech/13",
+        "background_speech/14",
+        "background_speech/15",
+        "background_speech/16",
+        "background_speech/17",
+        "background_speech/18",
+        "background_speech/19",
+        "background_speech/2",
+        "background_speech/20",
+        "background_speech/21",
+        "background_speech/22",
+        "background_speech/23",
+        "background_speech/24",
+        "background_speech/25",
+        "background_speech/26",
+        "background_speech/27",
+        "background_speech/28",
+        "background_speech/29",
+        "background_speech/3",
+        "background_speech/30",
+        "background_speech/31",
+        "background_speech/32",
+        "background_speech/33",
+        "background_speech/34",
+        "background_speech/35",
+        "background_speech/36",
+        "background_speech/37",
+        "background_speech/38",
+        "background_speech/39",
+        "background_speech/4",
+        "background_speech/40",
+        "background_speech/41",
+        "background_speech/42",
+        "background_speech/43",
+        "background_speech/44",
+        "background_speech/45",
+        "background_speech/46",
+        "background_speech/47",
+        "background_speech/48",
+        "background_speech/49",
+        "background_speech/5",
+        "background_speech/50",
+        "background_speech/51",
+        "background_speech/52",
+        "background_speech/53",
+        "background_speech/54",
+        "background_speech/55",
+        "background_speech/56",
+        "background_speech/57",
+        "background_speech/58",
+        "background_speech/59",
+        "background_speech/6",
+        "background_speech/60",
+        "background_speech/61",
+        "background_speech/62",
+        "background_speech/63",
+        "background_speech/64",
+        "background_speech/65",
+        "background_speech/66",
+        "background_speech/67",
+        "background_speech/68",
+        "background_speech/69",
+        "background_speech/7",
+        "background_speech/70",
+        "background_speech/71",
+        "background_speech/72",
+        "background_speech/73",
+        "background_speech/74",
+        "background_speech/75",
+        "background_speech/76",
+        "background_speech/77",
+        "background_speech/78",
+        "background_speech/79",
+        "background_speech/8",
+        "background_speech/80",
+        "background_speech/81",
+        "background_speech/82",
+        "background_speech/83",
+        "background_speech/84",
+        "background_speech/85",
+        "background_speech/86",
+        "background_speech/87",
+        "background_speech/88",
+        "background_speech/89",
+        "background_speech/9",
+        "background_speech/90",
+        "background_speech/91",
+        "background_speech/92",
+        "background_speech/93",
+        "background_speech/94",
+        "background_speech/95",
+        "background_speech/96",
+        "background_speech/97",
+        "background_speech/98",
+        "background_speech/99",
+        "talking_to_other/1",
+        "talking_to_other/10",
+        "talking_to_other/100",
+        "talking_to_other/11",
+        "talking_to_other/12",
+        "talking_to_other/13",
+        "talking_to_other/14",
+        "talking_to_other/15",
+        "talking_to_other/16",
+        "talking_to_other/17",
+        "talking_to_other/18",
+        "talking_to_other/19",
+        "talking_to_other/2",
+        "talking_to_other/20",
+        "talking_to_other/21",
+        "talking_to_other/22",
+        "talking_to_other/23",
+        "talking_to_other/24",
+        "talking_to_other/25",
+        "talking_to_other/26",
+        "talking_to_other/27",
+        "talking_to_other/28",
+        "talking_to_other/29",
+        "talking_to_other/3",
+        "talking_to_other/30",
+        "talking_to_other/31",
+        "talking_to_other/32",
+        "talking_to_other/33",
+        "talking_to_other/34",
+        "talking_to_other/35",
+        "talking_to_other/36",
+        "talking_to_other/37",
+        "talking_to_other/38",
+        "talking_to_other/39",
+        "talking_to_other/4",
+        "talking_to_other/40",
+        "talking_to_other/41",
+        "talking_to_other/42",
+        "talking_to_other/43",
+        "talking_to_other/44",
+        "talking_to_other/45",
+        "talking_to_other/46",
+        "talking_to_other/47",
+        "talking_to_other/48",
+        "talking_to_other/49",
+        "talking_to_other/5",
+        "talking_to_other/50",
+        "talking_to_other/51",
+        "talking_to_other/52",
+        "talking_to_other/53",
+        "talking_to_other/54",
+        "talking_to_other/55",
+        "talking_to_other/56",
+        "talking_to_other/57",
+        "talking_to_other/58",
+        "talking_to_other/59",
+        "talking_to_other/6",
+        "talking_to_other/60",
+        "talking_to_other/61",
+        "talking_to_other/62",
+        "talking_to_other/63",
+        "talking_to_other/64",
+        "talking_to_other/65",
+        "talking_to_other/66",
+        "talking_to_other/67",
+        "talking_to_other/68",
+        "talking_to_other/69",
+        "talking_to_other/7",
+        "talking_to_other/70",
+        "talking_to_other/71",
+        "talking_to_other/72",
+        "talking_to_other/73",
+        "talking_to_other/74",
+        "talking_to_other/75",
+        "talking_to_other/76",
+        "talking_to_other/77",
+        "talking_to_other/78",
+        "talking_to_other/79",
+        "talking_to_other/8",
+        "talking_to_other/80",
+        "talking_to_other/81",
+        "talking_to_other/82",
+        "talking_to_other/83",
+        "talking_to_other/84",
+        "talking_to_other/85",
+        "talking_to_other/86",
+        "talking_to_other/87",
+        "talking_to_other/88",
+        "talking_to_other/89",
+        "talking_to_other/9",
+        "talking_to_other/90",
+        "talking_to_other/91",
+        "talking_to_other/92",
+        "talking_to_other/93",
+        "talking_to_other/94",
+        "talking_to_other/95",
+        "talking_to_other/96",
+        "talking_to_other/97",
+        "talking_to_other/98",
+        "talking_to_other/99",
+        "user_backchannel/1",
+        "user_backchannel/10",
+        "user_backchannel/11",
+        "user_backchannel/12",
+        "user_backchannel/13",
+        "user_backchannel/14",
+        "user_backchannel/15",
+        "user_backchannel/16",
+        "user_backchannel/17",
+        "user_backchannel/18",
+        "user_backchannel/19",
+        "user_backchannel/2",
+        "user_backchannel/20",
+        "user_backchannel/21",
+        "user_backchannel/22",
+        "user_backchannel/23",
+        "user_backchannel/24",
+        "user_backchannel/25",
+        "user_backchannel/26",
+        "user_backchannel/27",
+        "user_backchannel/28",
+        "user_backchannel/29",
+        "user_backchannel/3",
+        "user_backchannel/30",
+        "user_backchannel/31",
+        "user_backchannel/32",
+        "user_backchannel/33",
+        "user_backchannel/34",
+        "user_backchannel/35",
+        "user_backchannel/36",
+        "user_backchannel/37",
+        "user_backchannel/38",
+        "user_backchannel/39",
+        "user_backchannel/4",
+        "user_backchannel/40",
+        "user_backchannel/41",
+        "user_backchannel/42",
+        "user_backchannel/43",
+        "user_backchannel/44",
+        "user_backchannel/45",
+        "user_backchannel/46",
+        "user_backchannel/47",
+        "user_backchannel/48",
+        "user_backchannel/49",
+        "user_backchannel/5",
+        "user_backchannel/50",
+        "user_backchannel/51",
+        "user_backchannel/52",
+        "user_backchannel/53",
+        "user_backchannel/54",
+        "user_backchannel/55",
+        "user_backchannel/56",
+        "user_backchannel/57",
+        "user_backchannel/58",
+        "user_backchannel/59",
+        "user_backchannel/6",
+        "user_backchannel/60",
+        "user_backchannel/61",
+        "user_backchannel/62",
+        "user_backchannel/63",
+        "user_backchannel/64",
+        "user_backchannel/65",
+        "user_backchannel/66",
+        "user_backchannel/67",
+        "user_backchannel/68",
+        "user_backchannel/69",
+        "user_backchannel/7",
+        "user_backchannel/70",
+        "user_backchannel/71",
+        "user_backchannel/72",
+        "user_backchannel/73",
+        "user_backchannel/74",
+        "user_backchannel/75",
+        "user_backchannel/76",
+        "user_backchannel/77",
+        "user_backchannel/78",
+        "user_backchannel/79",
+        "user_backchannel/8",
+        "user_backchannel/80",
+        "user_backchannel/81",
+        "user_backchannel/82",
+        "user_backchannel/83",
+        "user_backchannel/84",
+        "user_backchannel/85",
+        "user_backchannel/86",
+        "user_backchannel/87",
+        "user_backchannel/88",
+        "user_backchannel/89",
+        "user_backchannel/9",
+        "user_backchannel/90",
+        "user_backchannel/91",
+        "user_backchannel/92",
+        "user_backchannel/93",
+        "user_backchannel/94",
+        "user_backchannel/95",
+        "user_backchannel/96",
+        "user_backchannel/97",
+        "user_backchannel/98",
+        "user_interruption/1",
+        "user_interruption/10",
+        "user_interruption/100",
+        "user_interruption/101",
+        "user_interruption/102",
+        "user_interruption/103",
+        "user_interruption/104",
+        "user_interruption/105",
+        "user_interruption/106",
+        "user_interruption/107",
+        "user_interruption/108",
+        "user_interruption/109",
+        "user_interruption/11",
+        "user_interruption/110",
+        "user_interruption/111",
+        "user_interruption/112",
+        "user_interruption/113",
+        "user_interruption/114",
+        "user_interruption/115",
+        "user_interruption/116",
+        "user_interruption/117",
+        "user_interruption/118",
+        "user_interruption/119",
+        "user_interruption/12",
+        "user_interruption/120",
+        "user_interruption/121",
+        "user_interruption/122",
+        "user_interruption/123",
+        "user_interruption/124",
+        "user_interruption/125",
+        "user_interruption/126",
+        "user_interruption/127",
+        "user_interruption/128",
+        "user_interruption/129",
+        "user_interruption/13",
+        "user_interruption/130",
+        "user_interruption/131",
+        "user_interruption/132",
+        "user_interruption/133",
+        "user_interruption/134",
+        "user_interruption/135",
+        "user_interruption/136",
+        "user_interruption/137",
+        "user_interruption/138",
+        "user_interruption/139",
+        "user_interruption/14",
+        "user_interruption/140",
+        "user_interruption/141",
+        "user_interruption/142",
+        "user_interruption/143",
+        "user_interruption/144",
+        "user_interruption/145",
+        "user_interruption/146",
+        "user_interruption/147",
+        "user_interruption/148",
+        "user_interruption/149",
+        "user_interruption/15",
+        "user_interruption/150",
+        "user_interruption/151",
+        "user_interruption/152",
+        "user_interruption/153",
+        "user_interruption/154",
+        "user_interruption/155",
+        "user_interruption/156",
+        "user_interruption/157",
+        "user_interruption/158",
+        "user_interruption/159",
+        "user_interruption/16",
+        "user_interruption/160",
+        "user_interruption/161",
+        "user_interruption/162",
+        "user_interruption/163",
+        "user_interruption/164",
+        "user_interruption/165",
+        "user_interruption/166",
+        "user_interruption/167",
+        "user_interruption/168",
+        "user_interruption/169",
+        "user_interruption/17",
+        "user_interruption/170",
+        "user_interruption/171",
+        "user_interruption/172",
+        "user_interruption/173",
+        "user_interruption/174",
+        "user_interruption/175",
+        "user_interruption/176",
+        "user_interruption/177",
+        "user_interruption/178",
+        "user_interruption/179",
+        "user_interruption/18",
+        "user_interruption/180",
+        "user_interruption/181",
+        "user_interruption/182",
+        "user_interruption/183",
+        "user_interruption/184",
+        "user_interruption/185",
+        "user_interruption/186",
+        "user_interruption/187",
+        "user_interruption/188",
+        "user_interruption/189",
+        "user_interruption/19",
+        "user_interruption/190",
+        "user_interruption/191",
+        "user_interruption/192",
+        "user_interruption/193",
+        "user_interruption/194",
+        "user_interruption/195",
+        "user_interruption/196",
+        "user_interruption/197",
+        "user_interruption/198",
+        "user_interruption/199",
+        "user_interruption/2",
+        "user_interruption/20",
+        "user_interruption/200",
+        "user_interruption/21",
+        "user_interruption/22",
+        "user_interruption/23",
+        "user_interruption/24",
+        "user_interruption/25",
+        "user_interruption/26",
+        "user_interruption/27",
+        "user_interruption/28",
+        "user_interruption/29",
+        "user_interruption/3",
+        "user_interruption/30",
+        "user_interruption/31",
+        "user_interruption/32",
+        "user_interruption/33",
+        "user_interruption/34",
+        "user_interruption/35",
+        "user_interruption/36",
+        "user_interruption/37",
+        "user_interruption/38",
+        "user_interruption/39",
+        "user_interruption/4",
+        "user_interruption/40",
+        "user_interruption/41",
+        "user_interruption/42",
+        "user_interruption/43",
+        "user_interruption/44",
+        "user_interruption/45",
+        "user_interruption/46",
+        "user_interruption/47",
+        "user_interruption/48",
+        "user_interruption/49",
+        "user_interruption/5",
+        "user_interruption/50",
+        "user_interruption/51",
+        "user_interruption/52",
+        "user_interruption/53",
+        "user_interruption/54",
+        "user_interruption/55",
+        "user_interruption/56",
+        "user_interruption/57",
+        "user_interruption/58",
+        "user_interruption/59",
+        "user_interruption/6",
+        "user_interruption/60",
+        "user_interruption/61",
+        "user_interruption/62",
+        "user_interruption/63",
+        "user_interruption/64",
+        "user_interruption/65",
+        "user_interruption/66",
+        "user_interruption/67",
+        "user_interruption/68",
+        "user_interruption/69",
+        "user_interruption/7",
+        "user_interruption/70",
+        "user_interruption/71",
+        "user_interruption/72",
+        "user_interruption/73",
+        "user_interruption/74",
+        "user_interruption/75",
+        "user_interruption/76",
+        "user_interruption/77",
+        "user_interruption/78",
+        "user_interruption/79",
+        "user_interruption/8",
+        "user_interruption/80",
+        "user_interruption/81",
+        "user_interruption/82",
+        "user_interruption/83",
+        "user_interruption/84",
+        "user_interruption/85",
+        "user_interruption/86",
+        "user_interruption/87",
+        "user_interruption/88",
+        "user_interruption/89",
+        "user_interruption/9",
+        "user_interruption/90",
+        "user_interruption/91",
+        "user_interruption/92",
+        "user_interruption/93",
+        "user_interruption/94",
+        "user_interruption/95",
+        "user_interruption/96",
+        "user_interruption/97",
+        "user_interruption/98",
+        "user_interruption/99"
+      ]
+    }
+  },
+  "reference_revision": "3e799c45a045256f47d5f1c9cda90157e2d2ec9e"
+}

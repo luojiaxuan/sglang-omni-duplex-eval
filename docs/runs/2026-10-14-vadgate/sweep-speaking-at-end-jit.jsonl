@@ -1,0 +1,12 @@
+{"threshold": 0.3, "min_silence_ms": 50, "not_exercised": 88, "response": 107, "speaking_at_end": 5, "response_rate_2s": 0.946, "median_latency_s": 1.2}
+{"threshold": 0.3, "min_silence_ms": 100, "not_exercised": 87, "response": 108, "speaking_at_end": 5, "response_rate_2s": 0.947, "median_latency_s": 1.2}
+{"threshold": 0.3, "min_silence_ms": 300, "not_exercised": 87, "response": 108, "speaking_at_end": 5, "response_rate_2s": 0.947, "median_latency_s": 1.2}
+{"threshold": 0.3, "min_silence_ms": 500, "not_exercised": 84, "response": 111, "speaking_at_end": 5, "response_rate_2s": 0.948, "median_latency_s": 1.2}
+{"threshold": 0.5, "min_silence_ms": 50, "not_exercised": 88, "response": 108, "speaking_at_end": 4, "response_rate_2s": 0.955, "median_latency_s": 1.2}
+{"threshold": 0.5, "min_silence_ms": 100, "not_exercised": 87, "response": 109, "speaking_at_end": 4, "response_rate_2s": 0.956, "median_latency_s": 1.2}
+{"threshold": 0.5, "min_silence_ms": 300, "not_exercised": 87, "response": 109, "speaking_at_end": 4, "response_rate_2s": 0.956, "median_latency_s": 1.2}
+{"threshold": 0.5, "min_silence_ms": 500, "not_exercised": 85, "response": 111, "speaking_at_end": 4, "response_rate_2s": 0.957, "median_latency_s": 1.2}
+{"threshold": 0.7, "min_silence_ms": 50, "not_exercised": 91, "response": 105, "speaking_at_end": 4, "response_rate_2s": 0.954, "median_latency_s": 1.12}
+{"threshold": 0.7, "min_silence_ms": 100, "not_exercised": 90, "response": 106, "speaking_at_end": 4, "response_rate_2s": 0.955, "median_latency_s": 1.12}
+{"threshold": 0.7, "min_silence_ms": 300, "not_exercised": 89, "response": 107, "speaking_at_end": 4, "response_rate_2s": 0.955, "median_latency_s": 1.2}
+{"threshold": 0.7, "min_silence_ms": 500, "not_exercised": 87, "response": 109, "speaking_at_end": 4, "response_rate_2s": 0.956, "median_latency_s": 1.2}

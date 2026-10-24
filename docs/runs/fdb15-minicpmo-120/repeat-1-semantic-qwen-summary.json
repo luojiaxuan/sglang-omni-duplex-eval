@@ -1,0 +1,283 @@
+{
+  "scope": "Custom semantic A/F/U judge Qwen/Qwen3.8-27B@1d4bf0f2ff60 via OpenAI-compatible chat completions with JSON-schema constrained output; thinking=True, temperature=0.0; transcript-supported semantics only",
+  "inputs_sha256": "f3cb931cdf6597f41e0064aceb101f6fd3c44fbada3cde02bece1aa52ce8704a",
+  "overall_axes": {
+    "interaction_handling": {
+      "selected": 120,
+      "accepted": 92,
+      "failed": 24,
+      "unresolved": 4
+    },
+    "relevance": {
+      "selected": 120,
+      "accepted": 93,
+      "failed": 15,
+      "unresolved": 12
+    },
+    "grounding": {
+      "selected": 120,
+      "accepted": 76,
+      "failed": 29,
+      "unresolved": 15
+    }
+  },
+  "overall_joint": {
+    "selected": 120,
+    "accepted": 57,
+    "failed": 48,
+    "unresolved": 15
+  },
+  "uncertainty_note": "120 selected, 120 assessable, 15 submitted, 15 returned. One generation per pair; the six authored controls are a rubric check, not human calibration or judge accuracy.",
+  "categories": {
+    "all": {
+      "interaction_handling": {
+        "selected": 120,
+        "accepted": 92,
+        "failed": 24,
+        "unresolved": 4,
+        "quality_percent": 79.3103448275862,
+        "coverage_percent": 96.66666666666667,
+        "unresolved_bounds_percent": [
+          76.66666666666667,
+          80.0
+        ]
+      },
+      "relevance": {
+        "selected": 120,
+        "accepted": 93,
+        "failed": 15,
+        "unresolved": 12,
+        "quality_percent": 86.11111111111111,
+        "coverage_percent": 90.0,
+        "unresolved_bounds_percent": [
+          77.5,
+          87.5
+        ]
+      },
+      "grounding": {
+        "selected": 120,
+        "accepted": 76,
+        "failed": 29,
+        "unresolved": 15,
+        "quality_percent": 72.38095238095238,
+        "coverage_percent": 87.5,
+        "unresolved_bounds_percent": [
+          63.333333333333336,
+          75.83333333333333
+        ]
+      },
+      "joint": {
+        "selected": 120,
+        "accepted": 57,
+        "failed": 48,
+        "unresolved": 15,
+        "quality_percent": 54.285714285714285,
+        "coverage_percent": 87.5,
+        "unresolved_bounds_percent": [
+          47.5,
+          60.0
+        ]
+      }
+    },
+    "background_speech": {
+      "interaction_handling": {
+        "selected": 30,
+        "accepted": 24,
+        "failed": 4,
+        "unresolved": 2,
+        "quality_percent": 85.71428571428571,
+        "coverage_percent": 93.33333333333333,
+        "unresolved_bounds_percent": [
+          80.0,
+          86.66666666666667
+        ]
+      },
+      "relevance": {
+        "selected": 30,
+        "accepted": 27,
+        "failed": 0,
+        "unresolved": 3,
+        "quality_percent": 100.0,
+        "coverage_percent": 90.0,
+        "unresolved_bounds_percent": [
+          90.0,
+          100.0
+        ]
+      },
+      "grounding": {
+        "selected": 30,
+        "accepted": 13,
+        "failed": 13,
+        "unresolved": 4,
+        "quality_percent": 50.0,
+        "coverage_percent": 86.66666666666667,
+        "unresolved_bounds_percent": [
+          43.333333333333336,
+          56.666666666666664
+        ]
+      },
+      "joint": {
+        "selected": 30,
+        "accepted": 12,
+        "failed": 15,
+        "unresolved": 3,
+        "quality_percent": 44.44444444444444,
+        "coverage_percent": 90.0,
+        "unresolved_bounds_percent": [
+          40.0,
+          50.0
+        ]
+      }
+    },
+    "talking_to_other": {
+      "interaction_handling": {
+        "selected": 30,
+        "accepted": 19,
+        "failed": 10,
+        "unresolved": 1,
+        "quality_percent": 65.51724137931035,
+        "coverage_percent": 96.66666666666667,
+        "unresolved_bounds_percent": [
+          63.333333333333336,
+          66.66666666666667
+        ]
+      },
+      "relevance": {
+        "selected": 30,
+        "accepted": 21,
+        "failed": 5,
+        "unresolved": 4,
+        "quality_percent": 80.76923076923077,
+        "coverage_percent": 86.66666666666667,
+        "unresolved_bounds_percent": [
+          70.0,
+          83.33333333333333
+        ]
+      },
+      "grounding": {
+        "selected": 30,
+        "accepted": 11,
+        "failed": 14,
+        "unresolved": 5,
+        "quality_percent": 44.0,
+        "coverage_percent": 83.33333333333333,
+        "unresolved_bounds_percent": [
+          36.666666666666664,
+          53.333333333333336
+        ]
+      },
+      "joint": {
+        "selected": 30,
+        "accepted": 7,
+        "failed": 18,
+        "unresolved": 5,
+        "quality_percent": 28.0,
+        "coverage_percent": 83.33333333333333,
+        "unresolved_bounds_percent": [
+          23.333333333333332,
+          40.0
+        ]
+      }
+    },
+    "user_backchannel": {
+      "interaction_handling": {
+        "selected": 30,
+        "accepted": 30,
+        "failed": 0,
+        "unresolved": 0,
+        "quality_percent": 100.0,
+        "coverage_percent": 100.0,
+        "unresolved_bounds_percent": [
+          100.0,
+          100.0
+        ]
+      },
+      "relevance": {
+        "selected": 30,
+        "accepted": 29,
+        "failed": 0,
+        "unresolved": 1,
+        "quality_percent": 100.0,
+        "coverage_percent": 96.66666666666667,
+        "unresolved_bounds_percent": [
+          96.66666666666667,
+          100.0
+        ]
+      },
+      "grounding": {
+        "selected": 30,
+        "accepted": 28,
+        "failed": 0,
+        "unresolved": 2,
+        "quality_percent": 100.0,
+        "coverage_percent": 93.33333333333333,
+        "unresolved_bounds_percent": [
+          93.33333333333333,
+          100.0
+        ]
+      },
+      "joint": {
+        "selected": 30,
+        "accepted": 28,
+        "failed": 0,
+        "unresolved": 2,
+        "quality_percent": 100.0,
+        "coverage_percent": 93.33333333333333,
+        "unresolved_bounds_percent": [
+          93.33333333333333,
+          100.0
+        ]
+      }
+    },
+    "user_interruption": {
+      "interaction_handling": {
+        "selected": 30,
+        "accepted": 19,
+        "failed": 10,
+        "unresolved": 1,
+        "quality_percent": 65.51724137931035,
+        "coverage_percent": 96.66666666666667,
+        "unresolved_bounds_percent": [
+          63.333333333333336,
+          66.66666666666667
+        ]
+      },
+      "relevance": {
+        "selected": 30,
+        "accepted": 16,
+        "failed": 10,
+        "unresolved": 4,
+        "quality_percent": 61.53846153846154,
+        "coverage_percent": 86.66666666666667,
+        "unresolved_bounds_percent": [
+          53.333333333333336,
+          66.66666666666667
+        ]
+      },
+      "grounding": {
+        "selected": 30,
+        "accepted": 24,
+        "failed": 2,
+        "unresolved": 4,
+        "quality_percent": 92.3076923076923,
+        "coverage_percent": 86.66666666666667,
+        "unresolved_bounds_percent": [
+          80.0,
+          93.33333333333333
+        ]
+      },
+      "joint": {
+        "selected": 30,
+        "accepted": 10,
+        "failed": 15,
+        "unresolved": 5,
+        "quality_percent": 40.0,
+        "coverage_percent": 83.33333333333333,
+        "unresolved_bounds_percent": [
+          33.333333333333336,
+          50.0
+        ]
+      }
+    }
+  }
+}

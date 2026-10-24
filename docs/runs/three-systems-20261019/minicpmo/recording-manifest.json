@@ -1,0 +1,42 @@
+{
+ "profile": "minicpmo-native-pr2377",
+ "server": {
+  "revision": "3dd888e02ac44fd64414241fc9ea55ab80a22adc",
+  "revision_source": "operator_supplied",
+  "model": "openbmb/MiniCPM-o-4_5",
+  "model_revision": "503e754207c94da6bb26850b4469f367c9ea3582",
+  "runtime": null,
+  "identity_source": "operator_supplied",
+  "served_models": {
+   "url": "http://127.0.0.1:28097/v1/models",
+   "ids": [
+    "/data/runs/20261019-three/fdb/models/MiniCPM-o-4_5"
+   ]
+  }
+ },
+ "config": {
+  "scenario": "continuous",
+  "variants": {
+   "overlap": "input",
+   "clean": "clean_input"
+  },
+  "timeout_s": 90.0,
+  "concurrency": 1,
+  "packet_ms": 80,
+  "pacing_tolerance_s": 0.08,
+  "transport": {
+   "max_message_bytes": 8388608,
+   "compression": null,
+   "keepalive_ping": false,
+   "post_close_s": 0.2,
+   "admission_retries": 3,
+   "admission_backoff_s": 0.25,
+   "input_end": "first append send start + unpadded input duration",
+   "input_send_receipts": "input-send-receipts.json"
+  },
+  "response_cancel": "never sent",
+  "protocol": "native",
+  "legacy": null,
+  "turn_based": null
+ }
+}

@@ -1,0 +1,9 @@
+{
+ "icl_leading_silence_s_mean": 0.384,
+ "icl_leading_silence_s_median": 0.355,
+ "icl_leading_silence_s_max": 1.33,
+ "sentences": 18,
+ "leading_silence_s_mean": 0.044,
+ "leading_silence_s_median": 0.04,
+ "leading_silence_s_max": 0.1
+}

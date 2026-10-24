@@ -1,0 +1,37 @@
+{
+ "outcomes": {
+  "not_exercised": 87,
+  "response": 109,
+  "speaking_at_end": 4
+ },
+ "not_exercised_with_speech_before_onset": 83,
+ "gap_last_speech_to_onset_s": {
+  "min": 0.069,
+  "p10": 0.314,
+  "median": 1.317,
+  "p90": 3.002,
+  "under_0.3": 5
+ },
+ "interruption_len_s": {
+  "min": 1.7,
+  "p10": 2.14,
+  "median": 3.42,
+  "p90": 4.23
+ },
+ "unified-3": {
+  "response_rate_1s": "84/200 = 0.42 ci [0.354, 0.489] bounds [0.42, 0.42]",
+  "response_rate_2s": "193/200 = 0.965 ci [0.93, 0.983] bounds [0.965, 0.965]",
+  "response_rate_5s": "198/200 = 0.99 ci [0.964, 0.997] bounds [0.99, 0.99]",
+  "no_response_rate": "2/200 = 0.01 ci [0.003, 0.036] bounds [0.01, 0.01]",
+  "response_latency_s": "median 1.2 [1.04, 1.28] p90 1.6 198/200"
+ },
+ "unified-4": {
+  "exercised_rate": "113/200 = 0.565 ci [0.496, 0.632] bounds [0.565, 0.565]",
+  "speaking_at_end_rate": "4/113 = 0.035 ci [0.014, 0.087] bounds [0.02, 0.455]",
+  "response_rate_1s": "47/113 = 0.416 ci [0.329, 0.508] bounds [0.235, 0.67]",
+  "response_rate_2s": "108/113 = 0.956 ci [0.901, 0.981] bounds [0.54, 0.975]",
+  "response_rate_5s": "109/113 = 0.965 ci [0.913, 0.986] bounds [0.545, 0.98]",
+  "no_response_rate": "0/113 = 0.0 ci [0.0, 0.033] bounds [0.0, 0.435]",
+  "response_latency_s": "median 1.2 [0.96, 1.28] p90 1.68 109/113"
+ }
+}

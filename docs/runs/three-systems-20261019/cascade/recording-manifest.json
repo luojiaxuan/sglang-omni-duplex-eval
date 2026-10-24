@@ -1,0 +1,49 @@
+{
+ "profile": "turn-based",
+ "server": {
+  "revision": "3dd888e02ac44fd64414241fc9ea55ab80a22adc",
+  "revision_source": "operator_supplied",
+  "model": "streaming-cascade/qwen3-asr-qwen3-tts-customvoice",
+  "model_revision": "3dd888e02ac44fd64414241fc9ea55ab80a22adc",
+  "runtime": null,
+  "identity_source": "operator_supplied",
+  "served_models": {
+   "url": "http://127.0.0.1:28865/v1/models",
+   "ids": [
+    "examples/streaming_cascade/profiles/qwen3-asr-qwen3-tts-customvoice-bench"
+   ]
+  }
+ },
+ "config": {
+  "scenario": "continuous",
+  "variants": {
+   "overlap": "input",
+   "clean": "clean_input"
+  },
+  "timeout_s": 90.0,
+  "concurrency": 1,
+  "packet_ms": 80,
+  "pacing_tolerance_s": 0.08,
+  "transport": {
+   "max_message_bytes": 8388608,
+   "compression": null,
+   "keepalive_ping": false,
+   "post_close_s": 0.2,
+   "admission_retries": 3,
+   "admission_backoff_s": 0.25,
+   "input_end": "first append send start + unpadded input duration",
+   "input_send_receipts": "input-send-receipts.json"
+  },
+  "response_cancel": "never sent",
+  "protocol": "turn_based",
+  "legacy": null,
+  "turn_based": {
+   "turn_detection": {
+    "type": "server_vad",
+    "silence_duration_ms": 800
+   },
+   "barge_in_cut": "playout cursor cut at the client receipt of a response.done with status cancelled",
+   "session_end": "sglang.input_audio.end at the input end, then session.close after sglang.input_audio.drained, which follows the server's answer to the last utterance; no deadline other than the session timeout bounds that wait"
+  }
+ }
+}

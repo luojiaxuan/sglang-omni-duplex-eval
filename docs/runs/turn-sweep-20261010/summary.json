@@ -1,0 +1,106 @@
+{
+ "vad500": {
+  "sessions": {
+   "pass": 335,
+   "fail": 0,
+   "error": 0,
+   "invalid": 0,
+   "pending": 0
+  },
+  "subsets": {
+   "candor_pause_handling": {
+    "selected": 216,
+    "evaluated": 216,
+    "result": {
+     "Average take turn": 0.1388888888888889
+    }
+   },
+   "candor_turn_taking": {
+    "selected": 119,
+    "evaluated": 119,
+    "result": {
+     "Average latency": 0.6927731092437117,
+     "Average take turn": 1.0
+    }
+   }
+  }
+ },
+ "vad800": {
+  "sessions": {
+   "pass": 335,
+   "fail": 0,
+   "error": 0,
+   "invalid": 0,
+   "pending": 0
+  },
+  "subsets": {
+   "candor_pause_handling": {
+    "selected": 216,
+    "evaluated": 216,
+    "result": {
+     "Average take turn": 0.046296296296296294
+    }
+   },
+   "candor_turn_taking": {
+    "selected": 119,
+    "evaluated": 119,
+    "result": {
+     "Average latency": 1.0431355932203545,
+     "Average take turn": 0.9915966386554622
+    }
+   }
+  }
+ },
+ "vad1200": {
+  "sessions": {
+   "pass": 334,
+   "fail": 1,
+   "error": 0,
+   "invalid": 0,
+   "pending": 0
+  },
+  "subsets": {
+   "candor_pause_handling": {
+    "selected": 216,
+    "evaluated": 215,
+    "result": {
+     "Average take turn": 0.018604651162790697
+    }
+   },
+   "candor_turn_taking": {
+    "selected": 119,
+    "evaluated": 119,
+    "result": {
+     "Average latency": 1.4796638655462349,
+     "Average take turn": 1.0
+    }
+   }
+  }
+ },
+ "semmed": {
+  "sessions": {
+   "pass": 333,
+   "fail": 2,
+   "error": 0,
+   "invalid": 0,
+   "pending": 0
+  },
+  "subsets": {
+   "candor_pause_handling": {
+    "selected": 216,
+    "evaluated": 214,
+    "result": {
+     "Average take turn": 0.037383177570093455
+    }
+   },
+   "candor_turn_taking": {
+    "selected": 119,
+    "evaluated": 119,
+    "result": {
+     "Average latency": 2.0122881355932356,
+     "Average take turn": 0.9915966386554622
+    }
+   }
+  }
+ }
+}

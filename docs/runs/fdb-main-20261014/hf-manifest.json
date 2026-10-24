@@ -1,0 +1,72 @@
+{
+ "minicpmo-g0.tar": {
+  "bytes": 879831040,
+  "sha256": "ed3dc779cb8b8abd488510caef9615057a97c83a170753ee52d31a05638bd5d9",
+  "members": [
+   "minicpmo-g0"
+  ]
+ },
+ "minicpmo-g1.tar": {
+  "bytes": 894412800,
+  "sha256": "9cd9331ce72f9a4129bcaf96ff3e8d0d8e19da81c4361783310b06b4f191d490",
+  "members": [
+   "minicpmo-g1"
+  ]
+ },
+ "minicpmo-g2.tar": {
+  "bytes": 886609920,
+  "sha256": "82b6d240e4091937296893032858e1c5540aeb4323656c0ac7ab41e604178b13",
+  "members": [
+   "minicpmo-g2"
+  ]
+ },
+ "minicpmo-g3.tar": {
+  "bytes": 913141760,
+  "sha256": "578b83f7f2829f2771b12336886453b689e6a558299a5be7c9218df87cd9b405",
+  "members": [
+   "minicpmo-g3"
+  ]
+ },
+ "minicpmo-g4.tar": {
+  "bytes": 896276480,
+  "sha256": "349e25afe596ed6cc1728b6d895413bee880df24c453ca61b83fb3825b0cd8d8",
+  "members": [
+   "minicpmo-g4"
+  ]
+ },
+ "minicpmo-g5.tar": {
+  "bytes": 885002240,
+  "sha256": "418d6e913882037e347a18e32149aa89e6d1d0821987bcfcf16d48a1139665d7",
+  "members": [
+   "minicpmo-g5"
+  ]
+ },
+ "minicpmo-g6.tar": {
+  "bytes": 918958080,
+  "sha256": "2092f19a2f03f6da61980733a787077b6654835bb1f61d89a466a44b8c5bcf18",
+  "members": [
+   "minicpmo-g6"
+  ]
+ },
+ "minicpmo-g7.tar": {
+  "bytes": 884070400,
+  "sha256": "6032f11545c4c803281ef3dff68a65a335c29d28890712171a9f8c02999b2520",
+  "members": [
+   "minicpmo-g7"
+  ]
+ },
+ "logs-and-scripts.tar": {
+  "bytes": 3031040,
+  "sha256": "1af8b5716dcbced42369e237786969c3a6e474ecdd8b566f272f0740f3a354cb",
+  "members": [
+   "logs",
+   "shards",
+   "setup.sh",
+   "shards.py",
+   "record_minicpmo.sh",
+   "record_qwen.sh",
+   "record_nemo.sh",
+   "pyshim"
+  ]
+ }
+}

@@ -1,0 +1,134 @@
+[
+ {
+  "concurrency": 1,
+  "variants_passed": 32,
+  "input_pacing_violations": 0,
+  "admission_denials": 0,
+  "initial_delay_s": {
+   "count": 32,
+   "p50": 4.107770833333333,
+   "p90": 4.129616666666667,
+   "max": 5.150875
+  },
+  "units": 432,
+  "units_finished": 432,
+  "deadline_misses": 0,
+  "ready_to_first_output_ms": {
+   "count": 432,
+   "p50": 178.103158,
+   "p95": 231.8024679,
+   "max": 651.897389
+  },
+  "ready_to_finished_ms": {
+   "count": 432,
+   "p50": 178.764294,
+   "p95": 232.61948375,
+   "max": 652.636286
+  },
+  "thinker_service_ms": {
+   "count": 432,
+   "p50": 36.773909,
+   "p95": 63.58237535,
+   "max": 287.481261
+  }
+ },
+ {
+  "concurrency": 2,
+  "variants_passed": 32,
+  "input_pacing_violations": 0,
+  "admission_denials": 0,
+  "initial_delay_s": {
+   "count": 32,
+   "p50": 4.140124999999999,
+   "p90": 5.1786666666666665,
+   "max": 5.2415416666666665
+  },
+  "units": 432,
+  "units_finished": 432,
+  "deadline_misses": 0,
+  "ready_to_first_output_ms": {
+   "count": 432,
+   "p50": 204.124042,
+   "p95": 280.60528339999996,
+   "max": 772.330637
+  },
+  "ready_to_finished_ms": {
+   "count": 432,
+   "p50": 204.74746249999998,
+   "p95": 296.43202395,
+   "max": 773.557823
+  },
+  "thinker_service_ms": {
+   "count": 432,
+   "p50": 41.8978885,
+   "p95": 79.39881365,
+   "max": 357.536302
+  }
+ },
+ {
+  "concurrency": 4,
+  "variants_passed": 32,
+  "input_pacing_violations": 0,
+  "admission_denials": 0,
+  "initial_delay_s": {
+   "count": 32,
+   "p50": 4.157,
+   "p90": 5.219304166666666,
+   "max": 8.151791666666666
+  },
+  "units": 432,
+  "units_finished": 432,
+  "deadline_misses": 0,
+  "ready_to_first_output_ms": {
+   "count": 432,
+   "p50": 209.104675,
+   "p95": 349.0383334999999,
+   "max": 771.671685
+  },
+  "ready_to_finished_ms": {
+   "count": 432,
+   "p50": 210.2895315,
+   "p95": 354.22928844999996,
+   "max": 772.342791
+  },
+  "thinker_service_ms": {
+   "count": 432,
+   "p50": 44.345813,
+   "p95": 106.89602645,
+   "max": 274.526354
+  }
+ },
+ {
+  "concurrency": 8,
+  "variants_passed": 32,
+  "input_pacing_violations": 0,
+  "admission_denials": 0,
+  "initial_delay_s": {
+   "count": 31,
+   "p50": 4.230583333333334,
+   "p90": 5.327708333333334,
+   "max": 5.328833333333334
+  },
+  "units": 432,
+  "units_finished": 432,
+  "deadline_misses": 0,
+  "ready_to_first_output_ms": {
+   "count": 432,
+   "p50": 278.787605,
+   "p95": 464.40618974999995,
+   "max": 602.343753
+  },
+  "ready_to_finished_ms": {
+   "count": 432,
+   "p50": 280.286547,
+   "p95": 469.57907064999995,
+   "max": 615.901948
+  },
+  "thinker_service_ms": {
+   "count": 432,
+   "p50": 56.5798765,
+   "p95": 175.75353925,
+   "max": 345.683786
+  }
+ }
+]

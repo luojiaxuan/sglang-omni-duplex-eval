@@ -1,0 +1,245 @@
+{
+  "levels": [
+    {
+      "run": "/data/runs/20261019-three/fdb/runs/qwen3omni/repeat-1/recording/shard-0",
+      "profile": "turn-based",
+      "concurrency": 1,
+      "mean_open_sessions": 0.9935530083845215,
+      "sessions": 200,
+      "sessions_failed": 0,
+      "admission_denials": 0,
+      "input_pacing_violations": 0,
+      "units_expected": null,
+      "units_missed": null,
+      "unit_miss_rate": null,
+      "unit_lag_s": {
+        "count": 0,
+        "p50": null,
+        "p90": null,
+        "p99": null,
+        "max": null
+      },
+      "replies": 299,
+      "replies_with_audio_after_text": null,
+      "first_audio_latency_s": {
+        "count": 299,
+        "p50": 0.16498029208742082,
+        "p90": 0.17440086510032415,
+        "p99": 0.44094826342072335,
+        "max": 0.5558641829993576
+      },
+      "startup_buffer_needed_s": {
+        "count": 299,
+        "p50": 0.0,
+        "p90": 0.0,
+        "p99": 0.0,
+        "max": 0.08749654819257557
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 1,
+      "underrun_s": 0.007496548118069768,
+      "real_time_factor": {
+        "count": 297,
+        "p50": 0.6257687989925618,
+        "p90": 0.7783757168011892,
+        "p99": 0.8965253152264109,
+        "max": 0.8999122783756133
+      },
+      "unmet_targets": []
+    },
+    {
+      "run": "/data/runs/20261019-three/serving/qwen3omni/c2/concurrency-2",
+      "profile": "turn-based",
+      "concurrency": 2,
+      "mean_open_sessions": 1.9803726964013857,
+      "sessions": 128,
+      "sessions_failed": 0,
+      "admission_denials": 0,
+      "input_pacing_violations": 0,
+      "units_expected": null,
+      "units_missed": null,
+      "unit_miss_rate": null,
+      "unit_lag_s": {
+        "count": 0,
+        "p50": null,
+        "p90": null,
+        "p99": null,
+        "max": null
+      },
+      "replies": 192,
+      "replies_with_audio_after_text": null,
+      "first_audio_latency_s": {
+        "count": 192,
+        "p50": 0.16351767699234188,
+        "p90": 0.21467259516939521,
+        "p99": 0.6935893087461593,
+        "max": 0.8202259731478989
+      },
+      "startup_buffer_needed_s": {
+        "count": 192,
+        "p50": 0.0,
+        "p90": 0.0,
+        "p99": 0.0,
+        "max": 0.0
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 0,
+      "underrun_s": 0.0,
+      "real_time_factor": {
+        "count": 190,
+        "p50": 0.6080514512596751,
+        "p90": 0.7761425339192294,
+        "p99": 0.8569752664477289,
+        "max": 0.8911726835126341
+      },
+      "unmet_targets": []
+    },
+    {
+      "run": "/data/runs/20261019-three/serving/qwen3omni/c4/concurrency-4",
+      "profile": "turn-based",
+      "concurrency": 4,
+      "mean_open_sessions": 3.9113280347375183,
+      "sessions": 128,
+      "sessions_failed": 6,
+      "admission_denials": 0,
+      "input_pacing_violations": 0,
+      "units_expected": null,
+      "units_missed": null,
+      "unit_miss_rate": null,
+      "unit_lag_s": {
+        "count": 0,
+        "p50": null,
+        "p90": null,
+        "p99": null,
+        "max": null
+      },
+      "replies": 184,
+      "replies_with_audio_after_text": null,
+      "first_audio_latency_s": {
+        "count": 184,
+        "p50": 0.16639918449800462,
+        "p90": 0.26246076039969934,
+        "p99": 0.8828725545713655,
+        "max": 1.078540381975472
+      },
+      "startup_buffer_needed_s": {
+        "count": 184,
+        "p50": 0.0,
+        "p90": 0.0,
+        "p99": 0.8534581399988377,
+        "max": 2.2522998170461506
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 7,
+      "underrun_s": 4.5127132586203516,
+      "real_time_factor": {
+        "count": 182,
+        "p50": 0.6191789848719573,
+        "p90": 0.7830934794830575,
+        "p99": 0.8706773510634732,
+        "max": 1.400137086278193
+      },
+      "unmet_targets": [
+        "no failed sessions"
+      ]
+    },
+    {
+      "run": "/data/runs/20261019-three/serving/qwen3omni/c8/concurrency-8",
+      "profile": "turn-based",
+      "concurrency": 8,
+      "mean_open_sessions": 7.769268762801936,
+      "sessions": 128,
+      "sessions_failed": 0,
+      "admission_denials": 0,
+      "input_pacing_violations": 0,
+      "units_expected": null,
+      "units_missed": null,
+      "unit_miss_rate": null,
+      "unit_lag_s": {
+        "count": 0,
+        "p50": null,
+        "p90": null,
+        "p99": null,
+        "max": null
+      },
+      "replies": 189,
+      "replies_with_audio_after_text": null,
+      "first_audio_latency_s": {
+        "count": 189,
+        "p50": 0.1766273151151836,
+        "p90": 0.5353482734411957,
+        "p99": 3.4120125829428436,
+        "max": 4.163640080951154
+      },
+      "startup_buffer_needed_s": {
+        "count": 189,
+        "p50": 0.0,
+        "p90": 0.0,
+        "p99": 3.6889722064789394,
+        "max": 4.437743068905547
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 13,
+      "underrun_s": 22.294845331227407,
+      "real_time_factor": {
+        "count": 186,
+        "p50": 0.60594491483738,
+        "p90": 0.7535491699562669,
+        "p99": 0.8581448633343037,
+        "max": 0.8753844418240107
+      },
+      "unmet_targets": []
+    },
+    {
+      "run": "/data/runs/20261019-three/serving/qwen3omni/c16/concurrency-16",
+      "profile": "turn-based",
+      "concurrency": 16,
+      "mean_open_sessions": 14.131937973555834,
+      "sessions": 128,
+      "sessions_failed": 69,
+      "admission_denials": 0,
+      "input_pacing_violations": 0,
+      "units_expected": null,
+      "units_missed": null,
+      "unit_miss_rate": null,
+      "unit_lag_s": {
+        "count": 0,
+        "p50": null,
+        "p90": null,
+        "p99": null,
+        "max": null
+      },
+      "replies": 81,
+      "replies_with_audio_after_text": null,
+      "first_audio_latency_s": {
+        "count": 81,
+        "p50": 0.6119449690449983,
+        "p90": 4.441000793827698,
+        "p99": 16.1158986304421,
+        "max": 16.637562100077048
+      },
+      "startup_buffer_needed_s": {
+        "count": 81,
+        "p50": 0.0,
+        "p90": 0.2696593292057514,
+        "p99": 16.145118507090956,
+        "max": 16.14525387203321
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 9,
+      "underrun_s": 61.51680174097419,
+      "real_time_factor": {
+        "count": 76,
+        "p50": 0.2799095822056728,
+        "p90": 0.704720011762173,
+        "p99": 1.3052882662312308,
+        "max": 2.442437579879695
+      },
+      "unmet_targets": [
+        "no failed sessions"
+      ]
+    }
+  ],
+  "max_concurrency_meeting_targets": 2,
+  "capacity_bounded": true
+}

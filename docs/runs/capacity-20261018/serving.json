@@ -1,0 +1,1122 @@
+{
+ "c10-r1": {
+  "run": "/data/runs/20261018-h100cap/h100/c10-r1/concurrency-10",
+  "profile": "minicpmo-native-pr2377",
+  "concurrency": 10,
+  "mean_open_sessions": 9.691707745049762,
+  "sessions": 128,
+  "sessions_failed": 0,
+  "admission_denials": 0,
+  "input_pacing_violations": 0,
+  "units_expected": 1744,
+  "units_missed": 220,
+  "unit_miss_rate": 0.12614678899082568,
+  "unit_lag_s": {
+   "count": 1744,
+   "p50": 0.5932043299544603,
+   "p90": 1.0650155201554299,
+   "p99": 1.5056833481532517,
+   "max": 2.332485012942925
+  },
+  "replies": 146,
+  "replies_with_audio_after_text": 12,
+  "first_audio_latency_s": {
+   "count": 146,
+   "p50": 0.6832028495846316,
+   "p90": 1.0819912203587592,
+   "p99": 1.314732648327482,
+   "max": 1.3745023710653186
+  },
+  "startup_buffer_needed_s": {
+   "count": 146,
+   "p50": 0.2928503310540691,
+   "p90": 0.6507374380016699,
+   "p99": 1.1276697530527624,
+   "max": 1.566492201993242
+  },
+  "playback_reserve_s": 0.08,
+  "replies_with_underrun": 116,
+  "underrun_s": 37.285767507273704,
+  "real_time_factor": null,
+  "unmet_targets": [
+   "unit miss rate at most 1%"
+  ]
+ },
+ "c10-r2": {
+  "run": "/data/runs/20261018-h100cap/h100/c10-r2/concurrency-10",
+  "profile": "minicpmo-native-pr2377",
+  "concurrency": 10,
+  "mean_open_sessions": 9.73080942551045,
+  "sessions": 128,
+  "sessions_failed": 0,
+  "admission_denials": 0,
+  "input_pacing_violations": 0,
+  "units_expected": 1744,
+  "units_missed": 0,
+  "unit_miss_rate": 0.0,
+  "unit_lag_s": {
+   "count": 1744,
+   "p50": 0.252383713494055,
+   "p90": 0.4312570870853961,
+   "p99": 0.6492460369132452,
+   "max": 0.8826486789621413
+  },
+  "replies": 150,
+  "replies_with_audio_after_text": 13,
+  "first_audio_latency_s": {
+   "count": 150,
+   "p50": 0.2994177135406062,
+   "p90": 0.4059902450768277,
+   "p99": 0.504843187718652,
+   "max": 0.5470772117841989
+  },
+  "startup_buffer_needed_s": {
+   "count": 150,
+   "p50": 0.15992287185508758,
+   "p90": 0.3629140536766499,
+   "p99": 0.5546102249203239,
+   "max": 0.6180333390366286
+  },
+  "playback_reserve_s": 0.08,
+  "replies_with_underrun": 117,
+  "underrun_s": 16.198511079885066,
+  "real_time_factor": null,
+  "unmet_targets": []
+ },
+ "c10-r3": {
+  "run": "/data/runs/20261018-h100cap/h100/c10-r3/concurrency-10",
+  "profile": "minicpmo-native-pr2377",
+  "concurrency": 10,
+  "mean_open_sessions": 9.708043393590913,
+  "sessions": 128,
+  "sessions_failed": 0,
+  "admission_denials": 0,
+  "input_pacing_violations": 0,
+  "units_expected": 1744,
+  "units_missed": 0,
+  "unit_miss_rate": 0.0,
+  "unit_lag_s": {
+   "count": 1744,
+   "p50": 0.2504056975012645,
+   "p90": 0.43122162609361114,
+   "p99": 0.5653166194469668,
+   "max": 0.7027671739924699
+  },
+  "replies": 150,
+  "replies_with_audio_after_text": 13,
+  "first_audio_latency_s": {
+   "count": 150,
+   "p50": 0.29283926356583834,
+   "p90": 0.41069722985848783,
+   "p99": 0.5405807748995719,
+   "max": 0.5562410110142082
+  },
+  "startup_buffer_needed_s": {
+   "count": 150,
+   "p50": 0.151524044922553,
+   "p90": 0.2992132691200822,
+   "p99": 0.3943508862843734,
+   "max": 1.140315666096285
+  },
+  "playback_reserve_s": 0.08,
+  "replies_with_underrun": 111,
+  "underrun_s": 14.589503689203411,
+  "real_time_factor": null,
+  "unmet_targets": []
+ },
+ "c12-r1": {
+  "run": "/data/runs/20261018-h100cap/h100/c12-r1/concurrency-12",
+  "profile": "minicpmo-native-pr2377",
+  "concurrency": 12,
+  "mean_open_sessions": 11.466137142330318,
+  "sessions": 128,
+  "sessions_failed": 0,
+  "admission_denials": 0,
+  "input_pacing_violations": 0,
+  "units_expected": 1744,
+  "units_missed": 272,
+  "unit_miss_rate": 0.1559633027522936,
+  "unit_lag_s": {
+   "count": 1744,
+   "p50": 0.37688791507389396,
+   "p90": 1.1354501587571577,
+   "p99": 1.4441141228470948,
+   "max": 1.9781817072071135
+  },
+  "replies": 148,
+  "replies_with_audio_after_text": 11,
+  "first_audio_latency_s": {
+   "count": 148,
+   "p50": 0.6859452804783359,
+   "p90": 1.1285598488990218,
+   "p99": 1.370673599448055,
+   "max": 1.3945723660290241
+  },
+  "startup_buffer_needed_s": {
+   "count": 148,
+   "p50": 0.2507074740715325,
+   "p90": 0.6334087173920127,
+   "p99": 0.9580339113320224,
+   "max": 1.1134580669458956
+  },
+  "playback_reserve_s": 0.08,
+  "replies_with_underrun": 123,
+  "underrun_s": 34.25331756332889,
+  "real_time_factor": null,
+  "unmet_targets": [
+   "unit miss rate at most 1%"
+  ]
+ },
+ "c12-r2": {
+  "run": "/data/runs/20261018-h100cap/h100/c12-r2/concurrency-12",
+  "profile": "minicpmo-native-pr2377",
+  "concurrency": 12,
+  "mean_open_sessions": 11.491073899378543,
+  "sessions": 128,
+  "sessions_failed": 0,
+  "admission_denials": 0,
+  "input_pacing_violations": 0,
+  "units_expected": 1744,
+  "units_missed": 1,
+  "unit_miss_rate": 0.0005733944954128441,
+  "unit_lag_s": {
+   "count": 1744,
+   "p50": 0.2510024160146713,
+   "p90": 0.4841089725494385,
+   "p99": 0.6511331048770808,
+   "max": 1.166218430036679
+  },
+  "replies": 147,
+  "replies_with_audio_after_text": 10,
+  "first_audio_latency_s": {
+   "count": 147,
+   "p50": 0.3029588961508125,
+   "p90": 0.4890918877907097,
+   "p99": 0.6375112328538669,
+   "max": 0.7058641740586609
+  },
+  "startup_buffer_needed_s": {
+   "count": 147,
+   "p50": 0.17096597817726433,
+   "p90": 0.3653201977256686,
+   "p99": 0.5360195342218499,
+   "max": 0.6156269938219339
+  },
+  "playback_reserve_s": 0.08,
+  "replies_with_underrun": 107,
+  "underrun_s": 17.547249303897843,
+  "real_time_factor": null,
+  "unmet_targets": []
+ },
+ "c12-r3": {
+  "run": "/data/runs/20261018-h100cap/h100/c12-r3/concurrency-12",
+  "profile": "minicpmo-native-pr2377",
+  "concurrency": 12,
+  "mean_open_sessions": 11.518246834155736,
+  "sessions": 128,
+  "sessions_failed": 0,
+  "admission_denials": 0,
+  "input_pacing_violations": 0,
+  "units_expected": 1744,
+  "units_missed": 1,
+  "unit_miss_rate": 0.0005733944954128441,
+  "unit_lag_s": {
+   "count": 1744,
+   "p50": 0.25246898049954325,
+   "p90": 0.4819306185236201,
+   "p99": 0.701552668889053,
+   "max": 1.0260372350458056
+  },
+  "replies": 147,
+  "replies_with_audio_after_text": 10,
+  "first_audio_latency_s": {
+   "count": 147,
+   "p50": 0.32196372793987393,
+   "p90": 0.45817681425251067,
+   "p99": 0.5350262880604714,
+   "max": 0.6555441850796342
+  },
+  "startup_buffer_needed_s": {
+   "count": 147,
+   "p50": 0.1493169069290161,
+   "p90": 0.4179168705362829,
+   "p99": 0.5912728491472076,
+   "max": 0.8018057870212942
+  },
+  "playback_reserve_s": 0.08,
+  "replies_with_underrun": 106,
+  "underrun_s": 18.574929906753823,
+  "real_time_factor": null,
+  "unmet_targets": []
+ },
+ "c14-r1": {
+  "run": "/data/runs/20261018-h100cap/h100/c14-r1/concurrency-14",
+  "profile": "minicpmo-native-pr2377",
+  "concurrency": 14,
+  "mean_open_sessions": 12.868797232384864,
+  "sessions": 128,
+  "sessions_failed": 0,
+  "admission_denials": 0,
+  "input_pacing_violations": 0,
+  "units_expected": 1744,
+  "units_missed": 5,
+  "unit_miss_rate": 0.0028669724770642203,
+  "unit_lag_s": {
+   "count": 1744,
+   "p50": 0.27370218257419765,
+   "p90": 0.5785442689899356,
+   "p99": 0.8536244447017088,
+   "max": 1.2833817650098354
+  },
+  "replies": 146,
+  "replies_with_audio_after_text": 17,
+  "first_audio_latency_s": {
+   "count": 146,
+   "p50": 0.40449428651481867,
+   "p90": 0.5922996494919062,
+   "p99": 0.8071224532905046,
+   "max": 0.9570770249702036
+  },
+  "startup_buffer_needed_s": {
+   "count": 146,
+   "p50": 0.13783406105358154,
+   "p90": 0.45908987254370004,
+   "p99": 0.6288001581444406,
+   "max": 0.8032427669968456
+  },
+  "playback_reserve_s": 0.08,
+  "replies_with_underrun": 105,
+  "underrun_s": 18.640015160664916,
+  "real_time_factor": null,
+  "unmet_targets": []
+ },
+ "c14-r2": {
+  "run": "/data/runs/20261018-h100cap/h100/c14-r2/concurrency-14",
+  "profile": "minicpmo-native-pr2377",
+  "concurrency": 14,
+  "mean_open_sessions": 12.845952477764172,
+  "sessions": 128,
+  "sessions_failed": 0,
+  "admission_denials": 0,
+  "input_pacing_violations": 0,
+  "units_expected": 1744,
+  "units_missed": 4,
+  "unit_miss_rate": 0.0022935779816513763,
+  "unit_lag_s": {
+   "count": 1744,
+   "p50": 0.28654336952604353,
+   "p90": 0.5304852947359905,
+   "p99": 0.8057666073134158,
+   "max": 1.2704302379861474
+  },
+  "replies": 144,
+  "replies_with_audio_after_text": 12,
+  "first_audio_latency_s": {
+   "count": 144,
+   "p50": 0.34128377051092684,
+   "p90": 0.5270769509254024,
+   "p99": 0.7246921053458929,
+   "max": 0.8963055280037224
+  },
+  "startup_buffer_needed_s": {
+   "count": 144,
+   "p50": 0.21253035799600184,
+   "p90": 0.47864685927052053,
+   "p99": 0.6442366523249072,
+   "max": 0.8403270030394197
+  },
+  "playback_reserve_s": 0.08,
+  "replies_with_underrun": 121,
+  "underrun_s": 24.219229605514556,
+  "real_time_factor": null,
+  "unmet_targets": []
+ },
+ "c16-r1": {
+  "run": "/data/runs/20261018-h100cap/h100/c16-r1/concurrency-16",
+  "profile": "minicpmo-native-pr2377",
+  "concurrency": 16,
+  "mean_open_sessions": 15.489218978837842,
+  "sessions": 128,
+  "sessions_failed": 0,
+  "admission_denials": 0,
+  "input_pacing_violations": 0,
+  "units_expected": 1744,
+  "units_missed": 18,
+  "unit_miss_rate": 0.010321100917431193,
+  "unit_lag_s": {
+   "count": 1744,
+   "p50": 0.31343622994609177,
+   "p90": 0.6538382655009629,
+   "p99": 0.9962367550912307,
+   "max": 1.9098936030641198
+  },
+  "replies": 147,
+  "replies_with_audio_after_text": 17,
+  "first_audio_latency_s": {
+   "count": 147,
+   "p50": 0.380813178839162,
+   "p90": 0.6204135181847961,
+   "p99": 0.7786812884267419,
+   "max": 0.8731167691294104
+  },
+  "startup_buffer_needed_s": {
+   "count": 147,
+   "p50": 0.28255563019774854,
+   "p90": 0.503179017174989,
+   "p99": 0.9735121630271892,
+   "max": 1.3653063029050827
+  },
+  "playback_reserve_s": 0.08,
+  "replies_with_underrun": 120,
+  "underrun_s": 32.29151697107591,
+  "real_time_factor": null,
+  "unmet_targets": [
+   "unit miss rate at most 1%"
+  ]
+ },
+ "c16-r2": {
+  "run": "/data/runs/20261018-h100cap/h100/c16-r2/concurrency-16",
+  "profile": "minicpmo-native-pr2377",
+  "concurrency": 16,
+  "mean_open_sessions": 15.482693678617087,
+  "sessions": 128,
+  "sessions_failed": 0,
+  "admission_denials": 0,
+  "input_pacing_violations": 0,
+  "units_expected": 1744,
+  "units_missed": 5,
+  "unit_miss_rate": 0.0028669724770642203,
+  "unit_lag_s": {
+   "count": 1744,
+   "p50": 0.3130512675270438,
+   "p90": 0.6041442912071944,
+   "p99": 0.841108602846507,
+   "max": 1.0566758569329977
+  },
+  "replies": 151,
+  "replies_with_audio_after_text": 24,
+  "first_audio_latency_s": {
+   "count": 151,
+   "p50": 0.38251143880188465,
+   "p90": 0.6039504981599748,
+   "p99": 0.8255632779328153,
+   "max": 0.9222480461467057
+  },
+  "startup_buffer_needed_s": {
+   "count": 151,
+   "p50": 0.23504420602694154,
+   "p90": 0.49058959702961147,
+   "p99": 0.6028190070064738,
+   "max": 0.6863378270063549
+  },
+  "playback_reserve_s": 0.08,
+  "replies_with_underrun": 110,
+  "underrun_s": 25.763627874664962,
+  "real_time_factor": null,
+  "unmet_targets": []
+ },
+ "c16-r3": {
+  "run": "/data/runs/20261018-h100cap/h100/c16-r3/concurrency-16",
+  "profile": "minicpmo-native-pr2377",
+  "concurrency": 16,
+  "mean_open_sessions": 15.380354266091118,
+  "sessions": 128,
+  "sessions_failed": 0,
+  "admission_denials": 0,
+  "input_pacing_violations": 0,
+  "units_expected": 1744,
+  "units_missed": 5,
+  "unit_miss_rate": 0.0028669724770642203,
+  "unit_lag_s": {
+   "count": 1744,
+   "p50": 0.30572911293711513,
+   "p90": 0.6321161617990584,
+   "p99": 0.9165205020946444,
+   "max": 1.46882370300591
+  },
+  "replies": 148,
+  "replies_with_audio_after_text": 7,
+  "first_audio_latency_s": {
+   "count": 148,
+   "p50": 0.38909476750995964,
+   "p90": 0.5873713232344018,
+   "p99": 0.7720253903931007,
+   "max": 0.9524735889863223
+  },
+  "startup_buffer_needed_s": {
+   "count": 148,
+   "p50": 0.2104791805613786,
+   "p90": 0.5166910251136869,
+   "p99": 0.7502361529413611,
+   "max": 0.7805375109892339
+  },
+  "playback_reserve_s": 0.08,
+  "replies_with_underrun": 104,
+  "underrun_s": 25.008621921762824,
+  "real_time_factor": null,
+  "unmet_targets": []
+ },
+ "c18-r1": {
+  "run": "/data/runs/20261018-h100cap/h100/c18-r1/concurrency-18",
+  "profile": "minicpmo-native-pr2377",
+  "concurrency": 18,
+  "mean_open_sessions": 16.0048928439277,
+  "sessions": 128,
+  "sessions_failed": 0,
+  "admission_denials": 0,
+  "input_pacing_violations": 0,
+  "units_expected": 1744,
+  "units_missed": 30,
+  "unit_miss_rate": 0.017201834862385322,
+  "unit_lag_s": {
+   "count": 1744,
+   "p50": 0.3574993779184297,
+   "p90": 0.7115490371128544,
+   "p99": 1.1006384601327588,
+   "max": 2.1145314720924944
+  },
+  "replies": 144,
+  "replies_with_audio_after_text": 8,
+  "first_audio_latency_s": {
+   "count": 144,
+   "p50": 0.4036791134858504,
+   "p90": 0.6568175486288967,
+   "p99": 0.9560607010126113,
+   "max": 0.9644299249630421
+  },
+  "startup_buffer_needed_s": {
+   "count": 144,
+   "p50": 0.29041501390747726,
+   "p90": 0.6003940469818192,
+   "p99": 0.884902024460025,
+   "max": 1.183320770971477
+  },
+  "playback_reserve_s": 0.08,
+  "replies_with_underrun": 119,
+  "underrun_s": 35.646458497969434,
+  "real_time_factor": null,
+  "unmet_targets": [
+   "unit miss rate at most 1%"
+  ]
+ },
+ "c20-r1": {
+  "run": "/data/runs/20261018-h100cap/h100/c20-r1/concurrency-20",
+  "profile": "minicpmo-native-pr2377",
+  "concurrency": 20,
+  "mean_open_sessions": 17.000777450075383,
+  "sessions": 128,
+  "sessions_failed": 92,
+  "admission_denials": 0,
+  "input_pacing_violations": 0,
+  "units_expected": 1744,
+  "units_missed": 1266,
+  "unit_miss_rate": 0.7259174311926605,
+  "unit_lag_s": {
+   "count": 478,
+   "p50": 0.26359948806930333,
+   "p90": 0.621848133369349,
+   "p99": 0.6752696790685879,
+   "max": 0.7654301100410521
+  },
+  "replies": 42,
+  "replies_with_audio_after_text": 4,
+  "first_audio_latency_s": {
+   "count": 42,
+   "p50": 0.5652968429494649,
+   "p90": 0.6269061168422922,
+   "p99": 0.7082853972539304,
+   "max": 0.7332570040598512
+  },
+  "startup_buffer_needed_s": {
+   "count": 42,
+   "p50": 0.08987751859240234,
+   "p90": 0.2857150866417214,
+   "p99": 0.44646353071788325,
+   "max": 0.4464641350787133
+  },
+  "playback_reserve_s": 0.08,
+  "replies_with_underrun": 28,
+  "underrun_s": 3.0744166707154363,
+  "real_time_factor": null,
+  "unmet_targets": [
+   "no failed sessions",
+   "unit miss rate at most 1%"
+  ]
+ },
+ "c4-r1": {
+  "run": "/data/runs/20261018-h100cap/h100/c4-r1/concurrency-4",
+  "profile": "minicpmo-native-pr2377",
+  "concurrency": 4,
+  "mean_open_sessions": 3.9773898748853234,
+  "sessions": 128,
+  "sessions_failed": 0,
+  "admission_denials": 0,
+  "input_pacing_violations": 0,
+  "units_expected": 1744,
+  "units_missed": 8,
+  "unit_miss_rate": 0.0045871559633027525,
+  "unit_lag_s": {
+   "count": 1744,
+   "p50": 0.2266131134238094,
+   "p90": 0.6323440373409539,
+   "p99": 0.8307869477709754,
+   "max": 1.398398556979373
+  },
+  "replies": 145,
+  "replies_with_audio_after_text": 11,
+  "first_audio_latency_s": {
+   "count": 145,
+   "p50": 0.4279150061774999,
+   "p90": 0.6477974523324519,
+   "p99": 0.7681689203158022,
+   "max": 0.7792349890805781
+  },
+  "startup_buffer_needed_s": {
+   "count": 145,
+   "p50": 0.11938379309140146,
+   "p90": 0.3127060087397694,
+   "p99": 0.4000033379439265,
+   "max": 0.4073333570268005
+  },
+  "playback_reserve_s": 0.08,
+  "replies_with_underrun": 90,
+  "underrun_s": 10.629856495186687,
+  "real_time_factor": null,
+  "unmet_targets": []
+ },
+ "c5-r1": {
+  "run": "/data/runs/20261018-h100cap/h100/c5-r1/concurrency-5",
+  "profile": "minicpmo-native-pr2377",
+  "concurrency": 5,
+  "mean_open_sessions": 4.8992447926068055,
+  "sessions": 128,
+  "sessions_failed": 0,
+  "admission_denials": 0,
+  "input_pacing_violations": 0,
+  "units_expected": 1744,
+  "units_missed": 0,
+  "unit_miss_rate": 0.0,
+  "unit_lag_s": {
+   "count": 1744,
+   "p50": 0.19591166998725384,
+   "p90": 0.3175959968706593,
+   "p99": 0.4311948008276521,
+   "max": 0.55876155779697
+  },
+  "replies": 150,
+  "replies_with_audio_after_text": 14,
+  "first_audio_latency_s": {
+   "count": 150,
+   "p50": 0.2249862588942051,
+   "p90": 0.31772292593959717,
+   "p99": 0.3878931638877839,
+   "max": 0.3947749058715999
+  },
+  "startup_buffer_needed_s": {
+   "count": 150,
+   "p50": 0.08494168310426176,
+   "p90": 0.1821894206106663,
+   "p99": 0.32513527735136444,
+   "max": 0.38145729596726596
+  },
+  "playback_reserve_s": 0.08,
+  "replies_with_underrun": 80,
+  "underrun_s": 5.319428385933861,
+  "real_time_factor": null,
+  "unmet_targets": []
+ },
+ "c5-r2": {
+  "run": "/data/runs/20261018-h100cap/h100/c5-r2/concurrency-5",
+  "profile": "minicpmo-native-pr2377",
+  "concurrency": 5,
+  "mean_open_sessions": 4.903545777310352,
+  "sessions": 128,
+  "sessions_failed": 0,
+  "admission_denials": 0,
+  "input_pacing_violations": 0,
+  "units_expected": 1744,
+  "units_missed": 0,
+  "unit_miss_rate": 0.0,
+  "unit_lag_s": {
+   "count": 1744,
+   "p50": 0.18322042806539685,
+   "p90": 0.29731938401237135,
+   "p99": 0.4025912615959532,
+   "max": 0.599483243888244
+  },
+  "replies": 143,
+  "replies_with_audio_after_text": 14,
+  "first_audio_latency_s": {
+   "count": 143,
+   "p50": 0.20923880604095757,
+   "p90": 0.30095612234435976,
+   "p99": 0.39683346690144394,
+   "max": 0.4018984748981893
+  },
+  "startup_buffer_needed_s": {
+   "count": 143,
+   "p50": 0.08238852978684008,
+   "p90": 0.1829232921823859,
+   "p99": 0.258697777329945,
+   "max": 0.2917809060309082
+  },
+  "playback_reserve_s": 0.08,
+  "replies_with_underrun": 76,
+  "underrun_s": 4.259181459667161,
+  "real_time_factor": null,
+  "unmet_targets": []
+ },
+ "c5-r3": {
+  "run": "/data/runs/20261018-h100cap/h100/c5-r3/concurrency-5",
+  "profile": "minicpmo-native-pr2377",
+  "concurrency": 5,
+  "mean_open_sessions": 4.900997077693523,
+  "sessions": 128,
+  "sessions_failed": 0,
+  "admission_denials": 0,
+  "input_pacing_violations": 0,
+  "units_expected": 1744,
+  "units_missed": 110,
+  "unit_miss_rate": 0.06307339449541284,
+  "unit_lag_s": {
+   "count": 1744,
+   "p50": 0.4336946934927255,
+   "p90": 0.9245595221640542,
+   "p99": 1.3483519416768102,
+   "max": 2.1194108109921217
+  },
+  "replies": 146,
+  "replies_with_audio_after_text": 12,
+  "first_audio_latency_s": {
+   "count": 146,
+   "p50": 0.60356924100779,
+   "p90": 0.8894904414191842,
+   "p99": 1.1103928445139903,
+   "max": 1.2864569302182645
+  },
+  "startup_buffer_needed_s": {
+   "count": 146,
+   "p50": 0.19631594349630177,
+   "p90": 0.46196552901528776,
+   "p99": 0.8315301657421525,
+   "max": 1.0226570079103112
+  },
+  "playback_reserve_s": 0.08,
+  "replies_with_underrun": 114,
+  "underrun_s": 24.386625637300313,
+  "real_time_factor": null,
+  "unmet_targets": [
+   "unit miss rate at most 1%"
+  ]
+ },
+ "c6-r1": {
+  "run": "/data/runs/20261018-h100cap/h100/c6-r1/concurrency-6",
+  "profile": "minicpmo-native-pr2377",
+  "concurrency": 6,
+  "mean_open_sessions": 5.795686139083299,
+  "sessions": 128,
+  "sessions_failed": 0,
+  "admission_denials": 0,
+  "input_pacing_violations": 0,
+  "units_expected": 1744,
+  "units_missed": 0,
+  "unit_miss_rate": 0.0,
+  "unit_lag_s": {
+   "count": 1744,
+   "p50": 0.1969432570040226,
+   "p90": 0.33249228068161757,
+   "p99": 0.45811977078206834,
+   "max": 0.5846869798842818
+  },
+  "replies": 143,
+  "replies_with_audio_after_text": 19,
+  "first_audio_latency_s": {
+   "count": 143,
+   "p50": 0.23995838686823845,
+   "p90": 0.33476099544204774,
+   "p99": 0.4059967700857671,
+   "max": 0.495932704070583
+  },
+  "startup_buffer_needed_s": {
+   "count": 143,
+   "p50": 0.09815824194811285,
+   "p90": 0.189222132274881,
+   "p99": 0.26131444027647394,
+   "max": 0.2886888768989593
+  },
+  "playback_reserve_s": 0.08,
+  "replies_with_underrun": 89,
+  "underrun_s": 5.897984670940787,
+  "real_time_factor": null,
+  "unmet_targets": []
+ },
+ "c6-r2": {
+  "run": "/data/runs/20261018-h100cap/h100/c6-r2/concurrency-6",
+  "profile": "minicpmo-native-pr2377",
+  "concurrency": 6,
+  "mean_open_sessions": 5.795322623820089,
+  "sessions": 128,
+  "sessions_failed": 0,
+  "admission_denials": 0,
+  "input_pacing_violations": 0,
+  "units_expected": 1744,
+  "units_missed": 0,
+  "unit_miss_rate": 0.0,
+  "unit_lag_s": {
+   "count": 1744,
+   "p50": 0.19538102904334664,
+   "p90": 0.31814218186773363,
+   "p99": 0.45487323002191254,
+   "max": 0.5785276959650218
+  },
+  "replies": 144,
+  "replies_with_audio_after_text": 12,
+  "first_audio_latency_s": {
+   "count": 144,
+   "p50": 0.2342137040104717,
+   "p90": 0.30668792661745103,
+   "p99": 0.4236783514427952,
+   "max": 0.4703115778975189
+  },
+  "startup_buffer_needed_s": {
+   "count": 144,
+   "p50": 0.08902362897060812,
+   "p90": 0.19828836515080187,
+   "p99": 0.286339432452805,
+   "max": 0.34387103002518415
+  },
+  "playback_reserve_s": 0.08,
+  "replies_with_underrun": 84,
+  "underrun_s": 5.591377306031063,
+  "real_time_factor": null,
+  "unmet_targets": []
+ },
+ "c6-r3": {
+  "run": "/data/runs/20261018-h100cap/h100/c6-r3/concurrency-6",
+  "profile": "minicpmo-native-pr2377",
+  "concurrency": 6,
+  "mean_open_sessions": 5.791335897242769,
+  "sessions": 128,
+  "sessions_failed": 0,
+  "admission_denials": 0,
+  "input_pacing_violations": 0,
+  "units_expected": 1744,
+  "units_missed": 7,
+  "unit_miss_rate": 0.0040137614678899085,
+  "unit_lag_s": {
+   "count": 1744,
+   "p50": 0.2064181003952399,
+   "p90": 0.38626475825440143,
+   "p99": 0.8414992017368769,
+   "max": 1.2298939598258585
+  },
+  "replies": 142,
+  "replies_with_audio_after_text": 15,
+  "first_audio_latency_s": {
+   "count": 142,
+   "p50": 0.2541896270122379,
+   "p90": 0.5295907181454823,
+   "p99": 0.7963178146257998,
+   "max": 0.9321121410466731
+  },
+  "startup_buffer_needed_s": {
+   "count": 142,
+   "p50": 0.12625701411161572,
+   "p90": 0.3056473962962629,
+   "p99": 0.6118672539805995,
+   "max": 0.7228437489829957
+  },
+  "playback_reserve_s": 0.08,
+  "replies_with_underrun": 96,
+  "underrun_s": 11.617192709818482,
+  "real_time_factor": null,
+  "unmet_targets": []
+ },
+ "c7-r1": {
+  "run": "/data/runs/20261018-h100cap/h100/c7-r1/concurrency-7",
+  "profile": "minicpmo-native-pr2377",
+  "concurrency": 7,
+  "mean_open_sessions": 6.712195962538386,
+  "sessions": 128,
+  "sessions_failed": 0,
+  "admission_denials": 0,
+  "input_pacing_violations": 0,
+  "units_expected": 1744,
+  "units_missed": 0,
+  "unit_miss_rate": 0.0,
+  "unit_lag_s": {
+   "count": 1744,
+   "p50": 0.19653624400962144,
+   "p90": 0.34849115181714296,
+   "p99": 0.503080707315821,
+   "max": 0.7447157260030508
+  },
+  "replies": 153,
+  "replies_with_audio_after_text": 20,
+  "first_audio_latency_s": {
+   "count": 153,
+   "p50": 0.23907153005711734,
+   "p90": 0.35199768193997444,
+   "p99": 0.4541187531314789,
+   "max": 0.4713204300496727
+  },
+  "startup_buffer_needed_s": {
+   "count": 153,
+   "p50": 0.08401802787557244,
+   "p90": 0.24440068383701147,
+   "p99": 0.419971152115613,
+   "max": 0.4353243981022388
+  },
+  "playback_reserve_s": 0.08,
+  "replies_with_underrun": 83,
+  "underrun_s": 8.039071762701496,
+  "real_time_factor": null,
+  "unmet_targets": []
+ },
+ "c7-r2": {
+  "run": "/data/runs/20261018-h100cap/h100/c7-r2/concurrency-7",
+  "profile": "minicpmo-native-pr2377",
+  "concurrency": 7,
+  "mean_open_sessions": 6.710988206010723,
+  "sessions": 128,
+  "sessions_failed": 0,
+  "admission_denials": 0,
+  "input_pacing_violations": 0,
+  "units_expected": 1744,
+  "units_missed": 0,
+  "unit_miss_rate": 0.0,
+  "unit_lag_s": {
+   "count": 1744,
+   "p50": 0.20674893946852535,
+   "p90": 0.3504180391551927,
+   "p99": 0.48196846154052764,
+   "max": 0.7300949189811945
+  },
+  "replies": 146,
+  "replies_with_audio_after_text": 15,
+  "first_audio_latency_s": {
+   "count": 146,
+   "p50": 0.2540669455192983,
+   "p90": 0.3680669240420684,
+   "p99": 0.4845490448293277,
+   "max": 0.5045948328915983
+  },
+  "startup_buffer_needed_s": {
+   "count": 146,
+   "p50": 0.09154104546178132,
+   "p90": 0.20712389051914215,
+   "p99": 0.29605152256553996,
+   "max": 0.3185590570792556
+  },
+  "playback_reserve_s": 0.08,
+  "replies_with_underrun": 82,
+  "underrun_s": 6.12056257808581,
+  "real_time_factor": null,
+  "unmet_targets": []
+ },
+ "c7-r3": {
+  "run": "/data/runs/20261018-h100cap/h100/c7-r3/concurrency-7",
+  "profile": "minicpmo-native-pr2377",
+  "concurrency": 7,
+  "mean_open_sessions": 6.701627922641747,
+  "sessions": 128,
+  "sessions_failed": 0,
+  "admission_denials": 0,
+  "input_pacing_violations": 0,
+  "units_expected": 1744,
+  "units_missed": 0,
+  "unit_miss_rate": 0.0,
+  "unit_lag_s": {
+   "count": 1744,
+   "p50": 0.21079595491755754,
+   "p90": 0.34564396387431773,
+   "p99": 0.49412353614112314,
+   "max": 0.6476363781839609
+  },
+  "replies": 150,
+  "replies_with_audio_after_text": 8,
+  "first_audio_latency_s": {
+   "count": 150,
+   "p50": 0.24600943003315479,
+   "p90": 0.3624027791433036,
+   "p99": 0.44653217448620114,
+   "max": 0.5013225669972599
+  },
+  "startup_buffer_needed_s": {
+   "count": 150,
+   "p50": 0.10753445548471063,
+   "p90": 0.2313573350431397,
+   "p99": 0.40081189607502843,
+   "max": 0.4602147659752518
+  },
+  "playback_reserve_s": 0.08,
+  "replies_with_underrun": 95,
+  "underrun_s": 8.017661628313363,
+  "real_time_factor": null,
+  "unmet_targets": []
+ },
+ "c8-d1": {
+  "run": "/data/runs/20261018-h100cap/h100/c8-d1/concurrency-8",
+  "profile": "minicpmo-native-pr2377",
+  "concurrency": 8,
+  "mean_open_sessions": 7.786202001740982,
+  "sessions": 128,
+  "sessions_failed": 0,
+  "admission_denials": 0,
+  "input_pacing_violations": 0,
+  "units_expected": 1744,
+  "units_missed": 1,
+  "unit_miss_rate": 0.0005733944954128441,
+  "unit_lag_s": {
+   "count": 1744,
+   "p50": 0.21574618644081056,
+   "p90": 0.38237302959896624,
+   "p99": 0.5393596034776419,
+   "max": 1.0068061649799347
+  },
+  "replies": 150,
+  "replies_with_audio_after_text": 17,
+  "first_audio_latency_s": {
+   "count": 150,
+   "p50": 0.2737115634372458,
+   "p90": 0.4179621312767267,
+   "p99": 0.5392110884911381,
+   "max": 0.6304065338335931
+  },
+  "startup_buffer_needed_s": {
+   "count": 150,
+   "p50": 0.10136833891738206,
+   "p90": 0.22922237447928634,
+   "p99": 0.3554577649128622,
+   "max": 0.3880537301301956
+  },
+  "playback_reserve_s": 0.08,
+  "replies_with_underrun": 89,
+  "underrun_s": 7.803245274582878,
+  "real_time_factor": null,
+  "unmet_targets": []
+ },
+ "c8-r1": {
+  "run": "/data/runs/20261018-h100cap/h100/c8-r1/concurrency-8",
+  "profile": "minicpmo-native-pr2377",
+  "concurrency": 8,
+  "mean_open_sessions": 7.847322048710909,
+  "sessions": 128,
+  "sessions_failed": 0,
+  "admission_denials": 0,
+  "input_pacing_violations": 0,
+  "units_expected": 1744,
+  "units_missed": 0,
+  "unit_miss_rate": 0.0,
+  "unit_lag_s": {
+   "count": 1744,
+   "p50": 0.20842975855339319,
+   "p90": 0.37807517799083146,
+   "p99": 0.5237199704442168,
+   "max": 0.8624666118994355
+  },
+  "replies": 147,
+  "replies_with_audio_after_text": 14,
+  "first_audio_latency_s": {
+   "count": 147,
+   "p50": 0.2527476579416543,
+   "p90": 0.36323230280540886,
+   "p99": 0.43701361514627934,
+   "max": 0.5099056849721819
+  },
+  "startup_buffer_needed_s": {
+   "count": 147,
+   "p50": 0.14657507091760635,
+   "p90": 0.2815569950267673,
+   "p99": 0.4472048820089546,
+   "max": 0.50736159295775
+  },
+  "playback_reserve_s": 0.08,
+  "replies_with_underrun": 101,
+  "underrun_s": 11.821237882832065,
+  "real_time_factor": null,
+  "unmet_targets": []
+ },
+ "c8-r2": {
+  "run": "/data/runs/20261018-h100cap/h100/c8-r2/concurrency-8",
+  "profile": "minicpmo-native-pr2377",
+  "concurrency": 8,
+  "mean_open_sessions": 7.8679296915196515,
+  "sessions": 128,
+  "sessions_failed": 0,
+  "admission_denials": 0,
+  "input_pacing_violations": 0,
+  "units_expected": 1744,
+  "units_missed": 1,
+  "unit_miss_rate": 0.0005733944954128441,
+  "unit_lag_s": {
+   "count": 1744,
+   "p50": 0.21502154902555048,
+   "p90": 0.37582808947190643,
+   "p99": 0.5536697772587647,
+   "max": 1.004667122848332
+  },
+  "replies": 148,
+  "replies_with_audio_after_text": 22,
+  "first_audio_latency_s": {
+   "count": 148,
+   "p50": 0.2820758504094556,
+   "p90": 0.395239945454523,
+   "p99": 0.4953842113423162,
+   "max": 0.6191384040284902
+  },
+  "startup_buffer_needed_s": {
+   "count": 148,
+   "p50": 0.09153371851425618,
+   "p90": 0.2926827673334629,
+   "p99": 0.4191323874471709,
+   "max": 0.6430675650481135
+  },
+  "playback_reserve_s": 0.08,
+  "replies_with_underrun": 84,
+  "underrun_s": 9.71412484254688,
+  "real_time_factor": null,
+  "unmet_targets": []
+ },
+ "c8-r3": {
+  "run": "/data/runs/20261018-h100cap/h100/c8-r3/concurrency-8",
+  "profile": "minicpmo-native-pr2377",
+  "concurrency": 8,
+  "mean_open_sessions": 7.831693688874886,
+  "sessions": 128,
+  "sessions_failed": 0,
+  "admission_denials": 0,
+  "input_pacing_violations": 0,
+  "units_expected": 1744,
+  "units_missed": 0,
+  "unit_miss_rate": 0.0,
+  "unit_lag_s": {
+   "count": 1744,
+   "p50": 0.20624983392190188,
+   "p90": 0.36843351658899337,
+   "p99": 0.508895250307396,
+   "max": 0.7238403118681163
+  },
+  "replies": 152,
+  "replies_with_audio_after_text": 12,
+  "first_audio_latency_s": {
+   "count": 152,
+   "p50": 0.25745487201493233,
+   "p90": 0.382751847570762,
+   "p99": 0.4733051137463195,
+   "max": 0.5089450438972563
+  },
+  "startup_buffer_needed_s": {
+   "count": 152,
+   "p50": 0.107365190400742,
+   "p90": 0.24237374437507248,
+   "p99": 0.3485624647815716,
+   "max": 0.5119488241616637
+  },
+  "playback_reserve_s": 0.08,
+  "replies_with_underrun": 94,
+  "underrun_s": 8.996178727131337,
+  "real_time_factor": null,
+  "unmet_targets": []
+ }
+}

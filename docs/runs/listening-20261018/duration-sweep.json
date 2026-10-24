@@ -1,0 +1,69 @@
+{
+ "replies": 29,
+ "durations": {
+  "0.25": {
+   "utmos_diff_mean": -2.0653207055453597,
+   "utmos_diff_abs_mean": 2.0653207055453597,
+   "utmos_diff_sd": 0.5103097935183023,
+   "voice_diff_mean": -62.011846317106794,
+   "voice_diff_abs_mean": 62.011846317106794,
+   "voice_diff_sd": 14.057800079924105
+  },
+  "0.5": {
+   "utmos_diff_mean": -1.0972868327436776,
+   "utmos_diff_abs_mean": 1.0972868327436776,
+   "utmos_diff_sd": 0.5207578805498214,
+   "voice_diff_mean": -49.381281050114794,
+   "voice_diff_abs_mean": 49.381281050114794,
+   "voice_diff_sd": 11.88883062604534
+  },
+  "0.75": {
+   "utmos_diff_mean": -0.6032350063323975,
+   "utmos_diff_abs_mean": 0.605858301294261,
+   "utmos_diff_sd": 0.4284573100904868,
+   "voice_diff_mean": -39.41749837891809,
+   "voice_diff_abs_mean": 39.41749837891809,
+   "voice_diff_sd": 9.501153647361155
+  },
+  "1.0": {
+   "utmos_diff_mean": -0.38004903135628537,
+   "utmos_diff_abs_mean": 0.43703708977534855,
+   "utmos_diff_sd": 0.4137834803216594,
+   "voice_diff_mean": -33.94636645399291,
+   "voice_diff_abs_mean": 33.94636645399291,
+   "voice_diff_sd": 8.712227711675155
+  },
+  "1.5": {
+   "utmos_diff_mean": -0.1461458370603364,
+   "utmos_diff_abs_mean": 0.291166798821811,
+   "utmos_diff_sd": 0.36367379116232246,
+   "voice_diff_mean": -25.934321407614082,
+   "voice_diff_abs_mean": 25.934321407614082,
+   "voice_diff_sd": 6.625336315336434
+  },
+  "2.0": {
+   "utmos_diff_mean": -0.06269912062020137,
+   "utmos_diff_abs_mean": 0.2300377549796269,
+   "utmos_diff_sd": 0.28524642924927357,
+   "voice_diff_mean": -18.95371850194602,
+   "voice_diff_abs_mean": 18.95371850194602,
+   "voice_diff_sd": 6.371276820274882
+  },
+  "3.0": {
+   "utmos_diff_mean": 0.07077930713522024,
+   "utmos_diff_abs_mean": 0.1540461901960702,
+   "utmos_diff_sd": 0.22947327468618564,
+   "voice_diff_mean": -11.921938328907407,
+   "voice_diff_abs_mean": 11.921938328907407,
+   "voice_diff_sd": 4.472383879552983
+  },
+  "4.0": {
+   "utmos_diff_mean": 0.04817938804626465,
+   "utmos_diff_abs_mean": 0.13448961027737322,
+   "utmos_diff_sd": 0.19405577746848207,
+   "voice_diff_mean": -7.024163007736206,
+   "voice_diff_abs_mean": 7.024163007736206,
+   "voice_diff_sd": 3.9632951265011784
+  }
+ }
+}

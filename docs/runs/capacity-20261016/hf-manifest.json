@@ -1,0 +1,30 @@
+{
+ "sweep-cold.tar": {
+  "bytes": 1812756480,
+  "sha256": "fa8464108146d2b55aa921dd344d234e02f6fc772d5da58409fc89f5280810c7",
+  "members": [
+   "sweep"
+  ]
+ },
+ "sweep-warm.tar": {
+  "bytes": 2238484480,
+  "sha256": "32e5387e31fc7d831999d96c3b497245d6b38a866f016135354a54084ab8cc45",
+  "members": [
+   "sweep-warm",
+   "warmup-sweep-warm"
+  ]
+ },
+ "logs-and-scripts.tar": {
+  "bytes": 7239680,
+  "sha256": "b4e502d2e012cdf976cc5a6c911ad2efd3ba24ae9806b5413e91f84ec71aeb87",
+  "members": [
+   "logs",
+   "setup.sh",
+   "setup_v15.py",
+   "capacity.sh",
+   "capacity_warm.sh",
+   "pack_upload.py",
+   "pyshim"
+  ]
+ }
+}

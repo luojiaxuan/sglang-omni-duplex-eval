@@ -1,0 +1,189 @@
+{
+  "asr": {
+    "checkpoint_sha256": "d99e39955c9d3d0350d8fb7c75e40c64a2b2eaeb003883d7c941fd2e8747b28c",
+    "device_type": "cuda"
+  },
+  "models": {
+    "utmos_sha256": "3080923f49ee69eb81ad875491eef94e533bf329d70e0cc37fa23745c464669d",
+    "speaker_finetune_sha256": "51f07e3b94d9e0262a6a675ef5a087be3dd09e8c62e9d886827f44f82fe7f94b",
+    "speaker_wavlm_sha256": "6fb4b3c3e6aa567f0a997b30855859cb81528ee8078802af439f7b2da0bf100f"
+  },
+  "text_normalizer": "whisper.normalizers.EnglishTextNormalizer",
+  "scored_duration_s": 3.0,
+  "datasets": {
+    "v1.0": {
+      "candor_pause_handling": {
+        "replies": 29,
+        "replies_with_audio": 27,
+        "short_replies": 18,
+        "statuses": {
+          "cancelled": 12,
+          "completed": 17
+        },
+        "compared_replies": 17,
+        "reference_words": 187,
+        "omission_rate": 0.0053475935828877,
+        "word_error_rate": 0.053475935828877004,
+        "utmos_mean": 4.26496860716078,
+        "utmos_p10": 3.920380687713623,
+        "voice_similarity_mean": 63.19527223375108,
+        "voice_similarity_p10": 58.48718490600586
+      },
+      "candor_turn_taking": {
+        "replies": 12,
+        "replies_with_audio": 12,
+        "short_replies": 2,
+        "statuses": {
+          "cancelled": 1,
+          "completed": 11
+        },
+        "compared_replies": 11,
+        "reference_words": 159,
+        "omission_rate": 0.0,
+        "word_error_rate": 0.025157232704402517,
+        "utmos_mean": 4.024547147750854,
+        "utmos_p10": 3.5268813133239747,
+        "voice_similarity_mean": 68.96439132690429,
+        "voice_similarity_p10": 58.92808456420899
+      },
+      "icc_backchannel": {
+        "replies": 20,
+        "replies_with_audio": 17,
+        "short_replies": 6,
+        "statuses": {
+          "cancelled": 8,
+          "completed": 12
+        },
+        "compared_replies": 12,
+        "reference_words": 184,
+        "omission_rate": 0.0,
+        "word_error_rate": 0.016304347826086956,
+        "utmos_mean": 4.087414611469615,
+        "utmos_p10": 3.539600372314453,
+        "voice_similarity_mean": 64.22305332530628,
+        "voice_similarity_p10": 56.30067443847656
+      },
+      "synthetic_pause_handling": {
+        "replies": 16,
+        "replies_with_audio": 15,
+        "short_replies": 5,
+        "statuses": {
+          "cancelled": 6,
+          "completed": 10
+        },
+        "compared_replies": 10,
+        "reference_words": 141,
+        "omission_rate": 0.0070921985815602835,
+        "word_error_rate": 0.0425531914893617,
+        "utmos_mean": 4.283280277252198,
+        "utmos_p10": 3.9437437057495117,
+        "voice_similarity_mean": 70.7152172088623,
+        "voice_similarity_p10": 63.52596931457519
+      },
+      "synthetic_user_interruption": {
+        "replies": 20,
+        "replies_with_audio": 20,
+        "short_replies": 0,
+        "statuses": {
+          "cancelled": 7,
+          "completed": 13
+        },
+        "compared_replies": 13,
+        "reference_words": 193,
+        "omission_rate": 0.0,
+        "word_error_rate": 0.010362694300518135,
+        "utmos_mean": 4.3064222693443295,
+        "utmos_p10": 4.074115371704101,
+        "voice_similarity_mean": 67.39965114593505,
+        "voice_similarity_p10": 59.8853343963623
+      }
+    },
+    "v1.5": {
+      "all": {
+        "replies": 300,
+        "replies_with_audio": 300,
+        "short_replies": 42,
+        "statuses": {
+          "cancelled": 80,
+          "completed": 220
+        },
+        "compared_replies": 220,
+        "reference_words": 2838,
+        "omission_rate": 0.005990133897110641,
+        "word_error_rate": 0.0408738548273432,
+        "utmos_mean": 4.201361598894578,
+        "utmos_p10": 3.6964225292205812,
+        "voice_similarity_mean": 67.34401224565136,
+        "voice_similarity_p10": 57.908470916748044
+      },
+      "background_speech": {
+        "replies": 75,
+        "replies_with_audio": 75,
+        "short_replies": 20,
+        "statuses": {
+          "cancelled": 12,
+          "completed": 63
+        },
+        "compared_replies": 63,
+        "reference_words": 677,
+        "omission_rate": 0.007385524372230428,
+        "word_error_rate": 0.03692762186115214,
+        "utmos_mean": 4.197786821018566,
+        "utmos_p10": 3.809787559509277,
+        "voice_similarity_mean": 67.16370755975896,
+        "voice_similarity_p10": 59.028282928466794
+      },
+      "talking_to_other": {
+        "replies": 75,
+        "replies_with_audio": 75,
+        "short_replies": 13,
+        "statuses": {
+          "cancelled": 18,
+          "completed": 57
+        },
+        "compared_replies": 57,
+        "reference_words": 630,
+        "omission_rate": 0.015873015873015872,
+        "word_error_rate": 0.08888888888888889,
+        "utmos_mean": 4.043261289596558,
+        "utmos_p10": 3.5071553945541383,
+        "voice_similarity_mean": 64.61081135657525,
+        "voice_similarity_p10": 53.54198112487793
+      },
+      "user_backchannel": {
+        "replies": 75,
+        "replies_with_audio": 75,
+        "short_replies": 7,
+        "statuses": {
+          "cancelled": 25,
+          "completed": 50
+        },
+        "compared_replies": 50,
+        "reference_words": 756,
+        "omission_rate": 0.0,
+        "word_error_rate": 0.03042328042328042,
+        "utmos_mean": 4.286791250986211,
+        "utmos_p10": 3.7799333810806273,
+        "voice_similarity_mean": 68.7213466868681,
+        "voice_similarity_p10": 61.695382308959964
+      },
+      "user_interruption": {
+        "replies": 75,
+        "replies_with_audio": 75,
+        "short_replies": 2,
+        "statuses": {
+          "cancelled": 25,
+          "completed": 50
+        },
+        "compared_replies": 50,
+        "reference_words": 775,
+        "omission_rate": 0.0025806451612903226,
+        "word_error_rate": 0.015483870967741935,
+        "utmos_mean": 4.258753593653848,
+        "utmos_p10": 3.7654166221618652,
+        "voice_similarity_mean": 68.51821047639194,
+        "voice_similarity_p10": 61.10375442504883
+      }
+    }
+  }
+}

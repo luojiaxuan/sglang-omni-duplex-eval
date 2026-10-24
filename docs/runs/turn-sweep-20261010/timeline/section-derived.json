@@ -1,0 +1,196 @@
+{
+ "kind": "section-derived",
+ "note": "Numbers derived for out/SECTION.md from out/sessions-<arm>.csv and out/metrics-<arm>.json; arithmetic only, no re-parsing of traces.",
+ "semmed_turn_taking_final_commit_path": {
+  "split_rule": "final_speech_end_to_commit_s < 1.0 s = fast path, else timeout path",
+  "fast": {
+   "sessions": 16,
+   "final_speech_end_to_commit_s": {
+    "median": 0.5635,
+    "min": 0.1794,
+    "max": 0.6262
+   },
+   "final_commit_minus_last_word_end_s_median": 0.173,
+   "official_latency_first_word_after_final_commit_s": {
+    "n": 15,
+    "mean": 0.91,
+    "median": 0.74
+   }
+  },
+  "timeout": {
+   "sessions": 103,
+   "final_speech_end_to_commit_s": {
+    "median": 1.9717,
+    "min": 1.9387,
+    "max": 2.0031
+   },
+   "final_commit_minus_last_word_end_s_median": 1.702,
+   "official_latency_first_word_after_final_commit_s": {
+    "n": 95,
+    "mean": 2.356,
+    "median": 2.31
+   }
+  }
+ },
+ "server_vad_final_commit_speech_end_to_commit_s": {
+  "vad500": {
+   "n": 119,
+   "median": 0.467,
+   "min": 0.4348,
+   "max": 0.4993
+  },
+  "vad800": {
+   "n": 119,
+   "median": 0.7549,
+   "min": 0.7223,
+   "max": 0.7869
+  },
+  "vad1200": {
+   "n": 119,
+   "median": 1.1712,
+   "min": 1.1381,
+   "max": 1.2028
+  }
+ },
+ "threshold_subtracted_turn_latency": {
+  "vad500": {
+   "silence_duration_s": 0.5,
+   "official_latency_mean_s": 0.6928,
+   "official_minus_silence_s": 0.193,
+   "first_word_after_final_commit_mean_s": 0.8191,
+   "first_word_after_final_commit_n": 99,
+   "first_word_after_final_commit_minus_silence_s": 0.319,
+   "speech_end_to_commit_median_s": 0.467,
+   "speech_end_to_commit_median_minus_silence_s": -0.033,
+   "commit_to_first_audio_median_s": 0.352,
+   "commit_to_first_audio_p90_s": 0.664,
+   "negative_latency_clipped": 18
+  },
+  "vad800": {
+   "silence_duration_s": 0.8,
+   "official_latency_mean_s": 1.0431,
+   "official_minus_silence_s": 0.243,
+   "first_word_after_final_commit_mean_s": 1.119,
+   "first_word_after_final_commit_n": 110,
+   "first_word_after_final_commit_minus_silence_s": 0.319,
+   "speech_end_to_commit_median_s": 0.755,
+   "speech_end_to_commit_median_minus_silence_s": -0.045,
+   "commit_to_first_audio_median_s": 0.37,
+   "commit_to_first_audio_p90_s": 0.789,
+   "negative_latency_clipped": 9
+  },
+  "vad1200": {
+   "silence_duration_s": 1.2,
+   "official_latency_mean_s": 1.4797,
+   "official_minus_silence_s": 0.28,
+   "first_word_after_final_commit_mean_s": 1.5086,
+   "first_word_after_final_commit_n": 116,
+   "first_word_after_final_commit_minus_silence_s": 0.309,
+   "speech_end_to_commit_median_s": 1.171,
+   "speech_end_to_commit_median_minus_silence_s": -0.029,
+   "commit_to_first_audio_median_s": 0.409,
+   "commit_to_first_audio_p90_s": 0.735,
+   "negative_latency_clipped": 2
+  }
+ },
+ "commits_vs_pauses": {
+  "vad500": {
+   "commits": 356,
+   "in_pause_by_commit_time": 273,
+   "outside_any_pause": 83,
+   "in_pause_by_speech_end": 89,
+   "pauses": 277,
+   "pauses_with_commit": 269
+  },
+  "vad800": {
+   "commits": 245,
+   "in_pause_by_commit_time": 223,
+   "outside_any_pause": 22,
+   "in_pause_by_speech_end": 55,
+   "pauses": 277,
+   "pauses_with_commit": 223
+  },
+  "vad1200": {
+   "commits": 84,
+   "in_pause_by_commit_time": 77,
+   "outside_any_pause": 7,
+   "in_pause_by_speech_end": 18,
+   "pauses": 275,
+   "pauses_with_commit": 77
+  },
+  "semmed": {
+   "commits": 56,
+   "in_pause_by_commit_time": 29,
+   "outside_any_pause": 27,
+   "in_pause_by_speech_end": 11,
+   "pauses": 273,
+   "pauses_with_commit": 28
+  }
+ },
+ "pause_responses_audio": {
+  "vad500": {
+   "responses": 345,
+   "with_audio": 204,
+   "without_audio": 141,
+   "cancelled": 258,
+   "with_audio_cut": 186,
+   "survived_per_audio_response_median_s": 0.284,
+   "received_before_cut_per_cut_response_median_s": 2.617,
+   "totals_s": {
+    "received": 812.7,
+    "cut_by_barge_in": 563.8,
+    "cropped_at_input_end": 38.6,
+    "received_after_input_end": 127.8,
+    "survived": 82.6
+   }
+  },
+  "vad800": {
+   "responses": 235,
+   "with_audio": 101,
+   "without_audio": 134,
+   "cancelled": 185,
+   "with_audio_cut": 93,
+   "survived_per_audio_response_median_s": 0.268,
+   "received_before_cut_per_cut_response_median_s": 2.377,
+   "totals_s": {
+    "received": 385.2,
+    "cut_by_barge_in": 239.8,
+    "cropped_at_input_end": 45.8,
+    "received_after_input_end": 55.4,
+    "survived": 44.2
+   }
+  },
+  "vad1200": {
+   "responses": 79,
+   "with_audio": 31,
+   "without_audio": 48,
+   "cancelled": 63,
+   "with_audio_cut": 26,
+   "survived_per_audio_response_median_s": 0.274,
+   "received_before_cut_per_cut_response_median_s": 2.297,
+   "totals_s": {
+    "received": 155.1,
+    "cut_by_barge_in": 78.3,
+    "cropped_at_input_end": 29.3,
+    "received_after_input_end": 30.3,
+    "survived": 17.2
+   }
+  },
+  "semmed": {
+   "responses": 56,
+   "with_audio": 33,
+   "without_audio": 23,
+   "cancelled": 37,
+   "with_audio_cut": 29,
+   "survived_per_audio_response_median_s": 0.456,
+   "received_before_cut_per_cut_response_median_s": 3.177,
+   "totals_s": {
+    "received": 141.6,
+    "cut_by_barge_in": 98.6,
+    "cropped_at_input_end": 21.9,
+    "received_after_input_end": 0.0,
+    "survived": 21.0
+   }
+  }
+ }
+}

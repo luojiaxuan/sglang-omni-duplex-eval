@@ -1,0 +1,131 @@
+{
+  "levels": [
+    {
+      "run": "/data/runs/20261019-three/serving/minicpmo-public/c8/concurrency-8",
+      "profile": "minicpmo-native-pr2377",
+      "concurrency": 8,
+      "mean_open_sessions": 7.828587336591532,
+      "sessions": 128,
+      "sessions_failed": 0,
+      "admission_denials": 0,
+      "input_pacing_violations": 0,
+      "units_expected": 1744,
+      "units_missed": 0,
+      "unit_miss_rate": 0.0,
+      "unit_lag_s": {
+        "count": 1744,
+        "p50": 0.24322170217055827,
+        "p90": 0.3776902321027592,
+        "p99": 0.5802820623689331,
+        "max": 0.9036241360008717
+      },
+      "replies": 151,
+      "replies_with_audio_after_text": 25,
+      "first_audio_latency_s": {
+        "count": 151,
+        "p50": 0.28018276882357895,
+        "p90": 0.3758416238706559,
+        "p99": 0.7002876055194065,
+        "max": 0.7008138990495354
+      },
+      "startup_buffer_needed_s": {
+        "count": 151,
+        "p50": 0.11569106904789805,
+        "p90": 0.22480592085048556,
+        "p99": 0.37094806553795934,
+        "max": 0.4185094169806689
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 95,
+      "underrun_s": 8.635240392526612,
+      "real_time_factor": null,
+      "unmet_targets": []
+    },
+    {
+      "run": "/data/runs/20261019-three/serving/minicpmo-public/c16/concurrency-16",
+      "profile": "minicpmo-native-pr2377",
+      "concurrency": 16,
+      "mean_open_sessions": 15.486242890074537,
+      "sessions": 128,
+      "sessions_failed": 0,
+      "admission_denials": 0,
+      "input_pacing_violations": 0,
+      "units_expected": 1744,
+      "units_missed": 11,
+      "unit_miss_rate": 0.006307339449541285,
+      "unit_lag_s": {
+        "count": 1744,
+        "p50": 0.3511726404540241,
+        "p90": 0.659849516255781,
+        "p99": 0.9439205439714713,
+        "max": 1.6134372679516673
+      },
+      "replies": 144,
+      "replies_with_audio_after_text": 15,
+      "first_audio_latency_s": {
+        "count": 144,
+        "p50": 0.44595907093025744,
+        "p90": 0.7554718303028496,
+        "p99": 0.7997610574495047,
+        "max": 0.9390904610045254
+      },
+      "startup_buffer_needed_s": {
+        "count": 144,
+        "p50": 0.24800928495824337,
+        "p90": 0.5071172944735738,
+        "p99": 0.6117315238318404,
+        "max": 0.697115606861189
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 106,
+      "underrun_s": 26.49983906559646,
+      "real_time_factor": null,
+      "unmet_targets": []
+    },
+    {
+      "run": "/data/runs/20261019-three/serving/minicpmo-public/c24/concurrency-24",
+      "profile": "minicpmo-native-pr2377",
+      "concurrency": 24,
+      "mean_open_sessions": 21.08681848204822,
+      "sessions": 128,
+      "sessions_failed": 0,
+      "admission_denials": 0,
+      "input_pacing_violations": 0,
+      "units_expected": 1744,
+      "units_missed": 107,
+      "unit_miss_rate": 0.06135321100917431,
+      "unit_lag_s": {
+        "count": 1744,
+        "p50": 0.4938885485753417,
+        "p90": 0.9214786655036733,
+        "p99": 1.3085725847166023,
+        "max": 1.7087345249019563
+      },
+      "replies": 148,
+      "replies_with_audio_after_text": 13,
+      "first_audio_latency_s": {
+        "count": 148,
+        "p50": 0.5440048245945945,
+        "p90": 0.7821388460928577,
+        "p99": 1.0630246983258984,
+        "max": 1.077674405183643
+      },
+      "startup_buffer_needed_s": {
+        "count": 148,
+        "p50": 0.3618792574852705,
+        "p90": 0.7154185600578785,
+        "p99": 0.980956211630255,
+        "max": 1.0192438589874655
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 126,
+      "underrun_s": 44.91020082938485,
+      "real_time_factor": null,
+      "unmet_targets": [
+        "unit miss rate at most 1%"
+      ]
+    }
+  ],
+  "max_concurrency_meeting_targets": 16,
+  "capacity_bounded": true
+}

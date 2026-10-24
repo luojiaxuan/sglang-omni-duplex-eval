@@ -1,0 +1,813 @@
+{
+  "shards": [
+    "minicpmo-g0",
+    "minicpmo-g1",
+    "minicpmo-g2",
+    "minicpmo-g3",
+    "minicpmo-g4",
+    "minicpmo-g5",
+    "minicpmo-g6",
+    "minicpmo-g7"
+  ],
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 20260925
+  },
+  "categories": {
+    "all": {
+      "pairs": 498,
+      "timed_overlap_sessions": 498,
+      "stop": {
+        "interval_n": 493,
+        "samples": 498,
+        "zero_interval_samples": 13,
+        "mean_s": 1.705501014198783,
+        "median_s": 1.6600000000000001,
+        "bootstrap_pooled_mean": {
+          "unit": "sample",
+          "unit_n": 498,
+          "replicates": 2000,
+          "empty_replicates": 0,
+          "seed": "20260925:minicpmo:all:overlap:stop",
+          "method": "percentile",
+          "ci95": [
+            1.631462054213535,
+            1.7791999140708912
+          ]
+        }
+      },
+      "response": {
+        "interval_n": 721,
+        "samples": 498,
+        "zero_interval_samples": 4,
+        "mean_s": 2.5177087378640777,
+        "median_s": 2.5000000000000004,
+        "bootstrap_pooled_mean": {
+          "unit": "sample",
+          "unit_n": 498,
+          "replicates": 2000,
+          "empty_replicates": 0,
+          "seed": "20260925:minicpmo:all:overlap:resp",
+          "method": "percentile",
+          "ci95": [
+            2.469571831143229,
+            2.5662726699735505
+          ]
+        }
+      },
+      "judged_pairs": 498,
+      "labels": {
+        "C_RESPOND": {
+          "count": 193,
+          "proportion": 0.38755020080321284,
+          "bootstrap": {
+            "unit": "sample",
+            "unit_n": 498,
+            "replicates": 2000,
+            "empty_replicates": 0,
+            "seed": "20260925:minicpmo:all:C_RESPOND",
+            "method": "percentile",
+            "ci95": [
+              0.34533132530120486,
+              0.42971887550200805
+            ]
+          }
+        },
+        "C_RESUME": {
+          "count": 289,
+          "proportion": 0.5803212851405622,
+          "bootstrap": {
+            "unit": "sample",
+            "unit_n": 498,
+            "replicates": 2000,
+            "empty_replicates": 0,
+            "seed": "20260925:minicpmo:all:C_RESUME",
+            "method": "percentile",
+            "ci95": [
+              0.5381526104417671,
+              0.6244979919678715
+            ]
+          }
+        },
+        "C_UNCERTAIN_HANDLING": {
+          "count": 7,
+          "proportion": 0.014056224899598393,
+          "bootstrap": {
+            "unit": "sample",
+            "unit_n": 498,
+            "replicates": 2000,
+            "empty_replicates": 0,
+            "seed": "20260925:minicpmo:all:C_UNCERTAIN_HANDLING",
+            "method": "percentile",
+            "ci95": [
+              0.006024096385542169,
+              0.02610441767068273
+            ]
+          }
+        },
+        "C_UNKNOWN": {
+          "count": 9,
+          "proportion": 0.018072289156626505,
+          "bootstrap": {
+            "unit": "sample",
+            "unit_n": 498,
+            "replicates": 2000,
+            "empty_replicates": 0,
+            "seed": "20260925:minicpmo:all:C_UNKNOWN",
+            "method": "percentile",
+            "ci95": [
+              0.008032128514056224,
+              0.030120481927710843
+            ]
+          }
+        }
+      },
+      "semantic": {
+        "interaction_handling": {
+          "selected": 498,
+          "accepted": 373,
+          "failed": 102,
+          "unresolved": 23,
+          "quality": 0.7852631578947369,
+          "coverage": 0.9538152610441767,
+          "unresolved_bounds": [
+            0.748995983935743,
+            0.7951807228915663
+          ]
+        },
+        "relevance": {
+          "selected": 498,
+          "accepted": 367,
+          "failed": 55,
+          "unresolved": 76,
+          "quality": 0.8696682464454977,
+          "coverage": 0.8473895582329317,
+          "unresolved_bounds": [
+            0.7369477911646586,
+            0.8895582329317269
+          ]
+        },
+        "grounding": {
+          "selected": 498,
+          "accepted": 323,
+          "failed": 131,
+          "unresolved": 44,
+          "quality": 0.711453744493392,
+          "coverage": 0.9116465863453815,
+          "unresolved_bounds": [
+            0.6485943775100401,
+            0.7369477911646586
+          ]
+        },
+        "joint": {
+          "selected": 498,
+          "accepted": 224,
+          "failed": 194,
+          "unresolved": 80,
+          "quality": 0.5358851674641149,
+          "coverage": 0.8393574297188755,
+          "unresolved_bounds": [
+            0.4497991967871486,
+            0.6104417670682731
+          ]
+        }
+      }
+    },
+    "background_speech": {
+      "pairs": 100,
+      "timed_overlap_sessions": 100,
+      "stop": {
+        "interval_n": 100,
+        "samples": 100,
+        "zero_interval_samples": 2,
+        "mean_s": 1.4203199999999998,
+        "median_s": 1.4200000000000004,
+        "bootstrap_pooled_mean": {
+          "unit": "sample",
+          "unit_n": 100,
+          "replicates": 2000,
+          "empty_replicates": 0,
+          "seed": "20260925:minicpmo:background_speech:overlap:stop",
+          "method": "percentile",
+          "ci95": [
+            1.33809900990099,
+            1.5013408163265305
+          ]
+        }
+      },
+      "response": {
+        "interval_n": 116,
+        "samples": 100,
+        "zero_interval_samples": 1,
+        "mean_s": 2.8812413793103446,
+        "median_s": 2.8520000000000003,
+        "bootstrap_pooled_mean": {
+          "unit": "sample",
+          "unit_n": 100,
+          "replicates": 2000,
+          "empty_replicates": 0,
+          "seed": "20260925:minicpmo:background_speech:overlap:resp",
+          "method": "percentile",
+          "ci95": [
+            2.778813623188406,
+            2.981379310344827
+          ]
+        }
+      },
+      "judged_pairs": 100,
+      "labels": {
+        "C_RESPOND": {
+          "count": 19,
+          "proportion": 0.19,
+          "bootstrap": {
+            "unit": "sample",
+            "unit_n": 100,
+            "replicates": 2000,
+            "empty_replicates": 0,
+            "seed": "20260925:minicpmo:background_speech:C_RESPOND",
+            "method": "percentile",
+            "ci95": [
+              0.12,
+              0.27
+            ]
+          }
+        },
+        "C_RESUME": {
+          "count": 77,
+          "proportion": 0.77,
+          "bootstrap": {
+            "unit": "sample",
+            "unit_n": 100,
+            "replicates": 2000,
+            "empty_replicates": 0,
+            "seed": "20260925:minicpmo:background_speech:C_RESUME",
+            "method": "percentile",
+            "ci95": [
+              0.69,
+              0.85
+            ]
+          }
+        },
+        "C_UNCERTAIN_HANDLING": {
+          "count": 2,
+          "proportion": 0.02,
+          "bootstrap": {
+            "unit": "sample",
+            "unit_n": 100,
+            "replicates": 2000,
+            "empty_replicates": 0,
+            "seed": "20260925:minicpmo:background_speech:C_UNCERTAIN_HANDLING",
+            "method": "percentile",
+            "ci95": [
+              0.0,
+              0.05
+            ]
+          }
+        },
+        "C_UNKNOWN": {
+          "count": 2,
+          "proportion": 0.02,
+          "bootstrap": {
+            "unit": "sample",
+            "unit_n": 100,
+            "replicates": 2000,
+            "empty_replicates": 0,
+            "seed": "20260925:minicpmo:background_speech:C_UNKNOWN",
+            "method": "percentile",
+            "ci95": [
+              0.0,
+              0.05
+            ]
+          }
+        }
+      },
+      "semantic": {
+        "interaction_handling": {
+          "selected": 100,
+          "accepted": 82,
+          "failed": 16,
+          "unresolved": 2,
+          "quality": 0.8367346938775511,
+          "coverage": 0.98,
+          "unresolved_bounds": [
+            0.82,
+            0.84
+          ]
+        },
+        "relevance": {
+          "selected": 100,
+          "accepted": 95,
+          "failed": 4,
+          "unresolved": 1,
+          "quality": 0.9595959595959596,
+          "coverage": 0.99,
+          "unresolved_bounds": [
+            0.95,
+            0.96
+          ]
+        },
+        "grounding": {
+          "selected": 100,
+          "accepted": 39,
+          "failed": 49,
+          "unresolved": 12,
+          "quality": 0.4431818181818182,
+          "coverage": 0.88,
+          "unresolved_bounds": [
+            0.39,
+            0.51
+          ]
+        },
+        "joint": {
+          "selected": 100,
+          "accepted": 39,
+          "failed": 53,
+          "unresolved": 8,
+          "quality": 0.42391304347826086,
+          "coverage": 0.92,
+          "unresolved_bounds": [
+            0.39,
+            0.47
+          ]
+        }
+      }
+    },
+    "talking_to_other": {
+      "pairs": 100,
+      "timed_overlap_sessions": 100,
+      "stop": {
+        "interval_n": 94,
+        "samples": 100,
+        "zero_interval_samples": 6,
+        "mean_s": 1.8662978723404253,
+        "median_s": 1.8520000000000003,
+        "bootstrap_pooled_mean": {
+          "unit": "sample",
+          "unit_n": 100,
+          "replicates": 2000,
+          "empty_replicates": 0,
+          "seed": "20260925:minicpmo:talking_to_other:overlap:stop",
+          "method": "percentile",
+          "ci95": [
+            1.7929191489361704,
+            1.934669565217391
+          ]
+        }
+      },
+      "response": {
+        "interval_n": 143,
+        "samples": 100,
+        "zero_interval_samples": 3,
+        "mean_s": 2.6356083916083914,
+        "median_s": 2.628,
+        "bootstrap_pooled_mean": {
+          "unit": "sample",
+          "unit_n": 100,
+          "replicates": 2000,
+          "empty_replicates": 0,
+          "seed": "20260925:minicpmo:talking_to_other:overlap:resp",
+          "method": "percentile",
+          "ci95": [
+            2.5293827909542195,
+            2.7459905808477236
+          ]
+        }
+      },
+      "judged_pairs": 100,
+      "labels": {
+        "C_RESPOND": {
+          "count": 38,
+          "proportion": 0.38,
+          "bootstrap": {
+            "unit": "sample",
+            "unit_n": 100,
+            "replicates": 2000,
+            "empty_replicates": 0,
+            "seed": "20260925:minicpmo:talking_to_other:C_RESPOND",
+            "method": "percentile",
+            "ci95": [
+              0.29,
+              0.48
+            ]
+          }
+        },
+        "C_RESUME": {
+          "count": 54,
+          "proportion": 0.54,
+          "bootstrap": {
+            "unit": "sample",
+            "unit_n": 100,
+            "replicates": 2000,
+            "empty_replicates": 0,
+            "seed": "20260925:minicpmo:talking_to_other:C_RESUME",
+            "method": "percentile",
+            "ci95": [
+              0.44,
+              0.6302499999999986
+            ]
+          }
+        },
+        "C_UNCERTAIN_HANDLING": {
+          "count": 3,
+          "proportion": 0.03,
+          "bootstrap": {
+            "unit": "sample",
+            "unit_n": 100,
+            "replicates": 2000,
+            "empty_replicates": 0,
+            "seed": "20260925:minicpmo:talking_to_other:C_UNCERTAIN_HANDLING",
+            "method": "percentile",
+            "ci95": [
+              0.0,
+              0.07
+            ]
+          }
+        },
+        "C_UNKNOWN": {
+          "count": 5,
+          "proportion": 0.05,
+          "bootstrap": {
+            "unit": "sample",
+            "unit_n": 100,
+            "replicates": 2000,
+            "empty_replicates": 0,
+            "seed": "20260925:minicpmo:talking_to_other:C_UNKNOWN",
+            "method": "percentile",
+            "ci95": [
+              0.01,
+              0.1
+            ]
+          }
+        }
+      },
+      "semantic": {
+        "interaction_handling": {
+          "selected": 100,
+          "accepted": 62,
+          "failed": 36,
+          "unresolved": 2,
+          "quality": 0.6326530612244898,
+          "coverage": 0.98,
+          "unresolved_bounds": [
+            0.62,
+            0.64
+          ]
+        },
+        "relevance": {
+          "selected": 100,
+          "accepted": 82,
+          "failed": 6,
+          "unresolved": 12,
+          "quality": 0.9318181818181818,
+          "coverage": 0.88,
+          "unresolved_bounds": [
+            0.82,
+            0.94
+          ]
+        },
+        "grounding": {
+          "selected": 100,
+          "accepted": 33,
+          "failed": 57,
+          "unresolved": 10,
+          "quality": 0.36666666666666664,
+          "coverage": 0.9,
+          "unresolved_bounds": [
+            0.33,
+            0.43
+          ]
+        },
+        "joint": {
+          "selected": 100,
+          "accepted": 22,
+          "failed": 69,
+          "unresolved": 9,
+          "quality": 0.24175824175824176,
+          "coverage": 0.91,
+          "unresolved_bounds": [
+            0.22,
+            0.31
+          ]
+        }
+      }
+    },
+    "user_backchannel": {
+      "pairs": 98,
+      "timed_overlap_sessions": 98,
+      "stop": {
+        "interval_n": 98,
+        "samples": 98,
+        "zero_interval_samples": 0,
+        "mean_s": 0.732326530612245,
+        "median_s": 0.7320000000000002,
+        "bootstrap_pooled_mean": {
+          "unit": "sample",
+          "unit_n": 98,
+          "replicates": 2000,
+          "empty_replicates": 0,
+          "seed": "20260925:minicpmo:user_backchannel:overlap:stop",
+          "method": "percentile",
+          "ci95": [
+            0.6993469387755102,
+            0.764334693877551
+          ]
+        }
+      },
+      "response": {
+        "interval_n": 104,
+        "samples": 98,
+        "zero_interval_samples": 0,
+        "mean_s": 2.579076923076923,
+        "median_s": 2.548,
+        "bootstrap_pooled_mean": {
+          "unit": "sample",
+          "unit_n": 98,
+          "replicates": 2000,
+          "empty_replicates": 0,
+          "seed": "20260925:minicpmo:user_backchannel:overlap:resp",
+          "method": "percentile",
+          "ci95": [
+            2.480613725490196,
+            2.679575802837938
+          ]
+        }
+      },
+      "judged_pairs": 98,
+      "labels": {
+        "C_RESPOND": {
+          "count": 1,
+          "proportion": 0.01020408163265306,
+          "bootstrap": {
+            "unit": "sample",
+            "unit_n": 98,
+            "replicates": 2000,
+            "empty_replicates": 0,
+            "seed": "20260925:minicpmo:user_backchannel:C_RESPOND",
+            "method": "percentile",
+            "ci95": [
+              0.0,
+              0.030612244897959183
+            ]
+          }
+        },
+        "C_RESUME": {
+          "count": 96,
+          "proportion": 0.9795918367346939,
+          "bootstrap": {
+            "unit": "sample",
+            "unit_n": 98,
+            "replicates": 2000,
+            "empty_replicates": 0,
+            "seed": "20260925:minicpmo:user_backchannel:C_RESUME",
+            "method": "percentile",
+            "ci95": [
+              0.9489795918367347,
+              1.0
+            ]
+          }
+        },
+        "C_UNCERTAIN_HANDLING": {
+          "count": 0,
+          "proportion": 0.0,
+          "bootstrap": {
+            "unit": "sample",
+            "unit_n": 98,
+            "replicates": 2000,
+            "empty_replicates": 0,
+            "seed": "20260925:minicpmo:user_backchannel:C_UNCERTAIN_HANDLING",
+            "method": "percentile",
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "C_UNKNOWN": {
+          "count": 1,
+          "proportion": 0.01020408163265306,
+          "bootstrap": {
+            "unit": "sample",
+            "unit_n": 98,
+            "replicates": 2000,
+            "empty_replicates": 0,
+            "seed": "20260925:minicpmo:user_backchannel:C_UNKNOWN",
+            "method": "percentile",
+            "ci95": [
+              0.0,
+              0.030612244897959183
+            ]
+          }
+        }
+      },
+      "semantic": {
+        "interaction_handling": {
+          "selected": 98,
+          "accepted": 98,
+          "failed": 0,
+          "unresolved": 0,
+          "quality": 1.0,
+          "coverage": 1.0,
+          "unresolved_bounds": [
+            1.0,
+            1.0
+          ]
+        },
+        "relevance": {
+          "selected": 98,
+          "accepted": 87,
+          "failed": 1,
+          "unresolved": 10,
+          "quality": 0.9886363636363636,
+          "coverage": 0.8979591836734694,
+          "unresolved_bounds": [
+            0.8877551020408163,
+            0.9897959183673469
+          ]
+        },
+        "grounding": {
+          "selected": 98,
+          "accepted": 85,
+          "failed": 1,
+          "unresolved": 12,
+          "quality": 0.9883720930232558,
+          "coverage": 0.8775510204081632,
+          "unresolved_bounds": [
+            0.8673469387755102,
+            0.9897959183673469
+          ]
+        },
+        "joint": {
+          "selected": 98,
+          "accepted": 80,
+          "failed": 2,
+          "unresolved": 16,
+          "quality": 0.975609756097561,
+          "coverage": 0.8367346938775511,
+          "unresolved_bounds": [
+            0.8163265306122449,
+            0.9795918367346939
+          ]
+        }
+      }
+    },
+    "user_interruption": {
+      "pairs": 200,
+      "timed_overlap_sessions": 200,
+      "stop": {
+        "interval_n": 201,
+        "samples": 200,
+        "zero_interval_samples": 5,
+        "mean_s": 2.2466666666666666,
+        "median_s": 2.2040000000000006,
+        "bootstrap_pooled_mean": {
+          "unit": "sample",
+          "unit_n": 200,
+          "replicates": 2000,
+          "empty_replicates": 0,
+          "seed": "20260925:minicpmo:user_interruption:overlap:stop",
+          "method": "percentile",
+          "ci95": [
+            2.120538206739006,
+            2.3737176363082546
+          ]
+        }
+      },
+      "response": {
+        "interval_n": 358,
+        "samples": 200,
+        "zero_interval_samples": 0,
+        "mean_s": 2.3349944134078213,
+        "median_s": 2.3080000000000003,
+        "bootstrap_pooled_mean": {
+          "unit": "sample",
+          "unit_n": 200,
+          "replicates": 2000,
+          "empty_replicates": 0,
+          "seed": "20260925:minicpmo:user_interruption:overlap:resp",
+          "method": "percentile",
+          "ci95": [
+            2.2700319397363464,
+            2.40072243767313
+          ]
+        }
+      },
+      "judged_pairs": 200,
+      "labels": {
+        "C_RESPOND": {
+          "count": 135,
+          "proportion": 0.675,
+          "bootstrap": {
+            "unit": "sample",
+            "unit_n": 200,
+            "replicates": 2000,
+            "empty_replicates": 0,
+            "seed": "20260925:minicpmo:user_interruption:C_RESPOND",
+            "method": "percentile",
+            "ci95": [
+              0.61,
+              0.74
+            ]
+          }
+        },
+        "C_RESUME": {
+          "count": 62,
+          "proportion": 0.31,
+          "bootstrap": {
+            "unit": "sample",
+            "unit_n": 200,
+            "replicates": 2000,
+            "empty_replicates": 0,
+            "seed": "20260925:minicpmo:user_interruption:C_RESUME",
+            "method": "percentile",
+            "ci95": [
+              0.245,
+              0.37
+            ]
+          }
+        },
+        "C_UNCERTAIN_HANDLING": {
+          "count": 2,
+          "proportion": 0.01,
+          "bootstrap": {
+            "unit": "sample",
+            "unit_n": 200,
+            "replicates": 2000,
+            "empty_replicates": 0,
+            "seed": "20260925:minicpmo:user_interruption:C_UNCERTAIN_HANDLING",
+            "method": "percentile",
+            "ci95": [
+              0.0,
+              0.025
+            ]
+          }
+        },
+        "C_UNKNOWN": {
+          "count": 1,
+          "proportion": 0.005,
+          "bootstrap": {
+            "unit": "sample",
+            "unit_n": 200,
+            "replicates": 2000,
+            "empty_replicates": 0,
+            "seed": "20260925:minicpmo:user_interruption:C_UNKNOWN",
+            "method": "percentile",
+            "ci95": [
+              0.0,
+              0.015
+            ]
+          }
+        }
+      },
+      "semantic": {
+        "interaction_handling": {
+          "selected": 200,
+          "accepted": 131,
+          "failed": 50,
+          "unresolved": 19,
+          "quality": 0.7237569060773481,
+          "coverage": 0.905,
+          "unresolved_bounds": [
+            0.655,
+            0.75
+          ]
+        },
+        "relevance": {
+          "selected": 200,
+          "accepted": 103,
+          "failed": 44,
+          "unresolved": 53,
+          "quality": 0.7006802721088435,
+          "coverage": 0.735,
+          "unresolved_bounds": [
+            0.515,
+            0.78
+          ]
+        },
+        "grounding": {
+          "selected": 200,
+          "accepted": 166,
+          "failed": 24,
+          "unresolved": 10,
+          "quality": 0.8736842105263158,
+          "coverage": 0.95,
+          "unresolved_bounds": [
+            0.83,
+            0.88
+          ]
+        },
+        "joint": {
+          "selected": 200,
+          "accepted": 83,
+          "failed": 70,
+          "unresolved": 47,
+          "quality": 0.5424836601307189,
+          "coverage": 0.765,
+          "unresolved_bounds": [
+            0.415,
+            0.65
+          ]
+        }
+      }
+    }
+  }
+}

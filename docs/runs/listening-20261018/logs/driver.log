@@ -1,0 +1,10 @@
+STEP pip exit=0 seconds=3
+STEP setup exit=0 seconds=9
+STEP generate exit=0 seconds=481
+STEP asr exit=0 seconds=106
+STEP aggregate exit=0 seconds=3
+STEP perturb-make exit=0 seconds=4
+STEP perturb-asr exit=0 seconds=21
+STEP perturb-score exit=0 seconds=19
+VALIDATE_EXIT 0
+DRIVER_EXIT=0

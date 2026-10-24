@@ -1,0 +1,194 @@
+{
+  "levels": [
+    {
+      "run": "HF 0cb3e190 20261014-minicpmo-concurrency-sweep/c1/run",
+      "profile": "minicpmo-native-pr2377",
+      "concurrency": 1,
+      "mean_open_sessions": 0.9974669590765654,
+      "sessions": 32,
+      "sessions_failed": 0,
+      "admission_denials": 0,
+      "input_pacing_violations": 0,
+      "units_expected": 432,
+      "units_missed": 0,
+      "unit_miss_rate": 0.0,
+      "unit_lag_s": {
+        "count": 432,
+        "p50": 0.1799772140220739,
+        "p90": 0.2075643384479918,
+        "p99": 0.27128481065505183,
+        "max": 0.6537909300532192
+      },
+      "replies": 39,
+      "replies_with_audio_after_text": 2,
+      "first_audio_latency_s": {
+        "count": 39,
+        "p50": 0.1870438790647313,
+        "p90": 0.20497677742969245,
+        "p99": 0.4860715785645868,
+        "max": 0.6535967210074887
+      },
+      "startup_buffer_needed_s": {
+        "count": 39,
+        "p50": 0.05184708395972848,
+        "p90": 0.09632889581844212,
+        "p99": 0.11715884639183055,
+        "max": 0.12365736695937812
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 9,
+      "underrun_s": 0.14826805843040347,
+      "real_time_factor": {
+        "count": 39,
+        "p50": 0.9939999770140275,
+        "p90": 1.0253219033172354,
+        "p99": 1.0327989997287903,
+        "max": 1.0332859086726482
+      },
+      "unmet_targets": []
+    },
+    {
+      "run": "HF 0cb3e190 20261014-minicpmo-concurrency-sweep/c2/run",
+      "profile": "minicpmo-native-pr2377",
+      "concurrency": 2,
+      "mean_open_sessions": 1.9911393350323234,
+      "sessions": 32,
+      "sessions_failed": 0,
+      "admission_denials": 0,
+      "input_pacing_violations": 0,
+      "units_expected": 432,
+      "units_missed": 0,
+      "unit_miss_rate": 0.0,
+      "unit_lag_s": {
+        "count": 432,
+        "p50": 0.20590043847914785,
+        "p90": 0.26327678171219304,
+        "p99": 0.40230228752247055,
+        "max": 0.7757759660016745
+      },
+      "replies": 36,
+      "replies_with_audio_after_text": 6,
+      "first_audio_latency_s": {
+        "count": 36,
+        "p50": 0.21771418751450256,
+        "p90": 0.27179696498205885,
+        "p99": 0.7751945666735992,
+        "max": 0.7754798800451681
+      },
+      "startup_buffer_needed_s": {
+        "count": 36,
+        "p50": 0.049397615948691964,
+        "p90": 0.09891416400205344,
+        "p99": 0.14906246798345812,
+        "max": 0.16354105691425502
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 8,
+      "underrun_s": 0.2110435552895069,
+      "real_time_factor": {
+        "count": 36,
+        "p50": 0.9930262336274609,
+        "p90": 1.0115796184183896,
+        "p99": 1.0325799853007387,
+        "max": 1.036605379350173
+      },
+      "unmet_targets": []
+    },
+    {
+      "run": "HF 0cb3e190 20261014-minicpmo-concurrency-sweep/c4/run",
+      "profile": "minicpmo-native-pr2377",
+      "concurrency": 4,
+      "mean_open_sessions": 3.9154597360447867,
+      "sessions": 32,
+      "sessions_failed": 0,
+      "admission_denials": 0,
+      "input_pacing_violations": 0,
+      "units_expected": 432,
+      "units_missed": 0,
+      "unit_miss_rate": 0.0,
+      "unit_lag_s": {
+        "count": 432,
+        "p50": 0.21108606096822768,
+        "p90": 0.3204604767845014,
+        "p99": 0.4742366202338596,
+        "max": 0.774182950030081
+      },
+      "replies": 39,
+      "replies_with_audio_after_text": 4,
+      "first_audio_latency_s": {
+        "count": 39,
+        "p50": 0.23481679509859532,
+        "p90": 0.42088019873481336,
+        "p99": 0.7732861176738516,
+        "max": 0.7739175199531019
+      },
+      "startup_buffer_needed_s": {
+        "count": 39,
+        "p50": 0.05622257699724287,
+        "p90": 0.11934145279228688,
+        "p99": 0.17035481375409284,
+        "max": 0.17841073393356055
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 15,
+      "underrun_s": 0.5367783685214818,
+      "real_time_factor": {
+        "count": 39,
+        "p50": 0.9865058143856004,
+        "p90": 1.0220077371923253,
+        "p99": 1.037664884730475,
+        "max": 1.0400438560172915
+      },
+      "unmet_targets": []
+    },
+    {
+      "run": "HF 0cb3e190 20261014-minicpmo-concurrency-sweep/c8/run",
+      "profile": "minicpmo-native-pr2377",
+      "concurrency": 8,
+      "mean_open_sessions": 7.787872303244058,
+      "sessions": 32,
+      "sessions_failed": 0,
+      "admission_denials": 0,
+      "input_pacing_violations": 0,
+      "units_expected": 432,
+      "units_missed": 0,
+      "unit_miss_rate": 0.0,
+      "unit_lag_s": {
+        "count": 432,
+        "p50": 0.282222400943283,
+        "p90": 0.41602315481286506,
+        "p99": 0.603737701663049,
+        "max": 0.619308946072124
+      },
+      "replies": 35,
+      "replies_with_audio_after_text": 4,
+      "first_audio_latency_s": {
+        "count": 35,
+        "p50": 0.28240456397179514,
+        "p90": 0.5621367410290987,
+        "p99": 0.6034857591264882,
+        "max": 0.6035360899986699
+      },
+      "startup_buffer_needed_s": {
+        "count": 35,
+        "p50": 0.11355018801987171,
+        "p90": 0.25118651418015364,
+        "p99": 0.37201725854305506,
+        "max": 0.4142063829349354
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 21,
+      "underrun_s": 2.1885129938600585,
+      "real_time_factor": {
+        "count": 35,
+        "p50": 0.9723168569875674,
+        "p90": 1.0251083354931325,
+        "p99": 1.2091905922489232,
+        "max": 1.287707667099312
+      },
+      "unmet_targets": []
+    }
+  ],
+  "max_concurrency_meeting_targets": 8,
+  "capacity_bounded": false
+}

@@ -1,0 +1,161 @@
+{
+ "minicpmo": {
+  "replies_with_audio": 278,
+  "longest_silence_s_p50": 0.28,
+  "longest_silence_s_p90": 0.48,
+  "replies_with_silence_over_2s": 0,
+  "replies_with_silence_over_5s": 0,
+  "speech_ratio_p10": 0.5779512195121951,
+  "speech_ratio_median": 0.7181341920599826,
+  "non_english_replies": 0,
+  "voice_similarity_english_mean": 76.0911979675293,
+  "voice_similarity_non_english_mean": null,
+  "non_english_examples": [],
+  "longest_silences": [
+   {
+    "sample_id": "user_backchannel/2",
+    "variant": "clean",
+    "status": "completed",
+    "duration_s": 9.28,
+    "longest_silence_s": 1.46,
+    "speech_ratio": 0.6077586206896551,
+    "non_english": false,
+    "utmos": 4.327176094055176,
+    "voice_similarity": 74.43834686279297,
+    "transcript": " Photosynthesis, that is the process through which plants use sunlight to convert carbon dioxide and water into sugar"
+   },
+   {
+    "sample_id": "user_backchannel/10",
+    "variant": "overlap",
+    "status": "completed",
+    "duration_s": 9.28,
+    "longest_silence_s": 0.8200000000000001,
+    "speech_ratio": 0.6681034482758621,
+    "non_english": false,
+    "utmos": 4.03049373626709,
+    "voice_similarity": 75.61479187011719,
+    "transcript": " Okay, let's talk about ancient Egypt. It was a civilization in Northeast Africa along the Nile River, which played a huge"
+   },
+   {
+    "sample_id": "synthetic_user_interruption/6",
+    "variant": "input",
+    "status": "completed",
+    "duration_s": 6.28,
+    "longest_silence_s": 0.7000000000000001,
+    "speech_ratio": 0.6464968152866242,
+    "non_english": false,
+    "utmos": 4.100593566894531,
+    "voice_similarity": 75.90849304199219,
+    "transcript": " If you're looking to see beautiful scenery, definitely go to the French Riv ier."
+   },
+   {
+    "sample_id": "talking_to_other/25",
+    "variant": "overlap",
+    "status": "completed",
+    "duration_s": 5.28,
+    "longest_silence_s": 0.68,
+    "speech_ratio": 0.6363636363636364,
+    "non_english": false,
+    "utmos": 4.40954065322876,
+    "voice_similarity": 73.11610412597656,
+    "transcript": " Got it. I will water the plants while you are gone and also set an alarm for"
+   },
+   {
+    "sample_id": "user_backchannel/19",
+    "variant": "clean",
+    "status": "completed",
+    "duration_s": 10.28,
+    "longest_silence_s": 0.66,
+    "speech_ratio": 0.7431906614785992,
+    "non_english": false,
+    "utmos": 4.065207004547119,
+    "voice_similarity": 79.87211608886719,
+    "transcript": " Exercise is very good for your health. Regular exercise can help improve physical fitness, strengthen muscles and bones, boost immunity, control weight,"
+   }
+  ]
+ },
+ "cascade": {
+  "replies_with_audio": 382,
+  "longest_silence_s_p50": 0.28,
+  "longest_silence_s_p90": 0.6,
+  "replies_with_silence_over_2s": 0,
+  "replies_with_silence_over_5s": 0,
+  "speech_ratio_p10": 0.718609022556391,
+  "speech_ratio_median": 0.8291402953586497,
+  "non_english_replies": 8,
+  "voice_similarity_english_mean": 67.54086277531643,
+  "voice_similarity_non_english_mean": 45.72421741485596,
+  "non_english_examples": [
+   "嗯，时间旅行理论目前仍属科幻，尚未被证实。",
+   "私は寿司が好きです。",
+   "パウル、そのメールを送り忘れた場合に私をポケてください。",
+   "私はすしを大好きです。",
+   "Nous devrions arroser les plantes plus tard.",
+   "哈哈，你真有趣！😄",
+   "嗯，确实，这边有很多站点，比如点魔欧、瓦尼米。",
+   "户外地方很多。"
+  ],
+  "longest_silences": [
+   {
+    "sample_id": "candor_pause_handling/7",
+    "variant": "input",
+    "status": "completed",
+    "duration_s": 6.32,
+    "longest_silence_s": 1.08,
+    "speech_ratio": 0.5917721518987342,
+    "non_english": true,
+    "utmos": 3.7028088569641113,
+    "voice_similarity": 48.194923400878906,
+    "transcript": "嗯，确实，这边有很多站点，比如点魔欧、瓦尼米。"
+   },
+   {
+    "sample_id": "user_interruption/10",
+    "variant": "clean",
+    "status": "completed",
+    "duration_s": 10.32,
+    "longest_silence_s": 1.06,
+    "speech_ratio": 0.6686046511627907,
+    "non_english": false,
+    "utmos": 4.4276123046875,
+    "voice_similarity": 67.53890228271484,
+    "transcript": "Try deep breathing: inhale for 4 counts, hold for 4, exhale for 6. Repeat until calm."
+   },
+   {
+    "sample_id": "talking_to_other/8",
+    "variant": "clean",
+    "status": "completed",
+    "duration_s": 4.72,
+    "longest_silence_s": 1.06,
+    "speech_ratio": 0.5847457627118644,
+    "non_english": true,
+    "utmos": 3.3787500858306885,
+    "voice_similarity": 33.80923843383789,
+    "transcript": "私はすしを大好きです。"
+   },
+   {
+    "sample_id": "talking_to_other/9",
+    "variant": "clean",
+    "status": "completed",
+    "duration_s": 10.8,
+    "longest_silence_s": 1.06,
+    "speech_ratio": 0.6518518518518519,
+    "non_english": false,
+    "utmos": 4.135934829711914,
+    "voice_similarity": 72.53446960449219,
+    "transcript": "Plant process where sunlight converts carbon dioxide and water into glucose and oxygen."
+   },
+   {
+    "sample_id": "icc_backchannel/5",
+    "variant": "input",
+    "status": "completed",
+    "duration_s": 8.64,
+    "longest_silence_s": 0.98,
+    "speech_ratio": 0.6898148148148148,
+    "non_english": false,
+    "utmos": 4.005809307098389,
+    "voice_similarity": 74.6082763671875,
+    "transcript": "You're right—calculus can be tough, but it builds strong problem-solving skills. Consider taking it later when you're ready."
+   }
+  ]
+ }
+}

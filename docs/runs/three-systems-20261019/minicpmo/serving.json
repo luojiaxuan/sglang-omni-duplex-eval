@@ -1,0 +1,301 @@
+{
+  "levels": [
+    {
+      "run": "/data/runs/20261019-three/fdb/runs/minicpmo/repeat-1/recording/shard-0",
+      "profile": "minicpmo-native-pr2377",
+      "concurrency": 1,
+      "mean_open_sessions": 0.9966763597453178,
+      "sessions": 200,
+      "sessions_failed": 0,
+      "admission_denials": 0,
+      "input_pacing_violations": 0,
+      "units_expected": 2742,
+      "units_missed": 0,
+      "unit_miss_rate": 0.0,
+      "unit_lag_s": {
+        "count": 2742,
+        "p50": 0.17758159851655364,
+        "p90": 0.20807306359056382,
+        "p99": 0.2640355788590387,
+        "max": 0.5438540149480104
+      },
+      "replies": 228,
+      "replies_with_audio_after_text": 21,
+      "first_audio_latency_s": {
+        "count": 228,
+        "p50": 0.184355708071962,
+        "p90": 0.20689583122730257,
+        "p99": 0.22083043051650747,
+        "max": 0.5436388968955725
+      },
+      "startup_buffer_needed_s": {
+        "count": 228,
+        "p50": 0.05773873452562839,
+        "p90": 0.09683143892325462,
+        "p99": 0.14661890699993818,
+        "max": 0.9913307530805469
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 53,
+      "underrun_s": 1.969704072456807,
+      "real_time_factor": null,
+      "unmet_targets": []
+    },
+    {
+      "run": "/data/runs/20261019-three/serving/minicpmo/c2/concurrency-2",
+      "profile": "minicpmo-native-pr2377",
+      "concurrency": 2,
+      "mean_open_sessions": 1.9928527488386532,
+      "sessions": 128,
+      "sessions_failed": 0,
+      "admission_denials": 0,
+      "input_pacing_violations": 0,
+      "units_expected": 1744,
+      "units_missed": 0,
+      "unit_miss_rate": 0.0,
+      "unit_lag_s": {
+        "count": 1744,
+        "p50": 0.20187054702546448,
+        "p90": 0.2611201805761084,
+        "p99": 0.32903328696498635,
+        "max": 0.5266994629055262
+      },
+      "replies": 144,
+      "replies_with_audio_after_text": 17,
+      "first_audio_latency_s": {
+        "count": 144,
+        "p50": 0.21596521546598524,
+        "p90": 0.2608978936681524,
+        "p99": 0.3005528015177696,
+        "max": 0.3243786839302629
+      },
+      "startup_buffer_needed_s": {
+        "count": 144,
+        "p50": 0.062219139421358705,
+        "p90": 0.11755400521215052,
+        "p99": 0.17006458294112234,
+        "max": 0.17624058295041323
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 49,
+      "underrun_s": 1.4285038004163653,
+      "real_time_factor": null,
+      "unmet_targets": []
+    },
+    {
+      "run": "/data/runs/20261019-three/serving/minicpmo/c4/concurrency-4",
+      "profile": "minicpmo-native-pr2377",
+      "concurrency": 4,
+      "mean_open_sessions": 3.9758930522030127,
+      "sessions": 128,
+      "sessions_failed": 0,
+      "admission_denials": 0,
+      "input_pacing_violations": 0,
+      "units_expected": 1744,
+      "units_missed": 0,
+      "unit_miss_rate": 0.0,
+      "unit_lag_s": {
+        "count": 1744,
+        "p50": 0.21924760146066546,
+        "p90": 0.32071366757154474,
+        "p99": 0.451207358299288,
+        "max": 0.5985686690546572
+      },
+      "replies": 149,
+      "replies_with_audio_after_text": 9,
+      "first_audio_latency_s": {
+        "count": 149,
+        "p50": 0.25177792203612626,
+        "p90": 0.31213124576024714,
+        "p99": 0.3537818310596051,
+        "max": 0.36464558891020715
+      },
+      "startup_buffer_needed_s": {
+        "count": 149,
+        "p50": 0.0737407801207155,
+        "p90": 0.15866068908944725,
+        "p99": 0.2847958504687998,
+        "max": 0.3189209830015898
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 70,
+      "underrun_s": 3.839983912417665,
+      "real_time_factor": null,
+      "unmet_targets": []
+    },
+    {
+      "run": "/data/runs/20261019-three/serving/minicpmo/c8/concurrency-8",
+      "profile": "minicpmo-native-pr2377",
+      "concurrency": 8,
+      "mean_open_sessions": 7.8329821618155355,
+      "sessions": 128,
+      "sessions_failed": 0,
+      "admission_denials": 0,
+      "input_pacing_violations": 0,
+      "units_expected": 1744,
+      "units_missed": 8,
+      "unit_miss_rate": 0.0045871559633027525,
+      "unit_lag_s": {
+        "count": 1744,
+        "p50": 0.24228155915625393,
+        "p90": 0.4448451552307234,
+        "p99": 0.8101181965763681,
+        "max": 1.6957744110841304
+      },
+      "replies": 143,
+      "replies_with_audio_after_text": 11,
+      "first_audio_latency_s": {
+        "count": 143,
+        "p50": 0.30948679195716977,
+        "p90": 0.41945154876448215,
+        "p99": 0.5679804799752314,
+        "max": 0.8705530769657344
+      },
+      "startup_buffer_needed_s": {
+        "count": 143,
+        "p50": 0.13809606595896184,
+        "p90": 0.29206935381516813,
+        "p99": 1.165869818637149,
+        "max": 1.2132557288277894
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 96,
+      "underrun_s": 14.405336217023432,
+      "real_time_factor": null,
+      "unmet_targets": []
+    },
+    {
+      "run": "/data/runs/20261019-three/serving/minicpmo/c16/concurrency-16",
+      "profile": "minicpmo-native-pr2377",
+      "concurrency": 16,
+      "mean_open_sessions": 15.454817499429424,
+      "sessions": 128,
+      "sessions_failed": 0,
+      "admission_denials": 0,
+      "input_pacing_violations": 0,
+      "units_expected": 1744,
+      "units_missed": 45,
+      "unit_miss_rate": 0.025802752293577983,
+      "unit_lag_s": {
+        "count": 1744,
+        "p50": 0.4044599438784644,
+        "p90": 0.7724790790351108,
+        "p99": 1.1249612170760515,
+        "max": 1.926215027924627
+      },
+      "replies": 147,
+      "replies_with_audio_after_text": 15,
+      "first_audio_latency_s": {
+        "count": 147,
+        "p50": 0.4813243269454688,
+        "p90": 0.8649504392407834,
+        "p99": 0.981990528809838,
+        "max": 0.9919279050081968
+      },
+      "startup_buffer_needed_s": {
+        "count": 147,
+        "p50": 0.2834906899370253,
+        "p90": 0.6517026313580573,
+        "p99": 0.9138969026599074,
+        "max": 1.107031209859997
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 116,
+      "underrun_s": 35.61230011587031,
+      "real_time_factor": null,
+      "unmet_targets": [
+        "unit miss rate at most 1%"
+      ]
+    },
+    {
+      "run": "/data/runs/20261019-three/serving/minicpmo/c24/concurrency-24",
+      "profile": "minicpmo-native-pr2377",
+      "concurrency": 24,
+      "mean_open_sessions": 21.195215158516845,
+      "sessions": 128,
+      "sessions_failed": 0,
+      "admission_denials": 0,
+      "input_pacing_violations": 0,
+      "units_expected": 1744,
+      "units_missed": 358,
+      "unit_miss_rate": 0.20527522935779816,
+      "unit_lag_s": {
+        "count": 1744,
+        "p50": 0.4978884175652638,
+        "p90": 1.2349965797737241,
+        "p99": 1.7969868139154255,
+        "max": 2.4279753111768514
+      },
+      "replies": 154,
+      "replies_with_audio_after_text": 21,
+      "first_audio_latency_s": {
+        "count": 154,
+        "p50": 0.6716998689807951,
+        "p90": 1.0206298616016287,
+        "p99": 1.4858433611528015,
+        "max": 1.5612107969354838
+      },
+      "startup_buffer_needed_s": {
+        "count": 154,
+        "p50": 0.3828098609810695,
+        "p90": 1.0630600739037626,
+        "p99": 1.6764323666668497,
+        "max": 2.014846549835056
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 120,
+      "underrun_s": 63.785971139092,
+      "real_time_factor": null,
+      "unmet_targets": [
+        "unit miss rate at most 1%"
+      ]
+    },
+    {
+      "run": "/data/runs/20261019-three/serving/minicpmo/c32/concurrency-32",
+      "profile": "minicpmo-native-pr2377",
+      "concurrency": 32,
+      "mean_open_sessions": 28.298095225430437,
+      "sessions": 128,
+      "sessions_failed": 7,
+      "admission_denials": 0,
+      "input_pacing_violations": 7,
+      "units_expected": 1744,
+      "units_missed": 1043,
+      "unit_miss_rate": 0.5980504587155964,
+      "unit_lag_s": {
+        "count": 1655,
+        "p50": 1.3603025290649384,
+        "p90": 3.374690850777553,
+        "p99": 6.070467958268713,
+        "max": 11.461102572036907
+      },
+      "replies": 143,
+      "replies_with_audio_after_text": 11,
+      "first_audio_latency_s": {
+        "count": 143,
+        "p50": 1.2998007950372994,
+        "p90": 2.026790215773508,
+        "p99": 2.8644844005210333,
+        "max": 3.1146050090901554
+      },
+      "startup_buffer_needed_s": {
+        "count": 143,
+        "p50": 1.585885235806927,
+        "p90": 3.3717547362204634,
+        "p99": 6.163491039974636,
+        "max": 9.122623787960038
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 136,
+      "underrun_s": 237.92036708607338,
+      "real_time_factor": null,
+      "unmet_targets": [
+        "no failed sessions",
+        "no input pacing violations",
+        "unit miss rate at most 1%"
+      ]
+    }
+  ],
+  "max_concurrency_meeting_targets": 8,
+  "capacity_bounded": true
+}

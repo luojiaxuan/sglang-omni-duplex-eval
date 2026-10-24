@@ -1,0 +1,194 @@
+{
+  "levels": [
+    {
+      "run": "/data/runs/20261019-27b/serving/cascade27b/c2/concurrency-2",
+      "profile": "turn-based",
+      "concurrency": 2,
+      "mean_open_sessions": 1.9910958161494892,
+      "sessions": 128,
+      "sessions_failed": 0,
+      "admission_denials": 0,
+      "input_pacing_violations": 0,
+      "units_expected": null,
+      "units_missed": null,
+      "unit_miss_rate": null,
+      "unit_lag_s": {
+        "count": 0,
+        "p50": null,
+        "p90": null,
+        "p99": null,
+        "max": null
+      },
+      "replies": 189,
+      "replies_with_audio_after_text": null,
+      "first_audio_latency_s": {
+        "count": 189,
+        "p50": 0.46550761302933097,
+        "p90": 0.6798534977249802,
+        "p99": 0.9616488084662768,
+        "max": 2.168081003939733
+      },
+      "startup_buffer_needed_s": {
+        "count": 189,
+        "p50": 0.0,
+        "p90": 0.0,
+        "p99": 0.0,
+        "max": 1.2518141109030694
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 1,
+      "underrun_s": 1.1718141108285636,
+      "real_time_factor": {
+        "count": 188,
+        "p50": 0.6817481317143458,
+        "p90": 0.8403956399063747,
+        "p99": 0.8834030055097809,
+        "max": 0.8930845212486742
+      },
+      "unmet_targets": []
+    },
+    {
+      "run": "/data/runs/20261019-27b/serving/cascade27b/c4/concurrency-4",
+      "profile": "turn-based",
+      "concurrency": 4,
+      "mean_open_sessions": 3.9706642307733087,
+      "sessions": 128,
+      "sessions_failed": 0,
+      "admission_denials": 0,
+      "input_pacing_violations": 0,
+      "units_expected": null,
+      "units_missed": null,
+      "unit_miss_rate": null,
+      "unit_lag_s": {
+        "count": 0,
+        "p50": null,
+        "p90": null,
+        "p99": null,
+        "max": null
+      },
+      "replies": 185,
+      "replies_with_audio_after_text": null,
+      "first_audio_latency_s": {
+        "count": 185,
+        "p50": 0.4698868650011718,
+        "p90": 0.767131499852985,
+        "p99": 1.5049881390202684,
+        "max": 4.132114332169294
+      },
+      "startup_buffer_needed_s": {
+        "count": 185,
+        "p50": 0.0,
+        "p90": 0.0,
+        "p99": 0.03805020380765119,
+        "max": 0.24655976193025708
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 2,
+      "underrun_s": 0.32437353557907045,
+      "real_time_factor": {
+        "count": 185,
+        "p50": 0.6710353324776586,
+        "p90": 0.8352879128862372,
+        "p99": 0.8809914923831398,
+        "max": 0.8879703334850256
+      },
+      "unmet_targets": []
+    },
+    {
+      "run": "/data/runs/20261019-27b/serving/cascade27b/c8/concurrency-8",
+      "profile": "turn-based",
+      "concurrency": 8,
+      "mean_open_sessions": 7.821272175857653,
+      "sessions": 128,
+      "sessions_failed": 0,
+      "admission_denials": 0,
+      "input_pacing_violations": 0,
+      "units_expected": null,
+      "units_missed": null,
+      "unit_miss_rate": null,
+      "unit_lag_s": {
+        "count": 0,
+        "p50": null,
+        "p90": null,
+        "p99": null,
+        "max": null
+      },
+      "replies": 183,
+      "replies_with_audio_after_text": null,
+      "first_audio_latency_s": {
+        "count": 183,
+        "p50": 0.5627206529024988,
+        "p90": 0.9819327216595412,
+        "p99": 4.217627425407992,
+        "max": 4.349503978854045
+      },
+      "startup_buffer_needed_s": {
+        "count": 183,
+        "p50": 0.0,
+        "p90": 0.0,
+        "p99": 0.040650290977211345,
+        "max": 0.2600009909365326
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 2,
+      "underrun_s": 0.3258359406609088,
+      "real_time_factor": {
+        "count": 183,
+        "p50": 0.660368591904516,
+        "p90": 0.8170774273907851,
+        "p99": 0.8501769005495198,
+        "max": 0.8724019435310028
+      },
+      "unmet_targets": []
+    },
+    {
+      "run": "/data/runs/20261019-27b/serving/cascade27b/c16/concurrency-16",
+      "profile": "turn-based",
+      "concurrency": 16,
+      "mean_open_sessions": 15.29052052354801,
+      "sessions": 128,
+      "sessions_failed": 0,
+      "admission_denials": 0,
+      "input_pacing_violations": 0,
+      "units_expected": null,
+      "units_missed": null,
+      "unit_miss_rate": null,
+      "unit_lag_s": {
+        "count": 0,
+        "p50": null,
+        "p90": null,
+        "p99": null,
+        "max": null
+      },
+      "replies": 183,
+      "replies_with_audio_after_text": null,
+      "first_audio_latency_s": {
+        "count": 183,
+        "p50": 0.8217564099468291,
+        "p90": 1.3148025821894407,
+        "p99": 4.357496858495288,
+        "max": 4.706282052909955
+      },
+      "startup_buffer_needed_s": {
+        "count": 183,
+        "p50": 0.0,
+        "p90": 0.0,
+        "p99": 0.05467619286384641,
+        "max": 0.3970678858458996
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 2,
+      "underrun_s": 0.5408245127182454,
+      "real_time_factor": {
+        "count": 183,
+        "p50": 0.5794617311344454,
+        "p90": 0.7950597915601444,
+        "p99": 0.8484381990514166,
+        "max": 0.8854030643341102
+      },
+      "unmet_targets": []
+    }
+  ],
+  "max_concurrency_meeting_targets": 16,
+  "capacity_bounded": false
+}

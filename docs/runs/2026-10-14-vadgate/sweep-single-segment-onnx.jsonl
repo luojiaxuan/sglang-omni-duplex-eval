@@ -1,0 +1,12 @@
+{"threshold": 0.3, "min_silence_ms": 50, "not_exercised": 88, "talked_through": 0, "exercised_and_responded": 112, "n": 200}
+{"threshold": 0.3, "min_silence_ms": 100, "not_exercised": 87, "talked_through": 1, "exercised_and_responded": 112, "n": 200}
+{"threshold": 0.3, "min_silence_ms": 300, "not_exercised": 87, "talked_through": 1, "exercised_and_responded": 112, "n": 200}
+{"threshold": 0.3, "min_silence_ms": 500, "not_exercised": 84, "talked_through": 3, "exercised_and_responded": 113, "n": 200}
+{"threshold": 0.5, "min_silence_ms": 50, "not_exercised": 88, "talked_through": 0, "exercised_and_responded": 112, "n": 200}
+{"threshold": 0.5, "min_silence_ms": 100, "not_exercised": 87, "talked_through": 0, "exercised_and_responded": 113, "n": 200}
+{"threshold": 0.5, "min_silence_ms": 300, "not_exercised": 87, "talked_through": 1, "exercised_and_responded": 112, "n": 200}
+{"threshold": 0.5, "min_silence_ms": 500, "not_exercised": 85, "talked_through": 3, "exercised_and_responded": 112, "n": 200}
+{"threshold": 0.7, "min_silence_ms": 50, "not_exercised": 91, "talked_through": 0, "exercised_and_responded": 109, "n": 200}
+{"threshold": 0.7, "min_silence_ms": 100, "not_exercised": 90, "talked_through": 0, "exercised_and_responded": 110, "n": 200}
+{"threshold": 0.7, "min_silence_ms": 300, "not_exercised": 89, "talked_through": 1, "exercised_and_responded": 110, "n": 200}
+{"threshold": 0.7, "min_silence_ms": 500, "not_exercised": 87, "talked_through": 3, "exercised_and_responded": 110, "n": 200}

@@ -1,0 +1,127 @@
+{
+  "asr_sha256": "0e51e1293be0086f0b7697fa60e1a5abc15bf24e6e077d44a2bf7064980457e1",
+  "kind": "full-duplex-bench-v1.0-reference-summary",
+  "manifest_sha256": "c860afef59c3f71c723a198de03452f487f1f32840a5b359c393265ffe94c2da",
+  "reference_files": {
+    "asr": {
+      "path": "v1_v1.5/get_transcript/asr.py",
+      "sha256": "aedaee0d50f2bc47947caf6f3899939461e290225a98c0ddc434c360189596cf"
+    },
+    "backchannel": {
+      "path": "v1_v1.5/evaluation/eval_backchannel.py",
+      "sha256": "36371e3efb4a25e6b5afe317d70c81ad8f8815b95ef025baa06b11c378ecd0d9"
+    },
+    "backchannel_distribution": {
+      "path": "v1_v1.5/evaluation/icc_gt_distribution.json",
+      "sha256": "92bcd0ff27246aaa9a0136737b476afd456cd393f003944c3394c140e590f2a8"
+    },
+    "evaluate": {
+      "path": "v1_v1.5/evaluation/evaluate.py",
+      "sha256": "ae362d718f80428a6fe73d8a87e9e3b8935e86008267f0b2e34d1cc7573f1d4e"
+    },
+    "pause_handling": {
+      "path": "v1_v1.5/evaluation/eval_pause_handling.py",
+      "sha256": "1e86519b4f4543f2f667ce60b9bea2f6148a3bc4255bb20c1ea111b45e0adbb5"
+    },
+    "smooth_turn_taking": {
+      "path": "v1_v1.5/evaluation/eval_smooth_turn_taking.py",
+      "sha256": "cb7d6b987cd415e1b71b6eea06e67ea8fdc77a1167107e5c0552105bac05b2df"
+    },
+    "user_interruption": {
+      "path": "v1_v1.5/evaluation/eval_user_interruption.py",
+      "sha256": "e701c14579c1477577b262265cfff75b28ac2e057beee5ba82572afa2a35963a"
+    }
+  },
+  "reference_revision": "3e799c45a045256f47d5f1c9cda90157e2d2ec9e",
+  "schema_version": 1,
+  "subsets": {
+    "candor_pause_handling": {
+      "declared": 216,
+      "evaluated": 3,
+      "evaluated_utc": "2026-10-12T19:45:50.043186+00:00",
+      "judge": null,
+      "log": "logs/evaluate-candor_pause_handling.log",
+      "result": {
+        "Average take turn": 0.0
+      },
+      "selected": 3,
+      "task": "pause_handling"
+    },
+    "candor_turn_taking": {
+      "declared": 119,
+      "evaluated": 3,
+      "evaluated_utc": "2026-10-12T19:45:53.654604+00:00",
+      "judge": null,
+      "log": "logs/evaluate-candor_turn_taking.log",
+      "result": {
+        "Average latency": 2.0566666666667137,
+        "Average take turn": 1.0
+      },
+      "selected": 3,
+      "task": "smooth_turn_taking"
+    },
+    "icc_backchannel": {
+      "declared": 55,
+      "evaluated": 3,
+      "evaluated_utc": "2026-10-12T19:46:01.052218+00:00",
+      "judge": null,
+      "log": "logs/evaluate-icc_backchannel.log",
+      "result": {
+        "Frequency mean": 0.0,
+        "Frequency std": 0.0,
+        "JSD mean": 1.0,
+        "JSD std": 0.0,
+        "Number of samples": 3.0,
+        "TOR mean": 0.0,
+        "TOR std": 0.0
+      },
+      "selected": 3,
+      "task": "backchannel"
+    },
+    "synthetic_pause_handling": {
+      "declared": 137,
+      "evaluated": 3,
+      "evaluated_utc": "2026-10-12T19:45:46.435572+00:00",
+      "judge": null,
+      "log": "logs/evaluate-synthetic_pause_handling.log",
+      "result": {
+        "Average take turn": 0.0
+      },
+      "selected": 3,
+      "task": "pause_handling"
+    },
+    "synthetic_user_interruption": {
+      "declared": 200,
+      "evaluated": 3,
+      "evaluated_utc": "2026-10-12T19:50:55.423629+00:00",
+      "judge": {
+        "base_url": "http://127.0.0.1:30000/v1/",
+        "completion_tokens": 344,
+        "distinct_requests": 3,
+        "ledger": "/data/fdb/runs/preflight/repeat-1/v10/reference/judge/user-interruption-20261012T195049Z.jsonl",
+        "max_attempts_per_request": 3,
+        "official": false,
+        "prompt_tokens": 1058,
+        "requested_models": [
+          "gpt-4-turbo"
+        ],
+        "requests": 3,
+        "retries": 0,
+        "returned_models": {
+          "qwen3.8-27b": 3
+        },
+        "sent_models": [
+          "qwen3.8-27b"
+        ]
+      },
+      "log": "logs/evaluate-synthetic_user_interruption.log",
+      "result": {
+        "Average latency": 1.6800000000000004,
+        "Average rating": 5.0,
+        "Average take turn": 1.0
+      },
+      "selected": 3,
+      "task": "user_interruption"
+    }
+  }
+}

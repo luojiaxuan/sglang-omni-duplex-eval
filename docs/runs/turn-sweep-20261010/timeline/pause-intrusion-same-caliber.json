@@ -1,0 +1,1619 @@
+{
+  "kind": "fdb-v1.0-same-caliber-pause-intrusion",
+  "rule": {
+    "source": "Parakeet word transcript (output.json chunks[].timestamp) of the exported output.wav inside [0, T_input]; annotations copied into each sample dir",
+    "pause_handling": {
+      "transcribed_speech_in_pause_s": "sum over words of |[word_start, word_end] \u2229 [pause_start, pause_end]| over all annotated [PAUSE] windows",
+      "words_starting_in_pause": "count of words with pause_start <= word_start <= pause_end for some pause",
+      "pauses_with_word_start": "annotated pause windows containing at least one word start",
+      "official_tor": "transcript span (last word end - first word start) >= 1 s OR more than 3 words (eval_pause_handling.py)",
+      "transcribed_speech_before_first_pause_s": "sum over words of |[word_start, word_end] \u2229 [0, first annotated pause start]|: model speech before the user has paused at all (unprompted / overlapping)",
+      "outside_pause_placement": "a word starting outside every pause is 'spill_after_pause_end' if it starts <= 1.0 s after a pause end, else 'lead_in_before_pause_start' if <= 1.0 s before a pause start, else 'far_from_pauses' (the user is speaking continuously there); its seconds exclude any part inside a pause"
+    },
+    "turn_taking": {
+      "latency_signed_vs_last_word_end_s": "first transcribed word start - annotated last user word END; signed, not clamped; all sessions with >= 1 word",
+      "official_latency_s": "max(0, first word start - annotated last user word START), TOR sessions only (eval_smooth_turn_taking.py)",
+      "first_word_after_last_word_end_s": "start of the first word that begins at or after the last-word end, minus the last-word end (ignores words spoken while the user was still talking)",
+      "transcribed_speech_before_last_word_end_s": "sum over words of |[word_start, word_end] \u2229 [0, last_word_end]|"
+    },
+    "word_end_none": "a word with a null end timestamp is treated as zero-length at its start (none occur in these trees)"
+  },
+  "known_official": {
+    "source": "task brief 2026-10-10 (official FDB v1.0 evaluator outputs)",
+    "nemotron-v10": {
+      "pause_tor": 0.389,
+      "turn_tor": 0.933,
+      "turn_latency_s": 0.557,
+      "note": "native full-duplex Nemotron VoiceChat, ref-v10 export, no turn-detection commits"
+    },
+    "vad500": {
+      "pause_tor_count": 30,
+      "pause_sessions": 216,
+      "turn_latency_s": 0.693,
+      "recorder_any_audio_pause": "157/216"
+    },
+    "vad800": {
+      "pause_tor_count": 10,
+      "pause_sessions": 216,
+      "turn_latency_s": 1.043,
+      "recorder_any_audio_pause": "89/216"
+    },
+    "vad1200": {
+      "pause_tor_count": 4,
+      "pause_sessions": 215,
+      "turn_latency_s": 1.48,
+      "recorder_any_audio_pause": "29/215"
+    },
+    "semmed": {
+      "pause_tor_count": 8,
+      "pause_sessions": 214,
+      "turn_latency_s": 2.012,
+      "recorder_any_audio_pause": "29/214"
+    },
+    "candor_pauses": {
+      "count": 277,
+      "min_s": 0.61,
+      "max_s": 1.49,
+      "median_s": 0.87,
+      "clips": 216
+    }
+  },
+  "systems": {
+    "nemotron-v10": {
+      "system": "nemotron-v10",
+      "ref": "/private/tmp/claude-501/-Users-luojiaxuan-Downloads-S2S-omni/d929e068-e502-4614-a422-100edee8e07f/scratchpad/trace_analysis/data/nemotron-ref-v10/ref-v10/export",
+      "sessions_without_transcript_or_annotation": {
+        "candor_pause_handling": [],
+        "candor_turn_taking": []
+      },
+      "candor_pause_handling": {
+        "sessions": 216,
+        "sessions_with_any_word": {
+          "count": 108,
+          "of": 216,
+          "rate": 0.5
+        },
+        "sessions_official_tor": {
+          "count": 84,
+          "of": 216,
+          "rate": 0.3888888888888889
+        },
+        "sessions_any_word_starts_in_pause": {
+          "count": 42,
+          "of": 216,
+          "rate": 0.19444444444444445
+        },
+        "sessions_any_overlap_with_pause": {
+          "count": 46,
+          "of": 216,
+          "rate": 0.21296296296296297
+        },
+        "sessions_first_word_starts_in_pause": {
+          "count": 27,
+          "of": 216,
+          "rate": 0.125
+        },
+        "sessions_speech_in_pause_ge_0p5s": {
+          "count": 17,
+          "of": 216,
+          "rate": 0.0787037037037037
+        },
+        "sessions_speech_in_pause_ge_1s": {
+          "count": 2,
+          "of": 216,
+          "rate": 0.009259259259259259
+        },
+        "tor_decomposition": {
+          "tor_and_word_in_pause": 38,
+          "tor_without_word_in_pause": 46,
+          "word_in_pause_without_tor": 4,
+          "neither": 128
+        },
+        "first_word_placement": {
+          "in_pause": 27,
+          "spill_after_pause_end": 46,
+          "lead_in_before_pause_start": 5,
+          "far_from_pauses": 30
+        },
+        "pauses": 277,
+        "pause_total_s": 252.7500000000032,
+        "pauses_with_word_start": {
+          "count": 44,
+          "of": 277,
+          "rate": 0.1588447653429603
+        },
+        "pauses_with_overlap": {
+          "count": 50,
+          "of": 277,
+          "rate": 0.18050541516245489
+        },
+        "transcribed_speech_in_pause_s_total": 22.38000000000062,
+        "transcribed_speech_in_pause_s_per_session": {
+          "n": 216,
+          "mean": 0.10361111111111398,
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 0.4600000000000324,
+          "min": 0.0,
+          "max": 2.130000000000045
+        },
+        "transcribed_speech_in_pause_s_per_session_with_intrusion": {
+          "n": 46,
+          "mean": 0.48652173913044827,
+          "median": 0.43999999999999484,
+          "p10": 0.14500000000005997,
+          "p90": 0.8450000000000637,
+          "min": 0.039999999999981384,
+          "max": 2.130000000000045
+        },
+        "transcribed_speech_in_pause_s_per_pause_mean": 0.08079422382671704,
+        "transcribed_speech_in_pause_fraction_of_pause_time": 0.08854599406528323,
+        "transcribed_speech_total_s": 192.8,
+        "transcribed_speech_total_s_per_session": {
+          "n": 216,
+          "mean": 0.8925925925925926,
+          "median": 0.07999999999999963,
+          "p10": 0.0,
+          "p90": 2.4000000000000004,
+          "min": 0,
+          "max": 8.879999999999999
+        },
+        "in_pause_fraction_of_total_speech": 0.11607883817427707,
+        "outside_pause_speech_s": {
+          "spill_after_pause_end_le1s": 71.0099999999999,
+          "lead_in_before_pause_start_le1s": 8.77,
+          "far_from_pauses": 85.32
+        },
+        "outside_pause_words": {
+          "spill_after_pause_end_le1s": 272,
+          "lead_in_before_pause_start_le1s": 38,
+          "far_from_pauses": 299
+        },
+        "sessions_any_speech_far_from_pauses": {
+          "count": 78,
+          "of": 216,
+          "rate": 0.3611111111111111
+        },
+        "sessions_any_word_before_first_pause": {
+          "count": 29,
+          "of": 216,
+          "rate": 0.13425925925925927
+        },
+        "transcribed_speech_before_first_pause_s_total": 36.68999999999994,
+        "words_before_first_pause_total": 123,
+        "first_word_start_s": {
+          "n": 108,
+          "mean": 4.456296296296297,
+          "median": 3.48,
+          "p10": 1.5280000000000005,
+          "p90": 8.152,
+          "min": 1.12,
+          "max": 16.32
+        },
+        "words_total": 690,
+        "words_starting_in_pause_total": 81,
+        "words_starting_in_pause_per_session": {
+          "n": 216,
+          "mean": 0.375,
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 2.0,
+          "min": 0,
+          "max": 8
+        },
+        "transcript_words_per_session": {
+          "n": 216,
+          "mean": 3.1944444444444446,
+          "median": 0.5,
+          "p10": 0.0,
+          "p90": 9.0,
+          "min": 0,
+          "max": 21
+        },
+        "pause_duration_s": {
+          "n": 277,
+          "mean": 0.912454873646221,
+          "median": 0.8700000000001182,
+          "p10": 0.6800000000000637,
+          "p90": 1.2800000000000353,
+          "min": 0.6099999999999568,
+          "max": 1.490000000000009
+        }
+      },
+      "candor_turn_taking": {
+        "sessions": 119,
+        "sessions_with_any_word": {
+          "count": 112,
+          "of": 119,
+          "rate": 0.9411764705882353
+        },
+        "sessions_official_tor": {
+          "count": 111,
+          "of": 119,
+          "rate": 0.9327731092436975
+        },
+        "first_word_start_s": {
+          "n": 112,
+          "mean": 6.394285714285714,
+          "median": 5.72,
+          "p10": 1.52,
+          "p90": 10.696000000000002,
+          "min": 0.96,
+          "max": 24.0
+        },
+        "official_latency_mean_s": 0.5573873873873997,
+        "official_latency_s": {
+          "n": 111,
+          "mean": 0.5573873873873997,
+          "median": 0.6099999999999861,
+          "p10": 0.0,
+          "p90": 1.1999999999999726,
+          "min": 0.0,
+          "max": 1.8600000000000634
+        },
+        "official_latency_negative_clipped": {
+          "count": 39,
+          "of": 111,
+          "rate": 0.35135135135135137
+        },
+        "latency_signed_vs_last_word_end_s": {
+          "n": 112,
+          "mean": -2.5442857142857034,
+          "median": 0.4199999999999635,
+          "p10": -7.728000000000037,
+          "p90": 0.9189999999998416,
+          "min": -87.24,
+          "max": 1.579999999999977
+        },
+        "latency_signed_vs_last_word_end_s_tor_sessions": {
+          "n": 111,
+          "mean": -2.522162162162153,
+          "median": 0.4200000000000177,
+          "p10": -7.820000000000046,
+          "p90": 0.9199999999998179,
+          "min": -87.24,
+          "max": 1.579999999999977
+        },
+        "latency_signed_vs_last_word_end_s_nonnegative_only": {
+          "n": 70,
+          "mean": 0.6447142857142837,
+          "median": 0.6250000000001181,
+          "p10": 0.31199999999999517,
+          "p90": 1.064000000000091,
+          "min": 0.09999999999998277,
+          "max": 1.579999999999977
+        },
+        "latency_signed_vs_last_word_end_buckets": {
+          "lt_-5s": 19,
+          "-5s_to_-1s": 19,
+          "-1s_to_0s": 4,
+          "0s_to_0.5s": 25,
+          "0.5s_to_1s": 37,
+          "1s_to_2s": 8,
+          "ge_2s": 0
+        },
+        "latency_signed_vs_last_word_start_s": {
+          "n": 112,
+          "mean": -2.3099999999999814,
+          "median": 0.6099999999999612,
+          "p10": -7.363999999999948,
+          "p90": 1.1969999999999748,
+          "min": -87.1,
+          "max": 1.8600000000000634
+        },
+        "first_word_after_last_word_end_s": {
+          "n": 111,
+          "mean": 0.6526126126126219,
+          "median": 0.5800000000000001,
+          "p10": 0.23999999999990873,
+          "p90": 1.1000000000000902,
+          "min": 0.0,
+          "max": 2.760000000000005
+        },
+        "sessions_first_word_before_last_word_end": {
+          "count": 42,
+          "of": 112,
+          "rate": 0.375
+        },
+        "sessions_first_word_before_last_word_start": {
+          "count": 40,
+          "of": 112,
+          "rate": 0.35714285714285715
+        },
+        "sessions_first_word_within_0p5s_after_last_word_end": {
+          "count": 25,
+          "of": 112,
+          "rate": 0.22321428571428573
+        },
+        "sessions_first_word_later_than_2s_after_last_word_end": {
+          "count": 0,
+          "of": 112,
+          "rate": 0.0
+        },
+        "sessions_any_speech_before_last_word_end": {
+          "count": 42,
+          "of": 119,
+          "rate": 0.35294117647058826
+        },
+        "sessions_no_word_after_last_word_end": {
+          "count": 8,
+          "of": 119,
+          "rate": 0.06722689075630252
+        },
+        "transcribed_speech_before_last_word_end_s_total": 77.46999999999973,
+        "transcribed_speech_before_last_word_end_s_per_session": {
+          "n": 119,
+          "mean": 0.6510084033613422,
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 1.808000000000001,
+          "min": 0.0,
+          "max": 18.080000000000023
+        },
+        "words_starting_before_last_word_end_total": 262,
+        "transcribed_speech_total_s": 453.52000000000004,
+        "transcript_words_per_session": {
+          "n": 119,
+          "mean": 14.176470588235293,
+          "median": 14.0,
+          "p10": 9.0,
+          "p90": 19.0,
+          "min": 0,
+          "max": 70
+        }
+      },
+      "tree_summary_json": null
+    },
+    "vad500": {
+      "system": "vad500",
+      "ref": "/private/tmp/claude-501/-Users-luojiaxuan-Downloads-S2S-omni/d929e068-e502-4614-a422-100edee8e07f/scratchpad/trace_analysis/data/score/vad500/ref",
+      "sessions_without_transcript_or_annotation": {
+        "candor_pause_handling": [],
+        "candor_turn_taking": []
+      },
+      "candor_pause_handling": {
+        "sessions": 216,
+        "sessions_with_any_word": {
+          "count": 68,
+          "of": 216,
+          "rate": 0.3148148148148148
+        },
+        "sessions_official_tor": {
+          "count": 30,
+          "of": 216,
+          "rate": 0.1388888888888889
+        },
+        "sessions_any_word_starts_in_pause": {
+          "count": 64,
+          "of": 216,
+          "rate": 0.2962962962962963
+        },
+        "sessions_any_overlap_with_pause": {
+          "count": 64,
+          "of": 216,
+          "rate": 0.2962962962962963
+        },
+        "sessions_first_word_starts_in_pause": {
+          "count": 58,
+          "of": 216,
+          "rate": 0.26851851851851855
+        },
+        "sessions_speech_in_pause_ge_0p5s": {
+          "count": 24,
+          "of": 216,
+          "rate": 0.1111111111111111
+        },
+        "sessions_speech_in_pause_ge_1s": {
+          "count": 1,
+          "of": 216,
+          "rate": 0.004629629629629629
+        },
+        "tor_decomposition": {
+          "tor_and_word_in_pause": 28,
+          "tor_without_word_in_pause": 2,
+          "word_in_pause_without_tor": 36,
+          "neither": 150
+        },
+        "first_word_placement": {
+          "in_pause": 58,
+          "spill_after_pause_end": 2,
+          "lead_in_before_pause_start": 2,
+          "far_from_pauses": 6
+        },
+        "pauses": 277,
+        "pause_total_s": 252.7500000000032,
+        "pauses_with_word_start": {
+          "count": 74,
+          "of": 277,
+          "rate": 0.26714801444043323
+        },
+        "pauses_with_overlap": {
+          "count": 74,
+          "of": 277,
+          "rate": 0.26714801444043323
+        },
+        "transcribed_speech_in_pause_s_total": 29.389999999998995,
+        "transcribed_speech_in_pause_s_per_session": {
+          "n": 216,
+          "mean": 0.13606481481481017,
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 0.5399999999999656,
+          "min": 0.0,
+          "max": 1.1399999999999548
+        },
+        "transcribed_speech_in_pause_s_per_session_with_intrusion": {
+          "n": 64,
+          "mean": 0.4592187499999843,
+          "median": 0.42999999999998906,
+          "p10": 0.16000000000000014,
+          "p90": 0.7780000000000075,
+          "min": 0.08000000000000007,
+          "max": 1.1399999999999548
+        },
+        "transcribed_speech_in_pause_s_per_pause_mean": 0.10610108303248734,
+        "transcribed_speech_in_pause_fraction_of_pause_time": 0.11628090999010335,
+        "transcribed_speech_total_s": 59.52,
+        "transcribed_speech_total_s_per_session": {
+          "n": 216,
+          "mean": 0.27555555555555555,
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 0.96,
+          "min": 0,
+          "max": 5.119999999999999
+        },
+        "in_pause_fraction_of_total_speech": 0.49378360215052075,
+        "outside_pause_speech_s": {
+          "spill_after_pause_end_le1s": 8.159999999999997,
+          "lead_in_before_pause_start_le1s": 0.9100000000000001,
+          "far_from_pauses": 13.360000000000001
+        },
+        "outside_pause_words": {
+          "spill_after_pause_end_le1s": 38,
+          "lead_in_before_pause_start_le1s": 2,
+          "far_from_pauses": 61
+        },
+        "sessions_any_speech_far_from_pauses": {
+          "count": 8,
+          "of": 216,
+          "rate": 0.037037037037037035
+        },
+        "sessions_any_word_before_first_pause": {
+          "count": 7,
+          "of": 216,
+          "rate": 0.032407407407407406
+        },
+        "transcribed_speech_before_first_pause_s_total": 6.910000000000001,
+        "words_before_first_pause_total": 28,
+        "first_word_start_s": {
+          "n": 68,
+          "mean": 4.138823529411765,
+          "median": 3.16,
+          "p10": 1.52,
+          "p90": 7.9200000000000035,
+          "min": 0.88,
+          "max": 14.08
+        },
+        "words_total": 229,
+        "words_starting_in_pause_total": 128,
+        "words_starting_in_pause_per_session": {
+          "n": 216,
+          "mean": 0.5925925925925926,
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 2.0,
+          "min": 0,
+          "max": 9
+        },
+        "transcript_words_per_session": {
+          "n": 216,
+          "mean": 1.0601851851851851,
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 3.0,
+          "min": 0,
+          "max": 21
+        },
+        "pause_duration_s": {
+          "n": 277,
+          "mean": 0.912454873646221,
+          "median": 0.8700000000001182,
+          "p10": 0.6800000000000637,
+          "p90": 1.2800000000000353,
+          "min": 0.6099999999999568,
+          "max": 1.490000000000009
+        }
+      },
+      "candor_turn_taking": {
+        "sessions": 119,
+        "sessions_with_any_word": {
+          "count": 119,
+          "of": 119,
+          "rate": 1.0
+        },
+        "sessions_official_tor": {
+          "count": 119,
+          "of": 119,
+          "rate": 1.0
+        },
+        "first_word_start_s": {
+          "n": 119,
+          "mean": 8.160672268907563,
+          "median": 6.5600000000000005,
+          "p10": 3.0720000000000005,
+          "p90": 13.808000000000005,
+          "min": 0.8,
+          "max": 55.52
+        },
+        "official_latency_mean_s": 0.6927731092437117,
+        "official_latency_s": {
+          "n": 119,
+          "mean": 0.6927731092437117,
+          "median": 0.6999999999996547,
+          "p10": 0.0,
+          "p90": 1.0839999999999719,
+          "min": 0.0,
+          "max": 3.410000000000119
+        },
+        "official_latency_negative_clipped": {
+          "count": 18,
+          "of": 119,
+          "rate": 0.15126050420168066
+        },
+        "latency_signed_vs_last_word_end_s": {
+          "n": 119,
+          "mean": -0.8645378151260396,
+          "median": 0.49999999999999467,
+          "p10": -3.7839999999999634,
+          "p90": 0.8839999999999405,
+          "min": -33.48,
+          "max": 3.1400000000001373
+        },
+        "latency_signed_vs_last_word_end_s_tor_sessions": {
+          "n": 119,
+          "mean": -0.8645378151260396,
+          "median": 0.49999999999999467,
+          "p10": -3.7839999999999634,
+          "p90": 0.8839999999999405,
+          "min": -33.48,
+          "max": 3.1400000000001373
+        },
+        "latency_signed_vs_last_word_end_s_nonnegative_only": {
+          "n": 101,
+          "mean": 0.5867326732673359,
+          "median": 0.5400000000001368,
+          "p10": 0.2599999999999545,
+          "p90": 0.9600000000000186,
+          "min": 0.06000000000000316,
+          "max": 3.1400000000001373
+        },
+        "latency_signed_vs_last_word_end_buckets": {
+          "lt_-5s": 11,
+          "-5s_to_-1s": 6,
+          "-1s_to_0s": 1,
+          "0s_to_0.5s": 42,
+          "0.5s_to_1s": 50,
+          "1s_to_2s": 8,
+          "ge_2s": 1
+        },
+        "latency_signed_vs_last_word_start_s": {
+          "n": 119,
+          "mean": -0.6345378151260351,
+          "median": 0.6999999999996547,
+          "p10": -3.6019999999999013,
+          "p90": 1.0839999999999719,
+          "min": -33.339999999999996,
+          "max": 3.410000000000119
+        },
+        "first_word_after_last_word_end_s": {
+          "n": 118,
+          "mean": 0.6010169491525534,
+          "median": 0.5500000000000456,
+          "p10": 0.2599999999999545,
+          "p90": 1.0120000000000582,
+          "min": 0.06000000000000316,
+          "max": 3.1400000000001373
+        },
+        "sessions_first_word_before_last_word_end": {
+          "count": 18,
+          "of": 119,
+          "rate": 0.15126050420168066
+        },
+        "sessions_first_word_before_last_word_start": {
+          "count": 18,
+          "of": 119,
+          "rate": 0.15126050420168066
+        },
+        "sessions_first_word_within_0p5s_after_last_word_end": {
+          "count": 42,
+          "of": 119,
+          "rate": 0.35294117647058826
+        },
+        "sessions_first_word_later_than_2s_after_last_word_end": {
+          "count": 1,
+          "of": 119,
+          "rate": 0.008403361344537815
+        },
+        "sessions_any_speech_before_last_word_end": {
+          "count": 18,
+          "of": 119,
+          "rate": 0.15126050420168066
+        },
+        "sessions_no_word_after_last_word_end": {
+          "count": 1,
+          "of": 119,
+          "rate": 0.008403361344537815
+        },
+        "transcribed_speech_before_last_word_end_s_total": 22.909999999999965,
+        "transcribed_speech_before_last_word_end_s_per_session": {
+          "n": 119,
+          "mean": 0.19252100840336106,
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 0.4320000000000008,
+          "min": 0.0,
+          "max": 7.600000000000001
+        },
+        "words_starting_before_last_word_end_total": 66,
+        "transcribed_speech_total_s": 429.28,
+        "transcript_words_per_session": {
+          "n": 119,
+          "mean": 13.302521008403362,
+          "median": 13.0,
+          "p10": 9.0,
+          "p90": 17.200000000000003,
+          "min": 5,
+          "max": 26
+        }
+      },
+      "tree_summary_json": {
+        "pause_average_take_turn": 0.1388888888888889,
+        "pause_evaluated": 216,
+        "turn_average_latency": 0.6927731092437117,
+        "turn_average_take_turn": 1.0,
+        "turn_evaluated": 119
+      }
+    },
+    "vad800": {
+      "system": "vad800",
+      "ref": "/private/tmp/claude-501/-Users-luojiaxuan-Downloads-S2S-omni/d929e068-e502-4614-a422-100edee8e07f/scratchpad/trace_analysis/data/score/vad800/ref",
+      "sessions_without_transcript_or_annotation": {
+        "candor_pause_handling": [],
+        "candor_turn_taking": []
+      },
+      "candor_pause_handling": {
+        "sessions": 216,
+        "sessions_with_any_word": {
+          "count": 32,
+          "of": 216,
+          "rate": 0.14814814814814814
+        },
+        "sessions_official_tor": {
+          "count": 10,
+          "of": 216,
+          "rate": 0.046296296296296294
+        },
+        "sessions_any_word_starts_in_pause": {
+          "count": 27,
+          "of": 216,
+          "rate": 0.125
+        },
+        "sessions_any_overlap_with_pause": {
+          "count": 27,
+          "of": 216,
+          "rate": 0.125
+        },
+        "sessions_first_word_starts_in_pause": {
+          "count": 25,
+          "of": 216,
+          "rate": 0.11574074074074074
+        },
+        "sessions_speech_in_pause_ge_0p5s": {
+          "count": 9,
+          "of": 216,
+          "rate": 0.041666666666666664
+        },
+        "sessions_speech_in_pause_ge_1s": {
+          "count": 0,
+          "of": 216,
+          "rate": 0.0
+        },
+        "tor_decomposition": {
+          "tor_and_word_in_pause": 8,
+          "tor_without_word_in_pause": 2,
+          "word_in_pause_without_tor": 19,
+          "neither": 187
+        },
+        "first_word_placement": {
+          "in_pause": 25,
+          "spill_after_pause_end": 3,
+          "lead_in_before_pause_start": 0,
+          "far_from_pauses": 4
+        },
+        "pauses": 277,
+        "pause_total_s": 252.7500000000032,
+        "pauses_with_word_start": {
+          "count": 28,
+          "of": 277,
+          "rate": 0.10108303249097472
+        },
+        "pauses_with_overlap": {
+          "count": 28,
+          "of": 277,
+          "rate": 0.10108303249097472
+        },
+        "transcribed_speech_in_pause_s_total": 10.109999999999081,
+        "transcribed_speech_in_pause_s_per_session": {
+          "n": 216,
+          "mean": 0.0468055555555513,
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 0.16000000000000014,
+          "min": 0.0,
+          "max": 0.7399999999999545
+        },
+        "transcribed_speech_in_pause_s_per_session_with_intrusion": {
+          "n": 27,
+          "mean": 0.3744444444444104,
+          "median": 0.35999999999999943,
+          "p10": 0.10000000000007532,
+          "p90": 0.6400000000000003,
+          "min": 0.009999999999863451,
+          "max": 0.7399999999999545
+        },
+        "transcribed_speech_in_pause_s_per_pause_mean": 0.03649819494584506,
+        "transcribed_speech_in_pause_fraction_of_pause_time": 0.03999999999999586,
+        "transcribed_speech_total_s": 29.360000000000003,
+        "transcribed_speech_total_s_per_session": {
+          "n": 216,
+          "mean": 0.13592592592592595,
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 0.4800000000000002,
+          "min": 0,
+          "max": 5.120000000000001
+        },
+        "in_pause_fraction_of_total_speech": 0.3443460490462902,
+        "outside_pause_speech_s": {
+          "spill_after_pause_end_le1s": 3.520000000000002,
+          "lead_in_before_pause_start_le1s": 0.0,
+          "far_from_pauses": 9.920000000000003
+        },
+        "outside_pause_words": {
+          "spill_after_pause_end_le1s": 18,
+          "lead_in_before_pause_start_le1s": 0,
+          "far_from_pauses": 42
+        },
+        "sessions_any_speech_far_from_pauses": {
+          "count": 6,
+          "of": 216,
+          "rate": 0.027777777777777776
+        },
+        "sessions_any_word_before_first_pause": {
+          "count": 3,
+          "of": 216,
+          "rate": 0.013888888888888888
+        },
+        "transcribed_speech_before_first_pause_s_total": 4.480000000000001,
+        "words_before_first_pause_total": 14,
+        "first_word_start_s": {
+          "n": 32,
+          "mean": 5.0575,
+          "median": 4.44,
+          "p10": 1.776,
+          "p90": 9.192000000000002,
+          "min": 1.2,
+          "max": 15.84
+        },
+        "words_total": 103,
+        "words_starting_in_pause_total": 43,
+        "words_starting_in_pause_per_session": {
+          "n": 216,
+          "mean": 0.19907407407407407,
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 1.0,
+          "min": 0,
+          "max": 4
+        },
+        "transcript_words_per_session": {
+          "n": 216,
+          "mean": 0.47685185185185186,
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 2.0,
+          "min": 0,
+          "max": 20
+        },
+        "pause_duration_s": {
+          "n": 277,
+          "mean": 0.912454873646221,
+          "median": 0.8700000000001182,
+          "p10": 0.6800000000000637,
+          "p90": 1.2800000000000353,
+          "min": 0.6099999999999568,
+          "max": 1.490000000000009
+        }
+      },
+      "candor_turn_taking": {
+        "sessions": 119,
+        "sessions_with_any_word": {
+          "count": 119,
+          "of": 119,
+          "rate": 1.0
+        },
+        "sessions_official_tor": {
+          "count": 118,
+          "of": 119,
+          "rate": 0.9915966386554622
+        },
+        "first_word_start_s": {
+          "n": 119,
+          "mean": 8.784537815126052,
+          "median": 7.5200000000000005,
+          "p10": 5.12,
+          "p90": 15.840000000000002,
+          "min": 1.28,
+          "max": 26.88
+        },
+        "official_latency_mean_s": 1.0431355932203545,
+        "official_latency_s": {
+          "n": 118,
+          "mean": 1.0431355932203545,
+          "median": 1.0050000000000097,
+          "p10": 0.7170000000000528,
+          "p90": 1.5990000000000704,
+          "min": 0.0,
+          "max": 2.4200000000002913
+        },
+        "official_latency_negative_clipped": {
+          "count": 9,
+          "of": 118,
+          "rate": 0.07627118644067797
+        },
+        "latency_signed_vs_last_word_end_s": {
+          "n": 119,
+          "mean": -0.24067226890755206,
+          "median": 0.8199999999999088,
+          "p10": 0.44000000000007394,
+          "p90": 1.3440000000000047,
+          "min": -87.72,
+          "max": 2.040000000000182
+        },
+        "latency_signed_vs_last_word_end_s_tor_sessions": {
+          "n": 118,
+          "mean": -0.24966101694914072,
+          "median": 0.809999999999921,
+          "p10": 0.4400000000000654,
+          "p90": 1.3460000000000099,
+          "min": -87.72,
+          "max": 2.040000000000182
+        },
+        "latency_signed_vs_last_word_end_s_nonnegative_only": {
+          "n": 110,
+          "mean": 0.8984545454545565,
+          "median": 0.8399999999999976,
+          "p10": 0.5580000000000083,
+          "p90": 1.3610000000000397,
+          "min": 0.249999999999984,
+          "max": 2.040000000000182
+        },
+        "latency_signed_vs_last_word_end_buckets": {
+          "lt_-5s": 4,
+          "-5s_to_-1s": 3,
+          "-1s_to_0s": 2,
+          "0s_to_0.5s": 6,
+          "0.5s_to_1s": 68,
+          "1s_to_2s": 35,
+          "ge_2s": 1
+        },
+        "latency_signed_vs_last_word_start_s": {
+          "n": 119,
+          "mean": -0.01067226890754778,
+          "median": 1.0000000000000409,
+          "p10": 0.7180000000000565,
+          "p90": 1.5960000000000711,
+          "min": -87.58,
+          "max": 2.4200000000002913
+        },
+        "first_word_after_last_word_end_s": {
+          "n": 119,
+          "mean": 0.8860504201680782,
+          "median": 0.8399999999999777,
+          "p10": 0.5359999999999728,
+          "p90": 1.3440000000000047,
+          "min": 0.23999999999999488,
+          "max": 2.040000000000182
+        },
+        "sessions_first_word_before_last_word_end": {
+          "count": 9,
+          "of": 119,
+          "rate": 0.07563025210084033
+        },
+        "sessions_first_word_before_last_word_start": {
+          "count": 9,
+          "of": 119,
+          "rate": 0.07563025210084033
+        },
+        "sessions_first_word_within_0p5s_after_last_word_end": {
+          "count": 6,
+          "of": 119,
+          "rate": 0.05042016806722689
+        },
+        "sessions_first_word_later_than_2s_after_last_word_end": {
+          "count": 1,
+          "of": 119,
+          "rate": 0.008403361344537815
+        },
+        "sessions_any_speech_before_last_word_end": {
+          "count": 9,
+          "of": 119,
+          "rate": 0.07563025210084033
+        },
+        "sessions_no_word_after_last_word_end": {
+          "count": 0,
+          "of": 119,
+          "rate": 0.0
+        },
+        "transcribed_speech_before_last_word_end_s_total": 25.509999999999987,
+        "transcribed_speech_before_last_word_end_s_per_session": {
+          "n": 119,
+          "mean": 0.21436974789915955,
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 0.0,
+          "min": 0.0,
+          "max": 19.080000000000016
+        },
+        "words_starting_before_last_word_end_total": 87,
+        "transcribed_speech_total_s": 404.40000000000003,
+        "transcript_words_per_session": {
+          "n": 119,
+          "mean": 12.84873949579832,
+          "median": 13.0,
+          "p10": 9.0,
+          "p90": 16.0,
+          "min": 1,
+          "max": 69
+        }
+      },
+      "tree_summary_json": {
+        "pause_average_take_turn": 0.046296296296296294,
+        "pause_evaluated": 216,
+        "turn_average_latency": 1.0431355932203545,
+        "turn_average_take_turn": 0.9915966386554622,
+        "turn_evaluated": 119
+      }
+    },
+    "vad1200": {
+      "system": "vad1200",
+      "ref": "/private/tmp/claude-501/-Users-luojiaxuan-Downloads-S2S-omni/d929e068-e502-4614-a422-100edee8e07f/scratchpad/trace_analysis/data/score/vad1200/ref",
+      "sessions_without_transcript_or_annotation": {
+        "candor_pause_handling": [],
+        "candor_turn_taking": []
+      },
+      "candor_pause_handling": {
+        "sessions": 215,
+        "sessions_with_any_word": {
+          "count": 10,
+          "of": 215,
+          "rate": 0.046511627906976744
+        },
+        "sessions_official_tor": {
+          "count": 4,
+          "of": 215,
+          "rate": 0.018604651162790697
+        },
+        "sessions_any_word_starts_in_pause": {
+          "count": 5,
+          "of": 215,
+          "rate": 0.023255813953488372
+        },
+        "sessions_any_overlap_with_pause": {
+          "count": 5,
+          "of": 215,
+          "rate": 0.023255813953488372
+        },
+        "sessions_first_word_starts_in_pause": {
+          "count": 5,
+          "of": 215,
+          "rate": 0.023255813953488372
+        },
+        "sessions_speech_in_pause_ge_0p5s": {
+          "count": 0,
+          "of": 215,
+          "rate": 0.0
+        },
+        "sessions_speech_in_pause_ge_1s": {
+          "count": 0,
+          "of": 215,
+          "rate": 0.0
+        },
+        "tor_decomposition": {
+          "tor_and_word_in_pause": 1,
+          "tor_without_word_in_pause": 3,
+          "word_in_pause_without_tor": 4,
+          "neither": 207
+        },
+        "first_word_placement": {
+          "in_pause": 5,
+          "spill_after_pause_end": 3,
+          "lead_in_before_pause_start": 0,
+          "far_from_pauses": 2
+        },
+        "pauses": 275,
+        "pause_total_s": 251.19000000000304,
+        "pauses_with_word_start": {
+          "count": 5,
+          "of": 275,
+          "rate": 0.01818181818181818
+        },
+        "pauses_with_overlap": {
+          "count": 5,
+          "of": 275,
+          "rate": 0.01818181818181818
+        },
+        "transcribed_speech_in_pause_s_total": 1.0999999999993082,
+        "transcribed_speech_in_pause_s_per_session": {
+          "n": 215,
+          "mean": 0.005116279069764224,
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 0.0,
+          "min": 0.0,
+          "max": 0.4299999999999726
+        },
+        "transcribed_speech_in_pause_s_per_session_with_intrusion": {
+          "n": 5,
+          "mean": 0.21999999999986164,
+          "median": 0.21999999999996378,
+          "p10": 0.09199999999976712,
+          "p90": 0.36199999999996524,
+          "min": 0.08000000000000007,
+          "max": 0.4299999999999726
+        },
+        "transcribed_speech_in_pause_s_per_pause_mean": 0.003999999999997485,
+        "transcribed_speech_in_pause_fraction_of_pause_time": 0.0043791552211445315,
+        "transcribed_speech_total_s": 10.800000000000002,
+        "transcribed_speech_total_s_per_session": {
+          "n": 215,
+          "mean": 0.050232558139534894,
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 0.0,
+          "min": 0,
+          "max": 4.16
+        },
+        "in_pause_fraction_of_total_speech": 0.10185185185178777,
+        "outside_pause_speech_s": {
+          "spill_after_pause_end_le1s": 1.3600000000000012,
+          "lead_in_before_pause_start_le1s": 0.0,
+          "far_from_pauses": 7.680000000000001
+        },
+        "outside_pause_words": {
+          "spill_after_pause_end_le1s": 7,
+          "lead_in_before_pause_start_le1s": 0,
+          "far_from_pauses": 27
+        },
+        "sessions_any_speech_far_from_pauses": {
+          "count": 3,
+          "of": 215,
+          "rate": 0.013953488372093023
+        },
+        "sessions_any_word_before_first_pause": {
+          "count": 1,
+          "of": 215,
+          "rate": 0.004651162790697674
+        },
+        "transcribed_speech_before_first_pause_s_total": 2.2399999999999993,
+        "words_before_first_pause_total": 8,
+        "first_word_start_s": {
+          "n": 10,
+          "mean": 6.960000000000001,
+          "median": 6.04,
+          "p10": 2.7520000000000002,
+          "p90": 11.296,
+          "min": 2.32,
+          "max": 15.040000000000001
+        },
+        "words_total": 40,
+        "words_starting_in_pause_total": 6,
+        "words_starting_in_pause_per_session": {
+          "n": 215,
+          "mean": 0.027906976744186046,
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 0.0,
+          "min": 0,
+          "max": 2
+        },
+        "transcript_words_per_session": {
+          "n": 215,
+          "mean": 0.18604651162790697,
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 0.0,
+          "min": 0,
+          "max": 15
+        },
+        "pause_duration_s": {
+          "n": 275,
+          "mean": 0.9134181818181929,
+          "median": 0.8700000000001182,
+          "p10": 0.6800000000000637,
+          "p90": 1.2800000000000522,
+          "min": 0.6099999999999568,
+          "max": 1.490000000000009
+        }
+      },
+      "candor_turn_taking": {
+        "sessions": 119,
+        "sessions_with_any_word": {
+          "count": 119,
+          "of": 119,
+          "rate": 1.0
+        },
+        "sessions_official_tor": {
+          "count": 119,
+          "of": 119,
+          "rate": 1.0
+        },
+        "first_word_start_s": {
+          "n": 119,
+          "mean": 9.511932773109244,
+          "median": 7.92,
+          "p10": 5.5680000000000005,
+          "p90": 16.0,
+          "min": 1.76,
+          "max": 26.72
+        },
+        "official_latency_mean_s": 1.4796638655462349,
+        "official_latency_s": {
+          "n": 119,
+          "mean": 1.4796638655462349,
+          "median": 1.4200000000001545,
+          "p10": 1.1879999999999729,
+          "p90": 1.8719999999999897,
+          "min": 0.0,
+          "max": 3.010000000000119
+        },
+        "official_latency_negative_clipped": {
+          "count": 2,
+          "of": 119,
+          "rate": 0.01680672268907563
+        },
+        "latency_signed_vs_last_word_end_s": {
+          "n": 119,
+          "mean": 0.48672268907564126,
+          "median": 1.2000000000000455,
+          "p10": 0.8960000000000005,
+          "p90": 1.705999999999971,
+          "min": -87.24,
+          "max": 2.740000000000137
+        },
+        "latency_signed_vs_last_word_end_s_tor_sessions": {
+          "n": 119,
+          "mean": 0.48672268907564126,
+          "median": 1.2000000000000455,
+          "p10": 0.8960000000000005,
+          "p90": 1.705999999999971,
+          "min": -87.24,
+          "max": 2.740000000000137
+        },
+        "latency_signed_vs_last_word_end_s_nonnegative_only": {
+          "n": 116,
+          "mean": 1.287241379310356,
+          "median": 1.2199999999998408,
+          "p10": 0.9449999999999918,
+          "p90": 1.7150000000000634,
+          "min": 0.5300000000000367,
+          "max": 2.740000000000137
+        },
+        "latency_signed_vs_last_word_end_buckets": {
+          "lt_-5s": 1,
+          "-5s_to_-1s": 1,
+          "-1s_to_0s": 1,
+          "0s_to_0.5s": 0,
+          "0.5s_to_1s": 20,
+          "1s_to_2s": 91,
+          "ge_2s": 5
+        },
+        "latency_signed_vs_last_word_start_s": {
+          "n": 119,
+          "mean": 0.7167226890756455,
+          "median": 1.4200000000001545,
+          "p10": 1.1879999999999729,
+          "p90": 1.8719999999999897,
+          "min": -87.1,
+          "max": 3.010000000000119
+        },
+        "first_word_after_last_word_end_s": {
+          "n": 118,
+          "mean": 1.273220338983062,
+          "median": 1.2099999999998863,
+          "p10": 0.9140000000000486,
+          "p90": 1.7090000000000019,
+          "min": 0.35999999999999943,
+          "max": 2.740000000000137
+        },
+        "sessions_first_word_before_last_word_end": {
+          "count": 3,
+          "of": 119,
+          "rate": 0.025210084033613446
+        },
+        "sessions_first_word_before_last_word_start": {
+          "count": 2,
+          "of": 119,
+          "rate": 0.01680672268907563
+        },
+        "sessions_first_word_within_0p5s_after_last_word_end": {
+          "count": 0,
+          "of": 119,
+          "rate": 0.0
+        },
+        "sessions_first_word_later_than_2s_after_last_word_end": {
+          "count": 5,
+          "of": 119,
+          "rate": 0.04201680672268908
+        },
+        "sessions_any_speech_before_last_word_end": {
+          "count": 3,
+          "of": 119,
+          "rate": 0.025210084033613446
+        },
+        "sessions_no_word_after_last_word_end": {
+          "count": 1,
+          "of": 119,
+          "rate": 0.008403361344537815
+        },
+        "transcribed_speech_before_last_word_end_s_total": 24.440000000000026,
+        "transcribed_speech_before_last_word_end_s_per_session": {
+          "n": 119,
+          "mean": 0.20537815126050443,
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 0.0,
+          "min": 0.0,
+          "max": 22.28000000000002
+        },
+        "words_starting_before_last_word_end_total": 86,
+        "transcribed_speech_total_s": 369.20000000000005,
+        "transcript_words_per_session": {
+          "n": 119,
+          "mean": 12.184873949579831,
+          "median": 11.0,
+          "p10": 9.0,
+          "p90": 15.0,
+          "min": 5,
+          "max": 90
+        }
+      },
+      "tree_summary_json": {
+        "pause_average_take_turn": 0.018604651162790697,
+        "pause_evaluated": 215,
+        "turn_average_latency": 1.4796638655462349,
+        "turn_average_take_turn": 1.0,
+        "turn_evaluated": 119
+      }
+    },
+    "semmed": {
+      "system": "semmed",
+      "ref": "/private/tmp/claude-501/-Users-luojiaxuan-Downloads-S2S-omni/d929e068-e502-4614-a422-100edee8e07f/scratchpad/trace_analysis/data/score/semmed/ref",
+      "sessions_without_transcript_or_annotation": {
+        "candor_pause_handling": [],
+        "candor_turn_taking": []
+      },
+      "candor_pause_handling": {
+        "sessions": 214,
+        "sessions_with_any_word": {
+          "count": 14,
+          "of": 214,
+          "rate": 0.06542056074766354
+        },
+        "sessions_official_tor": {
+          "count": 8,
+          "of": 214,
+          "rate": 0.037383177570093455
+        },
+        "sessions_any_word_starts_in_pause": {
+          "count": 10,
+          "of": 214,
+          "rate": 0.04672897196261682
+        },
+        "sessions_any_overlap_with_pause": {
+          "count": 10,
+          "of": 214,
+          "rate": 0.04672897196261682
+        },
+        "sessions_first_word_starts_in_pause": {
+          "count": 8,
+          "of": 214,
+          "rate": 0.037383177570093455
+        },
+        "sessions_speech_in_pause_ge_0p5s": {
+          "count": 4,
+          "of": 214,
+          "rate": 0.018691588785046728
+        },
+        "sessions_speech_in_pause_ge_1s": {
+          "count": 0,
+          "of": 214,
+          "rate": 0.0
+        },
+        "tor_decomposition": {
+          "tor_and_word_in_pause": 5,
+          "tor_without_word_in_pause": 3,
+          "word_in_pause_without_tor": 5,
+          "neither": 201
+        },
+        "first_word_placement": {
+          "in_pause": 8,
+          "spill_after_pause_end": 0,
+          "lead_in_before_pause_start": 0,
+          "far_from_pauses": 6
+        },
+        "pauses": 273,
+        "pause_total_s": 249.2400000000031,
+        "pauses_with_word_start": {
+          "count": 11,
+          "of": 273,
+          "rate": 0.040293040293040296
+        },
+        "pauses_with_overlap": {
+          "count": 11,
+          "of": 273,
+          "rate": 0.040293040293040296
+        },
+        "transcribed_speech_in_pause_s_total": 4.169999999999936,
+        "transcribed_speech_in_pause_s_per_session": {
+          "n": 214,
+          "mean": 0.019485981308410914,
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 0.0,
+          "min": 0.0,
+          "max": 0.8200000000000456
+        },
+        "transcribed_speech_in_pause_s_per_session_with_intrusion": {
+          "n": 10,
+          "mean": 0.4169999999999936,
+          "median": 0.40000000000000013,
+          "p10": 0.15199999999991778,
+          "p90": 0.7300000000000019,
+          "min": 0.07999999999999985,
+          "max": 0.8200000000000456
+        },
+        "transcribed_speech_in_pause_s_per_pause_mean": 0.01527472527472504,
+        "transcribed_speech_in_pause_fraction_of_pause_time": 0.01673086181993213,
+        "transcribed_speech_total_s": 15.120000000000003,
+        "transcribed_speech_total_s_per_session": {
+          "n": 214,
+          "mean": 0.07065420560747665,
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 0.0,
+          "min": 0,
+          "max": 3.76
+        },
+        "in_pause_fraction_of_total_speech": 0.2757936507936465,
+        "outside_pause_speech_s": {
+          "spill_after_pause_end_le1s": 2.239999999999999,
+          "lead_in_before_pause_start_le1s": 0.4,
+          "far_from_pauses": 7.520000000000003
+        },
+        "outside_pause_words": {
+          "spill_after_pause_end_le1s": 6,
+          "lead_in_before_pause_start_le1s": 3,
+          "far_from_pauses": 27
+        },
+        "sessions_any_speech_far_from_pauses": {
+          "count": 7,
+          "of": 214,
+          "rate": 0.03271028037383177
+        },
+        "sessions_any_word_before_first_pause": {
+          "count": 5,
+          "of": 214,
+          "rate": 0.02336448598130841
+        },
+        "transcribed_speech_before_first_pause_s_total": 4.000000000000001,
+        "words_before_first_pause_total": 11,
+        "first_word_start_s": {
+          "n": 14,
+          "mean": 4.411428571428572,
+          "median": 2.36,
+          "p10": 0.8160000000000001,
+          "p90": 8.728000000000002,
+          "min": 0.56,
+          "max": 16.64
+        },
+        "words_total": 51,
+        "words_starting_in_pause_total": 15,
+        "words_starting_in_pause_per_session": {
+          "n": 214,
+          "mean": 0.07009345794392523,
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 0.0,
+          "min": 0,
+          "max": 3
+        },
+        "transcript_words_per_session": {
+          "n": 214,
+          "mean": 0.2383177570093458,
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 0.0,
+          "min": 0,
+          "max": 15
+        },
+        "pause_duration_s": {
+          "n": 273,
+          "mean": 0.9129670329670444,
+          "median": 0.8700000000001182,
+          "p10": 0.6800000000000637,
+          "p90": 1.2800000000000693,
+          "min": 0.6099999999999568,
+          "max": 1.490000000000009
+        }
+      },
+      "candor_turn_taking": {
+        "sessions": 119,
+        "sessions_with_any_word": {
+          "count": 118,
+          "of": 119,
+          "rate": 0.9915966386554622
+        },
+        "sessions_official_tor": {
+          "count": 118,
+          "of": 119,
+          "rate": 0.9915966386554622
+        },
+        "first_word_start_s": {
+          "n": 118,
+          "mean": 9.88135593220339,
+          "median": 8.440000000000001,
+          "p10": 5.832000000000001,
+          "p90": 16.904,
+          "min": 0.72,
+          "max": 27.68
+        },
+        "official_latency_mean_s": 2.0122881355932356,
+        "official_latency_s": {
+          "n": 118,
+          "mean": 2.0122881355932356,
+          "median": 2.225000000000078,
+          "p10": 0.4840000000000383,
+          "p90": 2.6459999999999995,
+          "min": 0.0,
+          "max": 3.8900000000000166
+        },
+        "official_latency_negative_clipped": {
+          "count": 8,
+          "of": 118,
+          "rate": 0.06779661016949153
+        },
+        "latency_signed_vs_last_word_end_s": {
+          "n": 118,
+          "mean": 0.8381355932203501,
+          "median": 2.064999999999964,
+          "p10": 0.17000000000001825,
+          "p90": 2.447000000000027,
+          "min": -86.44,
+          "max": 3.790000000000001
+        },
+        "latency_signed_vs_last_word_end_s_tor_sessions": {
+          "n": 118,
+          "mean": 0.8381355932203501,
+          "median": 2.064999999999964,
+          "p10": 0.17000000000001825,
+          "p90": 2.447000000000027,
+          "min": -86.44,
+          "max": 3.790000000000001
+        },
+        "latency_signed_vs_last_word_end_s_nonnegative_only": {
+          "n": 109,
+          "mean": 1.9533027522935897,
+          "median": 2.0800000000000463,
+          "p10": 0.7920000000000327,
+          "p90": 2.511999999999977,
+          "min": 0.04000000000009063,
+          "max": 3.790000000000001
+        },
+        "latency_signed_vs_last_word_end_buckets": {
+          "lt_-5s": 2,
+          "-5s_to_-1s": 6,
+          "-1s_to_0s": 1,
+          "0s_to_0.5s": 7,
+          "0.5s_to_1s": 5,
+          "1s_to_2s": 32,
+          "ge_2s": 65
+        },
+        "latency_signed_vs_last_word_start_s": {
+          "n": 118,
+          "mean": 1.0667796610169646,
+          "median": 2.225000000000078,
+          "p10": 0.4840000000000383,
+          "p90": 2.6459999999999995,
+          "min": -86.3,
+          "max": 3.8900000000000166
+        },
+        "first_word_after_last_word_end_s": {
+          "n": 118,
+          "mean": 1.9167796610169603,
+          "median": 2.0799999999999774,
+          "p10": 0.5739999999999745,
+          "p90": 2.5129999999999675,
+          "min": 0.04000000000000625,
+          "max": 3.790000000000001
+        },
+        "sessions_first_word_before_last_word_end": {
+          "count": 9,
+          "of": 118,
+          "rate": 0.07627118644067797
+        },
+        "sessions_first_word_before_last_word_start": {
+          "count": 8,
+          "of": 118,
+          "rate": 0.06779661016949153
+        },
+        "sessions_first_word_within_0p5s_after_last_word_end": {
+          "count": 7,
+          "of": 118,
+          "rate": 0.059322033898305086
+        },
+        "sessions_first_word_later_than_2s_after_last_word_end": {
+          "count": 65,
+          "of": 118,
+          "rate": 0.5508474576271186
+        },
+        "sessions_any_speech_before_last_word_end": {
+          "count": 9,
+          "of": 119,
+          "rate": 0.07563025210084033
+        },
+        "sessions_no_word_after_last_word_end": {
+          "count": 1,
+          "of": 119,
+          "rate": 0.008403361344537815
+        },
+        "transcribed_speech_before_last_word_end_s_total": 23.79,
+        "transcribed_speech_before_last_word_end_s_per_session": {
+          "n": 119,
+          "mean": 0.19991596638655462,
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 0.0,
+          "min": 0.0,
+          "max": 18.439999999999984
+        },
+        "words_starting_before_last_word_end_total": 67,
+        "transcribed_speech_total_s": 295.84,
+        "transcript_words_per_session": {
+          "n": 119,
+          "mean": 9.815126050420169,
+          "median": 9.0,
+          "p10": 6.0,
+          "p90": 14.0,
+          "min": 0,
+          "max": 68
+        }
+      },
+      "tree_summary_json": {
+        "pause_average_take_turn": 0.037383177570093455,
+        "pause_evaluated": 214,
+        "turn_average_latency": 2.0122881355932356,
+        "turn_average_take_turn": 0.9915966386554622,
+        "turn_evaluated": 119
+      }
+    }
+  },
+  "csv": {
+    "nemotron-v10": "/private/tmp/claude-501/-Users-luojiaxuan-Downloads-S2S-omni/d929e068-e502-4614-a422-100edee8e07f/scratchpad/trace_analysis/out/pause-intrusion-nemotron-v10.csv",
+    "vad500": "/private/tmp/claude-501/-Users-luojiaxuan-Downloads-S2S-omni/d929e068-e502-4614-a422-100edee8e07f/scratchpad/trace_analysis/out/pause-intrusion-vad500.csv",
+    "vad800": "/private/tmp/claude-501/-Users-luojiaxuan-Downloads-S2S-omni/d929e068-e502-4614-a422-100edee8e07f/scratchpad/trace_analysis/out/pause-intrusion-vad800.csv",
+    "vad1200": "/private/tmp/claude-501/-Users-luojiaxuan-Downloads-S2S-omni/d929e068-e502-4614-a422-100edee8e07f/scratchpad/trace_analysis/out/pause-intrusion-vad1200.csv",
+    "semmed": "/private/tmp/claude-501/-Users-luojiaxuan-Downloads-S2S-omni/d929e068-e502-4614-a422-100edee8e07f/scratchpad/trace_analysis/out/pause-intrusion-semmed.csv"
+  }
+}

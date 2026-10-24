@@ -1,0 +1,26 @@
+{
+ "reference_n": 198,
+ "candidate_n": 198,
+ "common_n": 198,
+ "exact_agreement": 0.7676767676767676,
+ "within_one": 0.9393939393939394,
+ "reference_mean": 4.41919191919192,
+ "candidate_mean": 4.398989898989899,
+ "quadratic_kappa": 0.8337629435418539,
+ "reference_hist": {
+  "0": 7,
+  "1": 6,
+  "2": 6,
+  "3": 5,
+  "4": 28,
+  "5": 146
+ },
+ "candidate_hist": {
+  "0": 5,
+  "1": 14,
+  "2": 9,
+  "3": 5,
+  "4": 1,
+  "5": 164
+ }
+}

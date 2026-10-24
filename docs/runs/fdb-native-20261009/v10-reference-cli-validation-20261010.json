@@ -1,0 +1,65 @@
+{
+ "candor_pause_handling": {
+  "evaluated": 216,
+  "result": {
+   "Average take turn": 0.3888888888888889
+  },
+  "judge": null
+ },
+ "candor_turn_taking": {
+  "evaluated": 119,
+  "result": {
+   "Average latency": 0.5573873873873997,
+   "Average take turn": 0.9327731092436975
+  },
+  "judge": null
+ },
+ "icc_backchannel": {
+  "evaluated": 55,
+  "result": {
+   "Frequency mean": 0.0676,
+   "Frequency std": 0.0462,
+   "JSD mean": 0.7735,
+   "JSD std": 0.0455,
+   "Number of samples": 55.0,
+   "TOR mean": 0.3455,
+   "TOR std": 0.4755
+  },
+  "judge": null
+ },
+ "synthetic_pause_handling": {
+  "evaluated": 137,
+  "result": {
+   "Average take turn": 0.11678832116788321
+  },
+  "judge": null
+ },
+ "synthetic_user_interruption": {
+  "evaluated": 200,
+  "result": {
+   "Average latency": 1.132929292929293,
+   "Average rating": 4.404040404040404,
+   "Average take turn": 0.99
+  },
+  "judge": {
+   "base_url": null,
+   "completion_tokens": 15690,
+   "distinct_requests": 198,
+   "ledger": "ref/judge/user-interruption-20261010T095121Z.jsonl",
+   "max_attempts_per_request": 3,
+   "official": true,
+   "prompt_tokens": 66463,
+   "requested_models": [
+    "gpt-4-turbo"
+   ],
+   "requests": 198,
+   "retries": 0,
+   "returned_models": {
+    "gpt-4-turbo-2024-04-09": 198
+   },
+   "sent_models": [
+    "gpt-4-turbo"
+   ]
+  }
+ }
+}

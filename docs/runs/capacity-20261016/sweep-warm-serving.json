@@ -1,0 +1,231 @@
+{
+  "levels": [
+    {
+      "run": "/data/runs/20261016-cap/sweep-warm/concurrency-8",
+      "profile": "minicpmo-native-pr2377",
+      "concurrency": 8,
+      "mean_open_sessions": 7.844262576115394,
+      "sessions": 128,
+      "sessions_failed": 6,
+      "admission_denials": 0,
+      "input_pacing_violations": 6,
+      "units_expected": 1744,
+      "units_missed": 74,
+      "unit_miss_rate": 0.04243119266055046,
+      "unit_lag_s": {
+        "count": 1670,
+        "p50": 0.23112838849192485,
+        "p90": 0.3667702590930276,
+        "p99": 0.5006483062601181,
+        "max": 0.6656083320267498
+      },
+      "replies": 143,
+      "replies_with_audio_after_text": 14,
+      "first_audio_latency_s": {
+        "count": 143,
+        "p50": 0.27788031403906643,
+        "p90": 0.3670448483666405,
+        "p99": 0.46540636872872737,
+        "max": 0.5022990910802037
+      },
+      "startup_buffer_needed_s": {
+        "count": 143,
+        "p50": 0.10243321093730628,
+        "p90": 0.23142604001332073,
+        "p99": 0.2932117939065211,
+        "max": 0.3511008769273758
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 89,
+      "underrun_s": 7.73875800834503,
+      "real_time_factor": null,
+      "unmet_targets": [
+        "no failed sessions",
+        "no input pacing violations",
+        "unit miss rate at most 1%"
+      ]
+    },
+    {
+      "run": "/data/runs/20261016-cap/sweep-warm/concurrency-16",
+      "profile": "minicpmo-native-pr2377",
+      "concurrency": 16,
+      "mean_open_sessions": 15.45403437508979,
+      "sessions": 128,
+      "sessions_failed": 5,
+      "admission_denials": 0,
+      "input_pacing_violations": 5,
+      "units_expected": 1744,
+      "units_missed": 77,
+      "unit_miss_rate": 0.04415137614678899,
+      "unit_lag_s": {
+        "count": 1677,
+        "p50": 0.36003191000781953,
+        "p90": 0.6201048322487623,
+        "p99": 0.9231001260504128,
+        "max": 2.0583515759790316
+      },
+      "replies": 145,
+      "replies_with_audio_after_text": 6,
+      "first_audio_latency_s": {
+        "count": 145,
+        "p50": 0.39552945201285183,
+        "p90": 0.6009932618122548,
+        "p99": 0.7110939937923104,
+        "max": 0.7361312349094078
+      },
+      "startup_buffer_needed_s": {
+        "count": 145,
+        "p50": 0.2202694189036265,
+        "p90": 0.5049351590219885,
+        "p99": 0.6546193818654865,
+        "max": 1.7628090250073
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 110,
+      "underrun_s": 25.76345108426176,
+      "real_time_factor": null,
+      "unmet_targets": [
+        "no failed sessions",
+        "no input pacing violations",
+        "unit miss rate at most 1%"
+      ]
+    },
+    {
+      "run": "/data/runs/20261016-cap/sweep-warm/concurrency-24",
+      "profile": "minicpmo-native-pr2377",
+      "concurrency": 24,
+      "mean_open_sessions": 21.099493678463606,
+      "sessions": 128,
+      "sessions_failed": 4,
+      "admission_denials": 0,
+      "input_pacing_violations": 4,
+      "units_expected": 1744,
+      "units_missed": 181,
+      "unit_miss_rate": 0.10378440366972477,
+      "unit_lag_s": {
+        "count": 1688,
+        "p50": 0.45017723203636706,
+        "p90": 0.9330147231230512,
+        "p99": 1.3414407548448042,
+        "max": 1.6894015499856323
+      },
+      "replies": 143,
+      "replies_with_audio_after_text": 14,
+      "first_audio_latency_s": {
+        "count": 143,
+        "p50": 0.541419546934776,
+        "p90": 0.8307276928564533,
+        "p99": 1.158198050344363,
+        "max": 1.323892452986911
+      },
+      "startup_buffer_needed_s": {
+        "count": 143,
+        "p50": 0.3172628100728616,
+        "p90": 0.7774499397957697,
+        "p99": 1.0820577326975764,
+        "max": 1.1329448210308328
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 119,
+      "underrun_s": 42.51033288682811,
+      "real_time_factor": null,
+      "unmet_targets": [
+        "no failed sessions",
+        "no input pacing violations",
+        "unit miss rate at most 1%"
+      ]
+    },
+    {
+      "run": "/data/runs/20261016-cap/sweep-warm/concurrency-32",
+      "profile": "minicpmo-native-pr2377",
+      "concurrency": 32,
+      "mean_open_sessions": 30.04412168417705,
+      "sessions": 128,
+      "sessions_failed": 19,
+      "admission_denials": 0,
+      "input_pacing_violations": 19,
+      "units_expected": 1744,
+      "units_missed": 526,
+      "unit_miss_rate": 0.30160550458715596,
+      "unit_lag_s": {
+        "count": 1480,
+        "p50": 0.6478573174099438,
+        "p90": 1.1652280434616842,
+        "p99": 1.9308539852150717,
+        "max": 2.2661854960024357
+      },
+      "replies": 120,
+      "replies_with_audio_after_text": 17,
+      "first_audio_latency_s": {
+        "count": 120,
+        "p50": 0.7396555175073445,
+        "p90": 0.9655459263478405,
+        "p99": 1.3727996085968335,
+        "max": 1.3791206310270354
+      },
+      "startup_buffer_needed_s": {
+        "count": 120,
+        "p50": 0.4080802060198039,
+        "p90": 0.9166668523103002,
+        "p99": 1.5400712656544058,
+        "max": 1.6333272960036993
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 92,
+      "underrun_s": 45.38211594999302,
+      "real_time_factor": null,
+      "unmet_targets": [
+        "no failed sessions",
+        "no input pacing violations",
+        "unit miss rate at most 1%"
+      ]
+    },
+    {
+      "run": "/data/runs/20261016-cap/sweep-warm/concurrency-40",
+      "profile": "minicpmo-native-pr2377",
+      "concurrency": 40,
+      "mean_open_sessions": 31.90728483517165,
+      "sessions": 128,
+      "sessions_failed": 60,
+      "admission_denials": 0,
+      "input_pacing_violations": 60,
+      "units_expected": 1744,
+      "units_missed": 1219,
+      "unit_miss_rate": 0.6989678899082569,
+      "unit_lag_s": {
+        "count": 929,
+        "p50": 0.8761907409643754,
+        "p90": 1.8118153219809756,
+        "p99": 2.6125344138592483,
+        "max": 3.0007048349361867
+      },
+      "replies": 80,
+      "replies_with_audio_after_text": 4,
+      "first_audio_latency_s": {
+        "count": 80,
+        "p50": 0.8496856415295042,
+        "p90": 1.028327534464188,
+        "p99": 1.3436798246938269,
+        "max": 1.34488336998038
+      },
+      "startup_buffer_needed_s": {
+        "count": 80,
+        "p50": 0.903109647508245,
+        "p90": 1.6116834995802503,
+        "p99": 2.053908762237988,
+        "max": 2.096637808950618
+      },
+      "playback_reserve_s": 0.08,
+      "replies_with_underrun": 77,
+      "underrun_s": 68.7706587536959,
+      "real_time_factor": null,
+      "unmet_targets": [
+        "no failed sessions",
+        "no input pacing violations",
+        "unit miss rate at most 1%"
+      ]
+    }
+  ],
+  "max_concurrency_meeting_targets": null,
+  "capacity_bounded": true
+}

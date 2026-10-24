@@ -1,0 +1,32 @@
+{
+ "reference_n": 498,
+ "candidate_n": 498,
+ "common_n": 498,
+ "exact_agreement": 0.8493975903614458,
+ "cohen_kappa": 0.7202561509942702,
+ "reference_dist": {
+  "C_RESPOND": 296,
+  "C_RESUME": 132,
+  "C_UNKNOWN": 51,
+  "C_UNCERTAIN_HANDLING": 19
+ },
+ "candidate_dist": {
+  "C_RESPOND": 322,
+  "C_RESUME": 137,
+  "C_UNCERTAIN_HANDLING": 28,
+  "C_UNKNOWN": 11
+ },
+ "confusion": {
+  "C_UNKNOWN -> C_RESUME": 19,
+  "C_UNKNOWN -> C_RESPOND": 13,
+  "C_UNKNOWN -> C_UNCERTAIN_HANDLING": 11,
+  "C_RESUME -> C_RESPOND": 9,
+  "C_UNCERTAIN_HANDLING -> C_RESPOND": 8,
+  "C_RESUME -> C_UNCERTAIN_HANDLING": 7,
+  "C_UNCERTAIN_HANDLING -> C_UNKNOWN": 2,
+  "C_RESPOND -> C_UNCERTAIN_HANDLING": 2,
+  "C_RESPOND -> C_RESUME": 2,
+  "C_RESUME -> C_UNKNOWN": 1,
+  "C_UNCERTAIN_HANDLING -> C_RESUME": 1
+ }
+}

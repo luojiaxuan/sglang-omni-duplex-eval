@@ -1,0 +1,35 @@
+{
+  "scope": "hand spot-check of sessions-<arm>.csv rows against raw traces, exporter manifest, run.json; synthetic parser edge cases",
+  "tools": {
+    "spotcheck.py": "independent recomputation (sample-level ownership array, event-order commit linking) + condensed timeline per session",
+    "edge_tests.py": "synthetic realtime-legacy-pcm16-v1 traces run through analyze_traces.analyze_session with hand-computed expectations"
+  },
+  "sessions_spot_checked": {
+    "vad500 (traces on disk)": {
+      "candor_pause_handling/10": "pause, 3 false endpoints, 2 responses with audio, 2 barge-in cuts, TOR=1 -- row matches, all 33 fields",
+      "candor_pause_handling/1": "pause, 3 false endpoints, 3 cancelled responses with zero audio -- row matches",
+      "candor_pause_handling/167": "pause, no commit, no false endpoint, speech open at end -- row matches",
+      "candor_pause_handling/22": "pause, response resp_...21f960 created at 7.9974 s after T=7.2 s (deferred, 1 delta after T, left open) -- row matches",
+      "candor_pause_handling/179": "pause, 5 commits, response resp_...635b5d created at 12.489 s after T=11.36 s -- row matches",
+      "candor_turn_taking/38": "server_vad turn taking, deferred second response, 1.3175 s cropped at T -- row matches incl. latency 0.47",
+      "candor_turn_taking/5": "server_vad turn taking, 2 cancelled zero-audio responses + 1 completed, 25.29 s cropped -- row matches incl. latency 1.33"
+    },
+    "semmed (rec-semmed.tar re-downloaded, sha256 873843958ae2...0549e verified, 6 sessions extracted, tar deleted)": {
+      "candor_pause_handling/1": "no commit, no false endpoint -- row matches",
+      "candor_pause_handling/6": "3 false endpoints, 2 cuts, TOR=1 -- row matches",
+      "candor_pause_handling/45": "2 false endpoints, deferred response cancelled with zero audio, 1 cut -- row matches",
+      "candor_turn_taking/5": "semantic_vad turn taking, single commit, latency 3.89 -- row matches",
+      "candor_turn_taking/107": "semantic_vad, deferred response, non-80ms-multiple T=16.7999375 -- row matches",
+      "candor_turn_taking/1": "semantic_vad, response left open with 16.8 s audio after T -- row matches"
+    }
+  },
+  "mismatches_found": [],
+  "expected_differences_not_mismatches": [
+    "exporter audio_after_window_excluded_s is None (not 0) when a session has no in-window audio; parser reports the actual post-T seconds (vad500 pause/7,25,51,170; vad800 pause/116,20; vad1200 pause/211,23). Recorder initial_delay_s for those 8 sessions equals the parser first_audio_s (|diff| < 2e-5 s), confirming the audio is real post-T audio.",
+    "spotcheck.py's own sample array uses ceil(T*24000) whereas the parser/exporter crop at float T*24000; differs by 1 sample (42 us) only when T*24000 is non-integer (semmed turn_taking/107, T=16.7999375). Parser identity in_window == survived+cut+cropped holds exactly in all 1337 sessions.",
+    "the first run of spotcheck.py flagged responses_deferred / tt_final_response_id in 5 vad500 sessions; that was a bug in the checker (it compared response.created against commits that had not happened yet). Fixed to event-order linking; the CSV values were correct."
+  ],
+  "cross_arm_checks_all_rows": "out/spotcheck/cross-arm-manifest-check.txt: for every row of all four arms (335/335/334/333) T_s, responses_created, responses_terminal, terminal_statuses, first commit time (manifest lifecycle.receipts_elapsed_s), barge_in_cuts, packet_audio_in_window_s, audio_after_window_excluded_s, queued_audio_cropped_s, first_playout_start_s, silent flag, run.json media_duration_s == audio_s_received, input duration all agree",
+  "edge_tests": "out/spotcheck/edge_tests.report.txt: 157 checks, all pass (multi-commit with swallowed commit, deferred response answering an earlier commit, cleared after completed response, cancelled zero-audio response, response/commit after T with audio only after T, speech_started after T cutting queued audio, delta exactly at T, semantic_vad allowance 0 vs --pause-allowance-s 0.5, interrupt_response=false)",
+  "known_numbers": {"pause_tor": [30, 10, 4, 8], "turn_latency_s": [0.6928, 1.0431, 1.4797, 2.0123], "any_audio_pause": [157, 89, 29, 29], "pauses": "277 over 216 clips, 0.61-1.49 s, median 0.87 (vad1200 analyses 275 pauses / 215 sessions and semmed 273 / 214 because pause/202 and pause/93 failed protocol in run.json)"}
+}

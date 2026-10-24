@@ -1,0 +1,47 @@
+{
+ "1.0": {
+  "real_scored": 46,
+  "real_with_audio": 50,
+  "real_mean": 53.583918861720875,
+  "real_p10": 42.38289260864258,
+  "original_mean": 53.6123693784078,
+  "pitch_mean": 38.34898694356283,
+  "separation_d": 1.8492645536342842
+ },
+ "1.5": {
+  "real_scored": 45,
+  "real_with_audio": 50,
+  "real_mean": 61.697686682807074,
+  "real_p10": 52.61659927368164,
+  "original_mean": 60.60299936930338,
+  "pitch_mean": 43.73641983668009,
+  "separation_d": 2.4911376899805067
+ },
+ "2.0": {
+  "real_scored": 45,
+  "real_with_audio": 50,
+  "real_mean": 67.84692204793295,
+  "real_p10": 58.02850494384766,
+  "original_mean": 66.40489896138509,
+  "pitch_mean": 47.770029385884605,
+  "separation_d": 2.697990702411781
+ },
+ "3.0": {
+  "real_scored": 44,
+  "real_with_audio": 50,
+  "real_mean": 74.17012015256014,
+  "real_p10": 67.73884963989258,
+  "original_mean": 72.4597970644633,
+  "pitch_mean": 52.467618783315025,
+  "separation_d": 3.9493666147851854
+ },
+ "4.0": {
+  "real_scored": 38,
+  "real_with_audio": 50,
+  "real_mean": 78.20008689478824,
+  "real_p10": 73.52603149414062,
+  "original_mean": 76.49898841164328,
+  "pitch_mean": 54.527871738780625,
+  "separation_d": 4.980727197630377
+ }
+}

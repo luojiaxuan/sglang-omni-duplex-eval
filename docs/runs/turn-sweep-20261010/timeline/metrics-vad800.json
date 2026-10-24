@@ -1,0 +1,683 @@
+{
+  "rec": "data/rec/vad800",
+  "ref": "data/score/vad800/ref",
+  "profile": "qwen3-omni-half-duplex",
+  "turn_detection": {
+    "type": "server_vad",
+    "silence_duration_ms": 800,
+    "prefix_padding_ms": 300,
+    "threshold": 0.5
+  },
+  "output_rate": 24000,
+  "pause_allowance_s": null,
+  "sessions_passed": 335,
+  "sessions_skipped": [],
+  "pause_handling": {
+    "sessions": 216,
+    "sessions_any_audio": {
+      "count": 89,
+      "of": 216,
+      "rate": 0.41203703703703703
+    },
+    "sessions_any_audio_in_window": {
+      "count": 87,
+      "of": 216,
+      "rate": 0.4027777777777778
+    },
+    "sessions_survived_audio_gt0": {
+      "count": 87,
+      "of": 216,
+      "rate": 0.4027777777777778
+    },
+    "sessions_official_tor": {
+      "count": 10,
+      "of": 216,
+      "rate": 0.046296296296296294
+    },
+    "sessions_with_commit": {
+      "count": 185,
+      "of": 216,
+      "rate": 0.8564814814814815
+    },
+    "sessions_with_false_endpoint": {
+      "count": 185,
+      "of": 216,
+      "rate": 0.8564814814814815
+    },
+    "sessions_speech_open_at_end": {
+      "count": 208,
+      "of": 216,
+      "rate": 0.9629629629629629
+    },
+    "sessions_with_client_error": {
+      "count": 0,
+      "of": 216,
+      "rate": 0.0
+    },
+    "commits": 245,
+    "commits_per_session": {
+      "n": 216,
+      "mean": 1.1342592592592593,
+      "median": 1.0,
+      "p90": 2.0,
+      "min": 0,
+      "max": 4
+    },
+    "false_endpoints": {
+      "count": 245,
+      "of": 245,
+      "rate": 1.0
+    },
+    "commits_swallowed": {
+      "count": 10,
+      "of": 245,
+      "rate": 0.04081632653061224
+    },
+    "commits_answered_immediately": {
+      "count": 234,
+      "of": 245,
+      "rate": 0.9551020408163265
+    },
+    "commits_answered_deferred": {
+      "count": 1,
+      "of": 245,
+      "rate": 0.004081632653061225
+    },
+    "speech_end_to_commit_s": {
+      "n": 245,
+      "mean": 0.7541523584788323,
+      "median": 0.7542031919797889,
+      "p90": 0.7856749674221499,
+      "min": 0.7222394130565224,
+      "max": 0.7863242120072245
+    },
+    "speech_starts": 453,
+    "speech_starts_after_input_end": 0,
+    "responses": 235,
+    "responses_deferred": {
+      "count": 1,
+      "of": 235,
+      "rate": 0.00425531914893617
+    },
+    "responses_with_audio": {
+      "count": 101,
+      "of": 235,
+      "rate": 0.4297872340425532
+    },
+    "responses_cancelled": {
+      "count": 185,
+      "of": 235,
+      "rate": 0.7872340425531915
+    },
+    "responses_completed": {
+      "count": 49,
+      "of": 235,
+      "rate": 0.20851063829787234
+    },
+    "responses_open_at_end": {
+      "count": 1,
+      "of": 235,
+      "rate": 0.00425531914893617
+    },
+    "responses_cut_by_exporter": {
+      "count": 93,
+      "of": 235,
+      "rate": 0.39574468085106385
+    },
+    "responses_with_audio_cut": {
+      "count": 93,
+      "of": 101,
+      "rate": 0.9207920792079208
+    },
+    "responses_with_audio_fully_cut": {
+      "count": 2,
+      "of": 101,
+      "rate": 0.019801980198019802
+    },
+    "commit_to_created_s": {
+      "n": 234,
+      "mean": 0.0005278076865097396,
+      "median": 0.0004954320029355586,
+      "p90": 0.0012291279388591649,
+      "min": 1.859001349657774e-05,
+      "max": 0.0014729700051248074
+    },
+    "commit_to_first_text_s": {
+      "n": 194,
+      "mean": 0.08557662225001943,
+      "median": 0.08321062551112846,
+      "p90": 0.09435716338921338,
+      "min": 0.0751666669966653,
+      "max": 0.1337820669868961
+    },
+    "commit_to_first_audio_s": {
+      "n": 101,
+      "mean": 0.29872606415416825,
+      "median": 0.27144216501619667,
+      "p90": 0.44829953205771744,
+      "min": 0.15468783595133573,
+      "max": 0.6578337870305404
+    },
+    "created_to_first_audio_s": {
+      "n": 101,
+      "mean": 0.29819758166674304,
+      "median": 0.2707767969695851,
+      "p90": 0.44753096904605627,
+      "min": 0.15395896194968373,
+      "max": 0.6571078470442444
+    },
+    "created_to_done_s": {
+      "n": 234,
+      "mean": 0.3526121411153163,
+      "median": 0.2899619385134429,
+      "p90": 0.7017917907098314,
+      "min": 0.07863772695418447,
+      "max": 3.1544905089540407
+    },
+    "first_audio_to_done_s": {
+      "n": 100,
+      "mean": 0.26044431524234823,
+      "median": 0.17697873094584793,
+      "p90": 0.49984085742617035,
+      "min": 0.00020817702170461416,
+      "max": 2.4973826619097963
+    },
+    "first_audio_to_cut_s": {
+      "n": 93,
+      "mean": 0.4104483474461582,
+      "median": 0.27260685502551496,
+      "p90": 0.7558435016078874,
+      "min": 0.012436358956620097,
+      "max": 5.473646349972114
+    },
+    "audio_s_received_per_response": {
+      "n": 101,
+      "mean": 3.813706683168317,
+      "median": 2.456875,
+      "p90": 7.7368749999999995,
+      "min": 0.616875,
+      "max": 35.81687500000001
+    },
+    "audio_s_received_before_cut_per_cut_response": {
+      "n": 93,
+      "mean": 2.98934811827957,
+      "median": 2.376875,
+      "p90": 6.344874999999998,
+      "min": 0.616875,
+      "max": 12.776875000000002
+    },
+    "audio_s_survived_per_response": {
+      "n": 101,
+      "mean": 0.4372842409240924,
+      "median": 0.26845833333333335,
+      "p90": 0.7699583333333333,
+      "min": 0.0,
+      "max": 5.473625
+    },
+    "audio_totals_s": {
+      "received": 385.184375,
+      "cut_by_barge_in": 239.83779166666667,
+      "cropped_at_input_end": 45.787124999999996,
+      "received_after_input_end": 55.393750000000004,
+      "survived": 44.165708333333335
+    },
+    "official_transcript_words": {
+      "n": 216,
+      "mean": 0.47685185185185186,
+      "median": 0.0,
+      "p90": 2.0,
+      "min": 0,
+      "max": 20
+    },
+    "pauses": {
+      "count": 277,
+      "duration_s": {
+        "n": 277,
+        "mean": 0.912454873646221,
+        "median": 0.8700000000001182,
+        "p90": 1.2800000000000353,
+        "min": 0.6099999999999568,
+        "max": 1.490000000000009
+      }
+    },
+    "commits_in_pause_by_commit_time": {
+      "count": 223,
+      "of": 245,
+      "rate": 0.9102040816326531
+    },
+    "commits_in_pause_by_speech_end": {
+      "count": 55,
+      "of": 245,
+      "rate": 0.22448979591836735
+    },
+    "pauses_with_commit_by_commit_time": {
+      "count": 223,
+      "of": 277,
+      "rate": 0.8050541516245487
+    },
+    "sessions_with_commit_in_pause": {
+      "count": 182,
+      "of": 216,
+      "rate": 0.8425925925925926
+    },
+    "offset_from_pause_start_s": {
+      "n": 223,
+      "mean": 0.6907091536184485,
+      "median": 0.7127836060292339,
+      "p90": 0.7895433805977405,
+      "min": 0.0027398729371270747,
+      "max": 0.8423221320751964
+    },
+    "sessions_any_word_starts_in_pause": {
+      "count": 27,
+      "of": 216,
+      "rate": 0.125
+    },
+    "transcribed_speech_in_pause_s_total": 10.109999999999081,
+    "transcribed_speech_in_pause_s_per_session": {
+      "n": 216,
+      "mean": 0.0468055555555513,
+      "median": 0.0,
+      "p90": 0.16000000000000014,
+      "min": 0.0,
+      "max": 0.7399999999999545
+    },
+    "sessions_any_transcribed_word": {
+      "count": 32,
+      "of": 216,
+      "rate": 0.14814814814814814
+    }
+  },
+  "turn_taking": {
+    "sessions": 119,
+    "sessions_any_audio": {
+      "count": 119,
+      "of": 119,
+      "rate": 1.0
+    },
+    "sessions_any_audio_in_window": {
+      "count": 119,
+      "of": 119,
+      "rate": 1.0
+    },
+    "sessions_survived_audio_gt0": {
+      "count": 119,
+      "of": 119,
+      "rate": 1.0
+    },
+    "sessions_official_tor": {
+      "count": 118,
+      "of": 119,
+      "rate": 0.9915966386554622
+    },
+    "sessions_with_commit": {
+      "count": 119,
+      "of": 119,
+      "rate": 1.0
+    },
+    "sessions_with_false_endpoint": {
+      "count": 119,
+      "of": 119,
+      "rate": 1.0
+    },
+    "sessions_speech_open_at_end": {
+      "count": 0,
+      "of": 119,
+      "rate": 0.0
+    },
+    "sessions_with_client_error": {
+      "count": 0,
+      "of": 119,
+      "rate": 0.0
+    },
+    "commits": 162,
+    "commits_per_session": {
+      "n": 119,
+      "mean": 1.361344537815126,
+      "median": 1.0,
+      "p90": 2.0,
+      "min": 1,
+      "max": 7
+    },
+    "false_endpoints": {
+      "count": 162,
+      "of": 162,
+      "rate": 1.0
+    },
+    "commits_swallowed": {
+      "count": 1,
+      "of": 162,
+      "rate": 0.006172839506172839
+    },
+    "commits_answered_immediately": {
+      "count": 158,
+      "of": 162,
+      "rate": 0.9753086419753086
+    },
+    "commits_answered_deferred": {
+      "count": 3,
+      "of": 162,
+      "rate": 0.018518518518518517
+    },
+    "speech_end_to_commit_s": {
+      "n": 162,
+      "mean": 0.7525785025807994,
+      "median": 0.7545267060217449,
+      "p90": 0.7857902695713562,
+      "min": 0.7222742230026054,
+      "max": 0.7870918300151826
+    },
+    "speech_starts": 162,
+    "speech_starts_after_input_end": 0,
+    "responses": 161,
+    "responses_deferred": {
+      "count": 3,
+      "of": 161,
+      "rate": 0.018633540372670808
+    },
+    "responses_with_audio": {
+      "count": 144,
+      "of": 161,
+      "rate": 0.8944099378881988
+    },
+    "responses_cancelled": {
+      "count": 25,
+      "of": 161,
+      "rate": 0.15527950310559005
+    },
+    "responses_completed": {
+      "count": 134,
+      "of": 161,
+      "rate": 0.8322981366459627
+    },
+    "responses_open_at_end": {
+      "count": 2,
+      "of": 161,
+      "rate": 0.012422360248447204
+    },
+    "responses_cut_by_exporter": {
+      "count": 19,
+      "of": 161,
+      "rate": 0.11801242236024845
+    },
+    "responses_with_audio_cut": {
+      "count": 19,
+      "of": 144,
+      "rate": 0.13194444444444445
+    },
+    "responses_with_audio_fully_cut": {
+      "count": 2,
+      "of": 144,
+      "rate": 0.013888888888888888
+    },
+    "commit_to_created_s": {
+      "n": 158,
+      "mean": 0.0006536307525113696,
+      "median": 0.0005348320119082928,
+      "p90": 0.0013962020166218283,
+      "min": 2.134696114808321e-05,
+      "max": 0.002703136997297406
+    },
+    "commit_to_first_text_s": {
+      "n": 153,
+      "mean": 0.08880639808203757,
+      "median": 0.08587529405485839,
+      "p90": 0.09657171305734664,
+      "min": 0.07707080710679293,
+      "max": 0.20365707797463983
+    },
+    "commit_to_first_audio_s": {
+      "n": 141,
+      "mean": 0.4522027675035997,
+      "median": 0.3697261670604348,
+      "p90": 0.7888225039932877,
+      "min": 0.15912771201692522,
+      "max": 1.5563710120040923
+    },
+    "created_to_first_audio_s": {
+      "n": 144,
+      "mean": 0.4522023799597971,
+      "median": 0.3690259615541436,
+      "p90": 0.7864197382936255,
+      "min": 0.15840754401870072,
+      "max": 1.5561746360035613
+    },
+    "created_to_done_s": {
+      "n": 159,
+      "mean": 1.3294789780109957,
+      "median": 1.0247580009745434,
+      "p90": 3.0793173609767113,
+      "min": 0.078665757086128,
+      "max": 5.662972145946696
+    },
+    "first_audio_to_done_s": {
+      "n": 142,
+      "mean": 1.0286963201737898,
+      "median": 0.7113053905195557,
+      "p90": 2.399752565729432,
+      "min": 0.0002038140082731843,
+      "max": 4.300056664971635
+    },
+    "first_audio_to_cut_s": {
+      "n": 19,
+      "mean": 0.5141063203030315,
+      "median": 0.2825779860140756,
+      "p90": 1.1636227086419235,
+      "min": 0.04091993800830096,
+      "max": 2.2704720369074494
+    },
+    "audio_s_received_per_response": {
+      "n": 144,
+      "mean": 15.75298611111111,
+      "median": 10.776875,
+      "p90": 36.840875000000025,
+      "min": 0.536875,
+      "max": 66.3768749999999
+    },
+    "audio_s_received_before_cut_per_cut_response": {
+      "n": 19,
+      "mean": 3.7537171052631577,
+      "median": 2.376875,
+      "p90": 8.200874999999998,
+      "min": 0.616875,
+      "max": 13.256875000000003
+    },
+    "audio_s_survived_per_response": {
+      "n": 144,
+      "mean": 3.420356915509259,
+      "median": 3.918125,
+      "p90": 4.299375,
+      "min": 0.0,
+      "max": 10.936875
+    },
+    "audio_totals_s": {
+      "received": 2268.43,
+      "cut_by_barge_in": 61.55258333333334,
+      "cropped_at_input_end": 1646.5060208333334,
+      "received_after_input_end": 67.84000000000002,
+      "survived": 492.5313958333333
+    },
+    "official_transcript_words": {
+      "n": 119,
+      "mean": 12.84873949579832,
+      "median": 13.0,
+      "p90": 16.0,
+      "min": 1,
+      "max": 69
+    },
+    "official_latency_s": {
+      "n": 118,
+      "mean": 1.0431355932203545,
+      "median": 1.0050000000000097,
+      "p90": 1.5990000000000704,
+      "min": 0.0,
+      "max": 2.4200000000002913
+    },
+    "official_latency_mean_s": 1.0431355932203545,
+    "final_commit_minus_input_end_s": {
+      "n": 119,
+      "mean": -4.617631576049619,
+      "median": -4.518471401916816,
+      "p90": -4.325306630385108,
+      "min": -14.076717465999536,
+      "max": -4.198318868968634
+    },
+    "final_commit_minus_last_word_end_s": {
+      "n": 119,
+      "mean": 0.3823374365554338,
+      "median": 0.4814660980832741,
+      "p90": 0.6746933696148517,
+      "min": -9.076717465999536,
+      "max": 0.8016811310312733
+    },
+    "final_commit_minus_last_word_start_s": {
+      "n": 119,
+      "mean": 0.6123374365554382,
+      "median": 0.7218347389670043,
+      "p90": 0.8117566760256978,
+      "min": -8.936717465999536,
+      "max": 1.1118418550397564
+    },
+    "final_commit_speech_end_minus_last_word_end_s": {
+      "n": 119,
+      "mean": -0.372840336134443,
+      "median": -0.27999999999995495,
+      "p90": -0.08719999999984171,
+      "min": -9.799999999999997,
+      "max": 0.01599999999990942
+    },
+    "final_response_first_audio_minus_input_end_s": {
+      "n": 119,
+      "mean": -4.130144158440062,
+      "median": -4.077693170029669,
+      "p90": -3.6374319853514443,
+      "min": -13.748925016028807,
+      "max": -3.1649936619410326
+    },
+    "final_response_first_audio_minus_last_word_start_s": {
+      "n": 119,
+      "mean": 1.0998248541649942,
+      "median": 1.1360603730008734,
+      "p90": 1.5721673393686841,
+      "min": -8.608925016028806,
+      "max": 2.0755165280402252
+    },
+    "any_first_audio_minus_input_end_s": {
+      "n": 119,
+      "mean": -5.836778867545828,
+      "median": -4.116970562023111,
+      "p90": -3.6374319853514443,
+      "min": -92.69196378695779,
+      "max": -3.1649936619410326
+    },
+    "sessions_final_commit_after_input_end": {
+      "count": 0,
+      "of": 119,
+      "rate": 0.0
+    },
+    "sessions_final_response_has_audio": {
+      "count": 119,
+      "of": 119,
+      "rate": 1.0
+    },
+    "premature_commits_before_last_word_start": {
+      "count": 46,
+      "of": 162,
+      "rate": 0.2839506172839506
+    },
+    "sessions_with_premature_commit": {
+      "count": 33,
+      "of": 119,
+      "rate": 0.2773109243697479
+    },
+    "official_latency_negative_clipped": {
+      "count": 9,
+      "of": 118,
+      "rate": 0.07627118644067797
+    },
+    "sessions_first_word_before_final_commit": {
+      "count": 8,
+      "of": 119,
+      "rate": 0.06722689075630252
+    },
+    "official_latency_single_commit_sessions_s": {
+      "n": 86,
+      "mean": 1.1144186046511753,
+      "median": 0.985000000000023,
+      "p90": 1.6900000000000057,
+      "min": 0.0,
+      "max": 2.4200000000002913
+    },
+    "official_latency_first_word_after_final_commit_s": {
+      "n": 110,
+      "mean": 1.1190000000000166,
+      "median": 1.0200000000000098,
+      "p90": 1.6230000000000604,
+      "min": 0.0,
+      "max": 2.4200000000002913
+    }
+  },
+  "arm": "vad800",
+  "reconciliation": {
+    "exporter_manifest_crosscheck": {
+      "sessions": 335,
+      "trace_sha256_matches_manifest": 335,
+      "barge_in_cuts_equal": 335,
+      "queued_audio_cropped_s_equal": 335,
+      "packet_audio_in_window_s_equal": 335,
+      "packet_audio_in_window_s_mismatches": [],
+      "audio_after_window_excluded_s_equal": 333,
+      "audio_after_window_excluded_s_mismatches": [
+        {
+          "sample_id": "candor_pause_handling/116",
+          "ours_s": 10.296875,
+          "exporter": null,
+          "packets_in_window": 0
+        },
+        {
+          "sample_id": "candor_pause_handling/20",
+          "ours_s": 10.296875,
+          "exporter": null,
+          "packets_in_window": 0
+        }
+      ],
+      "recorder_media_duration_consistent_with_any_audio": 335
+    },
+    "known_vs_recomputed": {
+      "pause_official_tor": {
+        "known": 10,
+        "recomputed": 10,
+        "score_summary": 0.046296296296296294,
+        "recomputed_rate": 0.046296296296296294
+      },
+      "pause_any_audio_sessions": {
+        "known": 89,
+        "recomputed": 89
+      },
+      "turn_official_latency_mean_s": {
+        "known": 1.043,
+        "recomputed": 1.0431355932203545,
+        "score_summary": 1.0431355932203545
+      },
+      "turn_official_tor": {
+        "recomputed": 118,
+        "score_summary": 0.9915966386554622,
+        "recomputed_rate": 0.9915966386554622
+      },
+      "candor_pauses": {
+        "known": {
+          "count": 277,
+          "min_s": 0.61,
+          "max_s": 1.49,
+          "median_s": 0.87
+        },
+        "recomputed": {
+          "count": 277,
+          "min_s": 0.61,
+          "max_s": 1.49,
+          "median_s": 0.87
+        }
+      }
+    }
+  }
+}

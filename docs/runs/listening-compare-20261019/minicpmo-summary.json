@@ -1,0 +1,179 @@
+{
+  "asr": {
+    "checkpoint_sha256": "d99e39955c9d3d0350d8fb7c75e40c64a2b2eaeb003883d7c941fd2e8747b28c",
+    "device_type": "cuda"
+  },
+  "models": {
+    "utmos_sha256": "3080923f49ee69eb81ad875491eef94e533bf329d70e0cc37fa23745c464669d",
+    "speaker_finetune_sha256": "51f07e3b94d9e0262a6a675ef5a087be3dd09e8c62e9d886827f44f82fe7f94b",
+    "speaker_wavlm_sha256": "6fb4b3c3e6aa567f0a997b30855859cb81528ee8078802af439f7b2da0bf100f"
+  },
+  "text_normalizer": "whisper.normalizers.EnglishTextNormalizer",
+  "scored_duration_s": 3.0,
+  "datasets": {
+    "v1.0": {
+      "candor_pause_handling": {
+        "replies": 7,
+        "replies_with_audio": 7,
+        "short_replies": 5,
+        "statuses": {
+          "completed": 7
+        },
+        "compared_replies": 7,
+        "reference_words": 45,
+        "omission_rate": 0.2,
+        "word_error_rate": 0.2222222222222222,
+        "utmos_mean": 4.173028230667114,
+        "utmos_p10": 3.9510496616363526,
+        "voice_similarity_mean": 81.16709518432617,
+        "voice_similarity_p10": 81.1336570739746
+      },
+      "candor_turn_taking": {
+        "replies": 11,
+        "replies_with_audio": 11,
+        "short_replies": 2,
+        "statuses": {
+          "completed": 11
+        },
+        "compared_replies": 11,
+        "reference_words": 142,
+        "omission_rate": 0.08450704225352113,
+        "word_error_rate": 0.08450704225352113,
+        "utmos_mean": 4.085326963000828,
+        "utmos_p10": 3.755403518676758,
+        "voice_similarity_mean": 72.12241321139865,
+        "voice_similarity_p10": 67.9082862854004
+      },
+      "icc_backchannel": {
+        "replies": 10,
+        "replies_with_audio": 10,
+        "short_replies": 10,
+        "statuses": {
+          "completed": 10
+        },
+        "compared_replies": 10,
+        "reference_words": 40,
+        "omission_rate": 0.15,
+        "word_error_rate": 0.475,
+        "utmos_mean": null,
+        "utmos_p10": null,
+        "voice_similarity_mean": null,
+        "voice_similarity_p10": null
+      },
+      "synthetic_pause_handling": {
+        "replies": 7,
+        "replies_with_audio": 7,
+        "short_replies": 4,
+        "statuses": {
+          "completed": 7
+        },
+        "compared_replies": 7,
+        "reference_words": 45,
+        "omission_rate": 0.2,
+        "word_error_rate": 0.4222222222222222,
+        "utmos_mean": 4.344639937082927,
+        "utmos_p10": 4.312911128997802,
+        "voice_similarity_mean": 77.37202707926433,
+        "voice_similarity_p10": 69.7806625366211
+      },
+      "synthetic_user_interruption": {
+        "replies": 15,
+        "replies_with_audio": 15,
+        "short_replies": 0,
+        "statuses": {
+          "completed": 15
+        },
+        "compared_replies": 15,
+        "reference_words": 423,
+        "omission_rate": 0.07801418439716312,
+        "word_error_rate": 0.1111111111111111,
+        "utmos_mean": 4.256392335891723,
+        "utmos_p10": 3.9785772800445556,
+        "voice_similarity_mean": 75.25428161621093,
+        "voice_similarity_p10": 63.76914291381836
+      }
+    },
+    "v1.5": {
+      "all": {
+        "replies": 228,
+        "replies_with_audio": 228,
+        "short_replies": 7,
+        "statuses": {
+          "completed": 228
+        },
+        "compared_replies": 228,
+        "reference_words": 4301,
+        "omission_rate": 0.05952104161822832,
+        "word_error_rate": 0.09532666821669379,
+        "utmos_mean": 4.239826585372649,
+        "utmos_p10": 3.9026362895965576,
+        "voice_similarity_mean": 76.2463044214033,
+        "voice_similarity_p10": 69.81367492675781
+      },
+      "background_speech": {
+        "replies": 53,
+        "replies_with_audio": 53,
+        "short_replies": 2,
+        "statuses": {
+          "completed": 53
+        },
+        "compared_replies": 53,
+        "reference_words": 825,
+        "omission_rate": 0.04,
+        "word_error_rate": 0.07151515151515152,
+        "utmos_mean": 4.218433782166126,
+        "utmos_p10": 3.8140482902526855,
+        "voice_similarity_mean": 75.63582431568818,
+        "voice_similarity_p10": 68.63233184814453
+      },
+      "talking_to_other": {
+        "replies": 57,
+        "replies_with_audio": 57,
+        "short_replies": 4,
+        "statuses": {
+          "completed": 57
+        },
+        "compared_replies": 57,
+        "reference_words": 941,
+        "omission_rate": 0.0669500531349628,
+        "word_error_rate": 0.12433581296493093,
+        "utmos_mean": 4.273331718624763,
+        "utmos_p10": 3.9767885208129883,
+        "voice_similarity_mean": 76.95558022553067,
+        "voice_similarity_p10": 71.35284881591797
+      },
+      "user_backchannel": {
+        "replies": 51,
+        "replies_with_audio": 51,
+        "short_replies": 0,
+        "statuses": {
+          "completed": 51
+        },
+        "compared_replies": 51,
+        "reference_words": 1214,
+        "omission_rate": 0.1013179571663921,
+        "word_error_rate": 0.1326194398682043,
+        "utmos_mean": 4.18440401320364,
+        "utmos_p10": 3.90537691116333,
+        "voice_similarity_mean": 77.03344337612975,
+        "voice_similarity_p10": 71.15826416015625
+      },
+      "user_interruption": {
+        "replies": 67,
+        "replies_with_audio": 67,
+        "short_replies": 1,
+        "statuses": {
+          "completed": 67
+        },
+        "compared_replies": 67,
+        "reference_words": 1321,
+        "omission_rate": 0.028009084027252083,
+        "word_error_rate": 0.05526116578349735,
+        "utmos_mean": 4.272278283581589,
+        "utmos_p10": 3.8996310234069824,
+        "voice_similarity_mean": 75.54022534688313,
+        "voice_similarity_p10": 67.46995544433594
+      }
+    }
+  }
+}

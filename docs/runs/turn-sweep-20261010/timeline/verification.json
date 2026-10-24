@@ -1,0 +1,502 @@
+[
+  {
+    "arm": "vad500",
+    "checks": {
+      "passed_sessions_per_subset": {
+        "run_json": {
+          "candor_pause_handling": 216,
+          "candor_turn_taking": 119
+        },
+        "csv_rows": {
+          "candor_pause_handling": 216,
+          "candor_turn_taking": 119
+        },
+        "metrics_sessions_passed": 335,
+        "metrics_pause_sessions": 216,
+        "metrics_turn_sessions": 119,
+        "run_json_not_passed": {},
+        "metrics_sessions_skipped": [],
+        "csv_ids_equal_run_passed_ids": true,
+        "known_pause_n": 216,
+        "pass": true
+      },
+      "any_audio_sessions": {
+        "run_json_media_duration_gt0": {
+          "candor_pause_handling": 157,
+          "candor_turn_taking": 119
+        },
+        "csv_any_audio_true": {
+          "candor_pause_handling": 157,
+          "candor_turn_taking": 119
+        },
+        "metrics_pause_any_audio": 157,
+        "metrics_turn_any_audio": 119,
+        "known_pause_any_audio": 157,
+        "pause_set_equal": true,
+        "turn_set_equal": true,
+        "pause_symmetric_difference": [],
+        "turn_symmetric_difference": [],
+        "pass": true
+      },
+      "commits_vs_media_duration": {
+        "sessions_with_audio_but_zero_commits": [],
+        "sessions_with_audio_but_zero_responses": [],
+        "sessions_media_zero_but_csv_audio_received_gt0": [],
+        "sessions_any_audio_true_but_audio_received_le0": [],
+        "max_abs_diff_media_duration_vs_csv_audio_s_received": {
+          "diff_s": 5.000000000165983e-05,
+          "sample_id": "candor_turn_taking/95",
+          "run_json_media_s": 19.47375,
+          "csv_audio_s_received": 19.4738
+        },
+        "csv_commits_total": 570,
+        "csv_commits_by_subset": {
+          "candor_pause_handling": 356,
+          "candor_turn_taking": 214
+        },
+        "metrics_commits": {
+          "pause": 356,
+          "turn": 214
+        },
+        "sessions_with_commit_pause": 215,
+        "pass": true
+      },
+      "official_pause_takeover": {
+        "tree_pause_sessions": 216,
+        "tree_ids_equal_csv_pause_ids": true,
+        "recomputed_from_output_json": 30,
+        "known": 30,
+        "csv_official_tor_sum": 30,
+        "metrics_sessions_official_tor": 30,
+        "score_summary_rate": 0.1388888888888889,
+        "score_summary_rate_times_n": 30.0,
+        "ids_equal_csv": true,
+        "symmetric_difference": [],
+        "pass": true
+      },
+      "official_turn_latency": {
+        "tree_turn_sessions": 119,
+        "recomputed_tor": 119,
+        "csv_official_tor_sum": 119,
+        "metrics_turn_official_tor": 119,
+        "score_summary_tor_rate": 1.0,
+        "score_summary_tor_rate_times_n": 119.0,
+        "non_takeover_sessions": [],
+        "latency_denominator_takeover_sessions": 119,
+        "mean_clamped_first_word_minus_ann_start": 0.6927731092437117,
+        "mean_clamped_over_all_sessions_with_words": 0.6927731092437117,
+        "mean_clamped_first_word_minus_ann_end": 0.4979831932773187,
+        "mean_raw_unclamped_vs_ann_start": -0.6345378151260351,
+        "negatives_clamped": 18,
+        "known": 0.693,
+        "abs_diff_vs_known": 0.00022689075628823385,
+        "score_summary_latency": 0.6927731092437117,
+        "metrics_official_latency_mean_s": 0.6927731092437117,
+        "upstream_log_entries": 119,
+        "upstream_log_mean_clamped": 0.6927731092437117,
+        "upstream_log_raw_matches_ann_start_anchor": 119,
+        "upstream_log_raw_matches_ann_end_anchor": 1,
+        "csv_latency_matches_recomputed": 119,
+        "pass": true
+      },
+      "candor_pause_annotations": {
+        "clips": 216,
+        "pauses": 277,
+        "min_s": 0.61,
+        "max_s": 1.49,
+        "median_s": 0.87,
+        "known": {
+          "count": 277,
+          "min_s": 0.61,
+          "max_s": 1.49,
+          "median_s": 0.87,
+          "clips": 216
+        },
+        "pass": true
+      },
+      "trace_recount": {
+        "available": true,
+        "sessions_recounted": 335,
+        "total_commits_from_traces": 570,
+        "sessions_with_audio_delta_from_traces": 276,
+        "commit_count_mismatches_vs_csv": [],
+        "any_audio_mismatches_vs_csv": [],
+        "media_duration_gt0_vs_audio_delta_present_mismatches": [],
+        "pass": true
+      }
+    },
+    "all_pass": true
+  },
+  {
+    "arm": "vad800",
+    "checks": {
+      "passed_sessions_per_subset": {
+        "run_json": {
+          "candor_pause_handling": 216,
+          "candor_turn_taking": 119
+        },
+        "csv_rows": {
+          "candor_pause_handling": 216,
+          "candor_turn_taking": 119
+        },
+        "metrics_sessions_passed": 335,
+        "metrics_pause_sessions": 216,
+        "metrics_turn_sessions": 119,
+        "run_json_not_passed": {},
+        "metrics_sessions_skipped": [],
+        "csv_ids_equal_run_passed_ids": true,
+        "known_pause_n": 216,
+        "pass": true
+      },
+      "any_audio_sessions": {
+        "run_json_media_duration_gt0": {
+          "candor_pause_handling": 89,
+          "candor_turn_taking": 119
+        },
+        "csv_any_audio_true": {
+          "candor_pause_handling": 89,
+          "candor_turn_taking": 119
+        },
+        "metrics_pause_any_audio": 89,
+        "metrics_turn_any_audio": 119,
+        "known_pause_any_audio": 89,
+        "pause_set_equal": true,
+        "turn_set_equal": true,
+        "pause_symmetric_difference": [],
+        "turn_symmetric_difference": [],
+        "pass": true
+      },
+      "commits_vs_media_duration": {
+        "sessions_with_audio_but_zero_commits": [],
+        "sessions_with_audio_but_zero_responses": [],
+        "sessions_media_zero_but_csv_audio_received_gt0": [],
+        "sessions_any_audio_true_but_audio_received_le0": [],
+        "max_abs_diff_media_duration_vs_csv_audio_s_received": {
+          "diff_s": 5.000000000165983e-05,
+          "sample_id": "candor_turn_taking/95",
+          "run_json_media_s": 20.59375,
+          "csv_audio_s_received": 20.5938
+        },
+        "csv_commits_total": 407,
+        "csv_commits_by_subset": {
+          "candor_pause_handling": 245,
+          "candor_turn_taking": 162
+        },
+        "metrics_commits": {
+          "pause": 245,
+          "turn": 162
+        },
+        "sessions_with_commit_pause": 185,
+        "pass": true
+      },
+      "official_pause_takeover": {
+        "tree_pause_sessions": 216,
+        "tree_ids_equal_csv_pause_ids": true,
+        "recomputed_from_output_json": 10,
+        "known": 10,
+        "csv_official_tor_sum": 10,
+        "metrics_sessions_official_tor": 10,
+        "score_summary_rate": 0.046296296296296294,
+        "score_summary_rate_times_n": 10.0,
+        "ids_equal_csv": true,
+        "symmetric_difference": [],
+        "pass": true
+      },
+      "official_turn_latency": {
+        "tree_turn_sessions": 119,
+        "recomputed_tor": 118,
+        "csv_official_tor_sum": 118,
+        "metrics_turn_official_tor": 118,
+        "score_summary_tor_rate": 0.9915966386554622,
+        "score_summary_tor_rate_times_n": 118.0,
+        "non_takeover_sessions": [
+          {
+            "sample_id": "candor_turn_taking/50",
+            "words": 1,
+            "span_s": 0.16000000000000014,
+            "text": "Okay.",
+            "csv_official_tor": "0",
+            "csv_latency": [
+              null,
+              null
+            ],
+            "in_upstream_log": false
+          }
+        ],
+        "latency_denominator_takeover_sessions": 118,
+        "mean_clamped_first_word_minus_ann_start": 1.0431355932203545,
+        "mean_clamped_over_all_sessions_with_words": 1.0426890756302674,
+        "mean_clamped_first_word_minus_ann_end": 0.8305932203389942,
+        "mean_raw_unclamped_vs_ann_start": -0.019152542372865834,
+        "negatives_clamped": 9,
+        "known": 1.043,
+        "abs_diff_vs_known": 0.00013559322035461285,
+        "score_summary_latency": 1.0431355932203545,
+        "metrics_official_latency_mean_s": 1.0431355932203545,
+        "upstream_log_entries": 118,
+        "upstream_log_mean_clamped": 1.0431355932203545,
+        "upstream_log_raw_matches_ann_start_anchor": 118,
+        "upstream_log_raw_matches_ann_end_anchor": 1,
+        "csv_latency_matches_recomputed": 118,
+        "pass": true
+      },
+      "trace_recount": {
+        "available": false,
+        "note": "rec tar not on disk for this arm; check rests on CSV vs run.json"
+      }
+    },
+    "all_pass": true
+  },
+  {
+    "arm": "vad1200",
+    "checks": {
+      "passed_sessions_per_subset": {
+        "run_json": {
+          "candor_pause_handling": 215,
+          "candor_turn_taking": 119
+        },
+        "csv_rows": {
+          "candor_pause_handling": 215,
+          "candor_turn_taking": 119
+        },
+        "metrics_sessions_passed": 334,
+        "metrics_pause_sessions": 215,
+        "metrics_turn_sessions": 119,
+        "run_json_not_passed": {
+          "candor_pause_handling/202": [
+            "fail",
+            "fail"
+          ]
+        },
+        "metrics_sessions_skipped": [
+          "candor_pause_handling/202"
+        ],
+        "csv_ids_equal_run_passed_ids": true,
+        "known_pause_n": 215,
+        "pass": true
+      },
+      "any_audio_sessions": {
+        "run_json_media_duration_gt0": {
+          "candor_pause_handling": 29,
+          "candor_turn_taking": 119
+        },
+        "csv_any_audio_true": {
+          "candor_pause_handling": 29,
+          "candor_turn_taking": 119
+        },
+        "metrics_pause_any_audio": 29,
+        "metrics_turn_any_audio": 119,
+        "known_pause_any_audio": 29,
+        "pause_set_equal": true,
+        "turn_set_equal": true,
+        "pause_symmetric_difference": [],
+        "turn_symmetric_difference": [],
+        "pass": true
+      },
+      "commits_vs_media_duration": {
+        "sessions_with_audio_but_zero_commits": [],
+        "sessions_with_audio_but_zero_responses": [],
+        "sessions_media_zero_but_csv_audio_received_gt0": [],
+        "sessions_any_audio_true_but_audio_received_le0": [],
+        "max_abs_diff_media_duration_vs_csv_audio_s_received": {
+          "diff_s": 5.000000000165983e-05,
+          "sample_id": "candor_turn_taking/68",
+          "run_json_media_s": 37.55375,
+          "csv_audio_s_received": 37.5538
+        },
+        "csv_commits_total": 217,
+        "csv_commits_by_subset": {
+          "candor_pause_handling": 84,
+          "candor_turn_taking": 133
+        },
+        "metrics_commits": {
+          "pause": 84,
+          "turn": 133
+        },
+        "sessions_with_commit_pause": 73,
+        "pass": true
+      },
+      "official_pause_takeover": {
+        "tree_pause_sessions": 215,
+        "tree_ids_equal_csv_pause_ids": true,
+        "recomputed_from_output_json": 4,
+        "known": 4,
+        "csv_official_tor_sum": 4,
+        "metrics_sessions_official_tor": 4,
+        "score_summary_rate": 0.018604651162790697,
+        "score_summary_rate_times_n": 4.0,
+        "ids_equal_csv": true,
+        "symmetric_difference": [],
+        "pass": true
+      },
+      "official_turn_latency": {
+        "tree_turn_sessions": 119,
+        "recomputed_tor": 119,
+        "csv_official_tor_sum": 119,
+        "metrics_turn_official_tor": 119,
+        "score_summary_tor_rate": 1.0,
+        "score_summary_tor_rate_times_n": 119.0,
+        "non_takeover_sessions": [],
+        "latency_denominator_takeover_sessions": 119,
+        "mean_clamped_first_word_minus_ann_start": 1.4796638655462349,
+        "mean_clamped_over_all_sessions_with_words": 1.4796638655462349,
+        "mean_clamped_first_word_minus_ann_end": 1.2547899159663976,
+        "mean_raw_unclamped_vs_ann_start": 0.7167226890756455,
+        "negatives_clamped": 2,
+        "known": 1.48,
+        "abs_diff_vs_known": 0.0003361344537651245,
+        "score_summary_latency": 1.4796638655462349,
+        "metrics_official_latency_mean_s": 1.4796638655462349,
+        "upstream_log_entries": 119,
+        "upstream_log_mean_clamped": 1.4796638655462349,
+        "upstream_log_raw_matches_ann_start_anchor": 119,
+        "upstream_log_raw_matches_ann_end_anchor": 1,
+        "csv_latency_matches_recomputed": 119,
+        "pass": true
+      },
+      "trace_recount": {
+        "available": false,
+        "note": "rec tar not on disk for this arm; check rests on CSV vs run.json"
+      }
+    },
+    "all_pass": true
+  },
+  {
+    "arm": "semmed",
+    "checks": {
+      "passed_sessions_per_subset": {
+        "run_json": {
+          "candor_pause_handling": 214,
+          "candor_turn_taking": 119
+        },
+        "csv_rows": {
+          "candor_pause_handling": 214,
+          "candor_turn_taking": 119
+        },
+        "metrics_sessions_passed": 333,
+        "metrics_pause_sessions": 214,
+        "metrics_turn_sessions": 119,
+        "run_json_not_passed": {
+          "candor_pause_handling/93": [
+            "fail",
+            "fail"
+          ],
+          "candor_pause_handling/202": [
+            "fail",
+            "fail"
+          ]
+        },
+        "metrics_sessions_skipped": [
+          "candor_pause_handling/202",
+          "candor_pause_handling/93"
+        ],
+        "csv_ids_equal_run_passed_ids": true,
+        "known_pause_n": 214,
+        "pass": true
+      },
+      "any_audio_sessions": {
+        "run_json_media_duration_gt0": {
+          "candor_pause_handling": 29,
+          "candor_turn_taking": 119
+        },
+        "csv_any_audio_true": {
+          "candor_pause_handling": 29,
+          "candor_turn_taking": 119
+        },
+        "metrics_pause_any_audio": 29,
+        "metrics_turn_any_audio": 119,
+        "known_pause_any_audio": 29,
+        "pause_set_equal": true,
+        "turn_set_equal": true,
+        "pause_symmetric_difference": [],
+        "turn_symmetric_difference": [],
+        "pass": true
+      },
+      "commits_vs_media_duration": {
+        "sessions_with_audio_but_zero_commits": [],
+        "sessions_with_audio_but_zero_responses": [],
+        "sessions_media_zero_but_csv_audio_received_gt0": [],
+        "sessions_any_audio_true_but_audio_received_le0": [],
+        "max_abs_diff_media_duration_vs_csv_audio_s_received": {
+          "diff_s": 5.000000000165983e-05,
+          "sample_id": "candor_turn_taking/94",
+          "run_json_media_s": 19.79375,
+          "csv_audio_s_received": 19.7938
+        },
+        "csv_commits_total": 207,
+        "csv_commits_by_subset": {
+          "candor_pause_handling": 56,
+          "candor_turn_taking": 151
+        },
+        "metrics_commits": {
+          "pause": 56,
+          "turn": 151
+        },
+        "sessions_with_commit_pause": 44,
+        "pass": true
+      },
+      "official_pause_takeover": {
+        "tree_pause_sessions": 214,
+        "tree_ids_equal_csv_pause_ids": true,
+        "recomputed_from_output_json": 8,
+        "known": 8,
+        "csv_official_tor_sum": 8,
+        "metrics_sessions_official_tor": 8,
+        "score_summary_rate": 0.037383177570093455,
+        "score_summary_rate_times_n": 7.999999999999999,
+        "ids_equal_csv": true,
+        "symmetric_difference": [],
+        "pass": true
+      },
+      "official_turn_latency": {
+        "tree_turn_sessions": 119,
+        "recomputed_tor": 118,
+        "csv_official_tor_sum": 118,
+        "metrics_turn_official_tor": 118,
+        "score_summary_tor_rate": 0.9915966386554622,
+        "score_summary_tor_rate_times_n": 118.0,
+        "non_takeover_sessions": [
+          {
+            "sample_id": "candor_turn_taking/80",
+            "words": 0,
+            "span_s": null,
+            "text": "",
+            "csv_official_tor": "0",
+            "csv_latency": [
+              null,
+              null
+            ],
+            "in_upstream_log": false
+          }
+        ],
+        "latency_denominator_takeover_sessions": 118,
+        "mean_clamped_first_word_minus_ann_start": 2.0122881355932356,
+        "mean_clamped_over_all_sessions_with_words": 2.0122881355932356,
+        "mean_clamped_first_word_minus_ann_end": 1.804322033898316,
+        "mean_raw_unclamped_vs_ann_start": 1.0667796610169646,
+        "negatives_clamped": 8,
+        "known": 2.012,
+        "abs_diff_vs_known": 0.00028813559323559446,
+        "score_summary_latency": 2.0122881355932356,
+        "metrics_official_latency_mean_s": 2.0122881355932356,
+        "upstream_log_entries": 118,
+        "upstream_log_mean_clamped": 2.0122881355932356,
+        "upstream_log_raw_matches_ann_start_anchor": 118,
+        "upstream_log_raw_matches_ann_end_anchor": 1,
+        "csv_latency_matches_recomputed": 118,
+        "pass": true
+      },
+      "trace_recount": {
+        "available": true,
+        "sessions_recounted": 335,
+        "total_commits_from_traces": 207,
+        "sessions_with_audio_delta_from_traces": 148,
+        "commit_count_mismatches_vs_csv": [],
+        "any_audio_mismatches_vs_csv": [],
+        "media_duration_gt0_vs_audio_delta_present_mismatches": [],
+        "pass": true
+      }
+    },
+    "all_pass": true
+  }
+]
