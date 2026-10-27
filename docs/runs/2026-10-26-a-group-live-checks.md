@@ -7,7 +7,7 @@
 - A2 (按播放位置截历史): main 上通过. 页面发 `conversation.item.truncate` (正确的 item_id 和 audio_end_ms), 服务端按 forced aligner 的词边界保留听到的部分, `sglang.response.heard` 与字幕一致 (例: 4613 ms 处保留 154 字符里的 70). #3207 的构建上没有回归.
 - A5 (Qwen3-Omni 生成上限):
   - talker 上限: #3059 实机通过 (50 帧时 `incomplete` / `max_output_tokens`, 音频 3.98 s; 默认 4096 帧有 3/32 条撞上限, 也正确报 incomplete).
-  - thinker 上限: 发现 bug, `max_new_tokens` 截断报成 completed. 修复是 sgl-project/sglang-omni#3240, 实机验证通过.
+  - thinker 上限: 发现 bug, `max_new_tokens` 截断报成 completed. 修复是 sgl-project/sglang-omni#3240, 实机验证通过, 10-26 已合入 (39fbbbfe). 合入前 CI 的 MMMU 纯文本 stage 两次 28/50, 29/50 低于 31/50 的门槛, main 同一 stage 10-26 也挂过 (26 到 29 题), 判为已有的不稳定测试.
   - thinker 与语音的比例: 29 条正常结束的回复, 语音帧数 / thinker token 中位数 3.67 (英文 3.71, 中文 3.56), p10 2.95, p90 3.94, 最大 4.29. 默认 4096 帧只够约 1100 token (按最大比例约 955), 而 thinker 默认上限 2048, 所以长回复会出现文字比语音多.
 - 附带发现 (不是管线 bug): 打断后的下一条回复, 27B 偶尔输出空回复或半句 (main 32 次打断中 5 次, #3207 11 次中 2 次, 另有 1 次可能是, 差异不显著). 调试日志显示 dialog 那一轮收到 0 个文本 delta, 是模型本身的输出, 与 #3187 记录的残留 (14%) 一致.
 
