@@ -22,9 +22,26 @@
 
 ## 产物
 
-- 原始数据: 本机 `~/Downloads/S2S_omni/results/alive/out/g1027/` (不进 Git), 待上传公开数据集 `gavinlaw/sglang-omni-fdb-native-runs`.
+- 原始数据: 公开数据集 `gavinlaw/sglang-omni-fdb-native-runs` 的 `a-group-live-20261027/`, revision fefa6849 (87 个文件, 页面 trace 里删掉了麦克风输入音频). 本机副本 `~/Downloads/S2S_omni/results/alive/out/g1027/`.
+- 外审全文: `docs/reviews/2026-10-28-a5-margin-a2-heard-gpt-review.md`.
 
 ## 判断记录
 
 - A8 判为通过: 书写单位内部的点都在归一化分开念的边界上, 写出来的前缀如实对应用户听到的内容 ("before 7" 对应 "before seven").
 - A18 的判据从 finish reason 改为最后一单元是否用满窗口: #3155 自己的 FDB 证据用的就是这个特征 (最后一块 30720 采样以上), GPU 上的 finish reason 与单测假设不同.
+
+### 决策: A5 的余量与包络 (10-28)
+
+- 问题: thinker 语音预算用多大余量, 包络取什么形状.
+- 默认答案: 余量 1.5, 包络取两条上界中较小者 `min(6.905 n, 600 + 4.405 n)` (每 token 最慢 6.905 帧, 以及 LP 直线; 两者都向外取整, 都覆盖全部 193 个点). 默认 talker 4096 帧对应 483 token; 50 帧对应 4 token, 不会因直线截距退化成 1.
+- 理由: 按 prompt 分组留出一半检验, 超出 1.5 倍包络的回复每次 0.21 条 (约 96 条中), 2 倍是 0.17 条, 2 倍几乎不再减少超出, 却少掉 32% 的预算 (328 对 483). 原 A5 负责人的计划写的是 2 倍 (沿用 #3157), 改为 1.5 并在 PR 里说明.
+- 回滚: 改 `SPEECH_BUDGET_MARGIN` 一个常量; 实测若出现被 talker 截断的回复, 把余量调回 2.0.
+- 外审 (GPT-6 Pro): 同意运行时上界与仿射包络, 建议 1.5; 指出 600 + 4.40n 舍入后在两个点低 1 和 3 帧 (采纳, 改为 4.405), `max(1, ...)` 在小 talker 上限下悄悄违反上界 (采纳, 加每 token 比例这一条上界), 原留出检验按行切分让同一 prompt 落进两边 (采纳, 改按 prompt 切分). 没有采纳的: 无.
+
+### 决策: Qwen3-Omni 截断时保留多少 token (10-28)
+
+- 问题: `heard_tokens` 按每 80 ms 一个 token 换算, 多保留约 3.7 倍; 用什么替代.
+- 默认答案: 按 A5 语料测得的中位语速 3.69 帧/token 换算, 去掉 +3.
+- 理由: 外审核对了 `talker_input.py`, +3 计的是 `<|im_start|>assistant` 模板行, 不是回复文字, 是第二个 bug; 中位语速在 4033 ms 处给 13 token, 实际听到 15 token, 原代码 53. 强制对齐 (cascade 的做法) 更准, 但要给 Qwen3-Omni 部署加一个模型, 作为后续.
+- 回滚: 改回 `heard_tokens` 一个函数.
+- 外审: 同意先上中位语速并去掉 +3, 强制对齐作为准确实现; 指出"每条 ±20%"的说法没有依据 (采纳, 不再这样写), 最慢语速不能保证不留未听到的文字 (采纳, 不用最慢语速).
